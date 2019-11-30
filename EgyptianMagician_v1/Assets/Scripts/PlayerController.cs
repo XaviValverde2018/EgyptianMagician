@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float moveSpeed = 4f;
     Vector3 forward, right;
-
+    public Joystick joystick;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +29,11 @@ public class PlayerController : MonoBehaviour
     }
 
     void MovePlayer() {
-        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        Debug.Log(Input.GetAxis("Horizontal"));// value -1 to 1 
-        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal"); // right or left direction. 
-        Vector3 upMovemenrt = forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical"); // forward or back direction.
+        Vector3 direction = new Vector3(joystick.Horizontal, 0, joystick.Vertical);
+        //Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //Debug.Log(Input.GetAxis("Horizontal"));// value -1 to 1 
+        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * joystick.Horizontal; // right or left direction. 
+        Vector3 upMovemenrt = forward * moveSpeed * Time.deltaTime * joystick.Vertical; // forward or back direction.
 
         Vector3 heading = Vector3.Normalize(rightMovement + upMovemenrt); // total direction direction
 
