@@ -30,12 +30,12 @@ public class RoomNearest : MonoBehaviour
         if (other.CompareTag("Player")) {
             playerInThisRoom = true;
             PlayerTargeting.Instance.enemiesListInRoom = new List<GameObject>(enemiesListInRoom);//revisar
-            Debug.Log("Enemy count:" + PlayerTargeting.Instance.enemiesListInRoom);
+            Debug.Log("Enemy count:" + PlayerTargeting.Instance.enemiesListInRoom.Count);
             Debug.Log("Player Enter in the room!");
         }
         if (other.CompareTag("Enemy")) {
             enemiesListInRoom.Add(other.gameObject);
-            Debug.Log("Enemy count enemy:" + other.gameObject.name);
+            Debug.Log("Enemy name:" + other.gameObject.name);
         }
     }
     private void OnTriggerExit(Collider other) {
