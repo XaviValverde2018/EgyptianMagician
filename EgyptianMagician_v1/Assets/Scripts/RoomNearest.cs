@@ -29,7 +29,7 @@ public class RoomNearest : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             playerInThisRoom = true;
-            PlayerTargeting.Instance.enemiesListInRoom = new List<GameObject>(enemiesListInRoom);//revisar
+            PlayerTargeting.Instance.enemiesListInRoom = new List<GameObject>(enemiesListInRoom);//revisaro
             Debug.Log("Enemy count:" + PlayerTargeting.Instance.enemiesListInRoom.Count);
             Debug.Log("Player Enter in the room!");
         }
