@@ -31,6 +31,15 @@ public class PlayerTargeting : MonoBehaviour
     public GameObject PlayerBolt;
     public Transform AttackPoint;
 
+
+    public Rigidbody bullet;
+    public float damage = 50f;
+    public float range = 100f;
+
+    public int enemiesleft = 0;
+    bool killedAllEnemies = false;
+
+
     private void OnDrawGizmos() {
         if (getATarget) {
             for(int i = 0; i < enemiesListInRoom.Count; i++) {
@@ -53,11 +62,15 @@ public class PlayerTargeting : MonoBehaviour
     void Update() {
         CalculateNearestTarget(); // function to calculate de nearest target in the room.
         //if(getATarget) transform.LookAt(Vector3.forward,Vector3.zero);
-
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemiesleft = enemies.Length;
+        if(enemies.Length == 0) {
+            Debug.Log("no hi ha enemics");
+        }
     }
 
     void CalculateNearestTarget() {
-        Debug.Log("fora del if"+TargetDist);
+        //Debug.Log("fora del if"+TargetDist);
         if (enemiesListInRoom.Count != 0) { // si no hay enemigos en la sala, reiniciamos variables. 
             currentDist = 0f; 
             closeDistIndex = 0; 
@@ -67,15 +80,31 @@ public class PlayerTargeting : MonoBehaviour
                 currentDist = Vector3.Distance(transform.position, enemiesListInRoom[i].transform.position);// distance: return distance between a and b. nos inventamos 35.
                 //Debug.Log("currentDist" +currentDist);
                 RaycastHit hit;
-                bool isHit = Physics.Raycast(transform.position, enemiesListInRoom[i].transform.position - transform.position, out hit, 20f, layerMask); //bool True if the ray intersects with a Collider, otherwise false.
-                Debug.Log("isHit" + isHit);
+                bool isHit = Physics.Raycast(transform.position, enemiesListInRoom[i].transform.position - transform.position, out hit); //bool True if the ray intersects with a Collider, otherwise false.
+
+                //Debug.Log("isHit" + isHit);
                 if (isHit && hit.transform.CompareTag("Enemy")) {// si a impactado i el tag de quien ha impactado es Enemy
+
+                    //--------------------------------------
+                    Debug.Log("le heeeeee dadoo");
+                    HitTarget _hittarget = hit.transform.GetComponent<HitTarget>();
+                    //Rigidbody instiantatebullet = Instantiate(bullet, transform.position, transform.rotation) as Rigidbody;
+                    //instiantatebullet.velocity = transform.TransformDirection(new Vector3(3.0f, 0, 0));
+                    if(_hittarget != null) {
+                        _hittarget.TakeDamage(damage);
+                    }
+
+
+
+
+                    //-------------------------------------
                     if (TargetDist >= currentDist) { // 100 >= 35
                         TargetIndex = i; // = 1
                         TargetDist = currentDist; // 35 sera maximo cerca targetDist
-                        Debug.Log("dins del if"+TargetDist);
+                        //Debug.Log("dins del if"+TargetDist);
                     }
                 }
+
                 if (closetDist >= currentDist) { //100>=35
                     closeDistIndex = i; // = 1
                     closetDist = currentDist; // 35 sera maximo cerca closetDist. distancia cerca. 
@@ -88,5 +117,6 @@ public class PlayerTargeting : MonoBehaviour
             TargetDist = 100f;
             getATarget = true;
         }
+        
     }
 }

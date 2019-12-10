@@ -19,6 +19,8 @@ public class RoomNearest : MonoBehaviour
     void Update()
     {
         if (playerInThisRoom) {
+            //Debug.Log("quants enemics" + enemiesListInRoom.Count);
+
             if (enemiesListInRoom.Count <= 0 && !isClearRoom) {
                 isClearRoom = true;
                 //Debug.Log("clear room from enemies");
@@ -30,7 +32,7 @@ public class RoomNearest : MonoBehaviour
         if (other.CompareTag("Player")) {
             playerInThisRoom = true;
             PlayerTargeting.Instance.enemiesListInRoom = new List<GameObject>(enemiesListInRoom);//revisarooooooooooo
-            //Debug.Log("Enemy count:" + PlayerTargeting.Instance.enemiesListInRoom.Count);
+            Debug.Log("Enemy count:" + PlayerTargeting.Instance.enemiesListInRoom.Count);
             //Debug.Log("Player Enter in the room!");
         }
         if (other.CompareTag("Enemy")) {
