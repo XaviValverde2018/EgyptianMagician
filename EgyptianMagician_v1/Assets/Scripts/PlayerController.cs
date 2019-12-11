@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
 
@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     float moveSpeed = 4f;
     Vector3 forward, right;
     public Joystick joystick;
+    //public float lifePlayer = 10.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -40,5 +41,11 @@ public class PlayerController : MonoBehaviour
         transform.forward = heading; // de Z axis in worldspace. Green square.
         transform.position += rightMovement; // actualposition + new position
         transform.position += upMovemenrt; // actualposition + new position
+
+
+        for (int i = 0; i < PlayerTargeting.Instance.enemiesListInRoom.Count; i++) {
+           transform.LookAt(PlayerTargeting.Instance.enemiesListInRoom[i].transform);
+            //Debug.Log("Player Enter in the room!");
+        }
     }
 }

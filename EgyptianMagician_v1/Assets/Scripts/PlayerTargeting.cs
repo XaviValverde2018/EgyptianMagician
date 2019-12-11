@@ -38,7 +38,7 @@ public class PlayerTargeting : MonoBehaviour
 
     public int enemiesleft = 0;
     bool killedAllEnemies = false;
-    public ParticleSystem rayosolar;
+    
     public GameObject gota;
     public GameObject piramid;
     public GameObject value_enemies;
@@ -54,7 +54,7 @@ public class PlayerTargeting : MonoBehaviour
                     //condicion de solo pintar verde el mas cerca
                     //if()
                         Gizmos.color = Color.green;
-                        rayosolar.Play();
+                        
                 } else {
                     Gizmos.color = Color.red;
                 }

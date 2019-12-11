@@ -8,7 +8,7 @@ public class RoomNearest : MonoBehaviour
     List<GameObject> enemiesListInRoom = new List<GameObject>();
     public bool playerInThisRoom = false;
     public bool isClearRoom = false;
-
+    public ParticleSystem rayosolar;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +33,7 @@ public class RoomNearest : MonoBehaviour
             playerInThisRoom = true;
             PlayerTargeting.Instance.enemiesListInRoom = new List<GameObject>(enemiesListInRoom);//revisarooooooooooo
             Debug.Log("Enemy count:" + PlayerTargeting.Instance.enemiesListInRoom.Count);
-            //Debug.Log("Player Enter in the room!");
+            rayosolar.Play();
         }
         if (other.CompareTag("Enemy")) {
             enemiesListInRoom.Add(other.gameObject);
