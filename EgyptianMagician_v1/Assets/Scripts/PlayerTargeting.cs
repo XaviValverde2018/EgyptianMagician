@@ -44,7 +44,7 @@ public class PlayerTargeting : MonoBehaviour
     public GameObject value_enemies;
 
     public AudioSource hitAudio;
-
+    public PlayerController playerjoystickcontroller;
     private void OnDrawGizmos() {
         if (getATarget) {
             for(int i = 0; i < enemiesListInRoom.Count; i++) {
@@ -72,6 +72,9 @@ public class PlayerTargeting : MonoBehaviour
 
     void Update() {
        
+        if(playerjoystickcontroller.joystick.Horizontal == 0 && playerjoystickcontroller.joystick.Vertical == 0) {
+            Debug.Log("estic parat");
+        }
         CalculateNearestTarget(); // function to calculate de nearest target in the room.
         //if(getATarget) transform.LookAt(Vector3.forward,Vector3.zero);
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -98,24 +101,28 @@ public class PlayerTargeting : MonoBehaviour
                 //Debug.Log("isHit" + isHit);
                 if (isHit && hit.transform.CompareTag("Enemy")) {// si a impactado i el tag de quien ha impactado es Enemy
 
-                    hitAudio.Play();
-                    gota.SetActive(true);
+
                     piramid.SetActive(true);
                     //--------------------------------------
                     Debug.Log("le heeeeee dadoo");
                     HitTarget _hittarget = hit.transform.GetComponent<HitTarget>();
                     //Rigidbody instiantatebullet = Instantiate(bullet, transform.position, transform.rotation) as Rigidbody;
                     //instiantatebullet.velocity = transform.TransformDirection(new Vector3(3.0f, 0, 0));
-                    if(_hittarget != null) {
-                        _hittarget.TakeDamage(damage);
-                       
+                    if (playerjoystickcontroller.joystick.Horizontal == 0 && playerjoystickcontroller.joystick.Vertical == 0) {
+                        if (_hittarget != null) {
+                            _hittarget.TakeDamage(damage);
+                        } else {
+                            gota.SetActive(false);//aqui me quedat
+                        }
+                            
+                        
                     }
+               
 
 
 
-
-                    //-------------------------------------
-                    if (TargetDist >= currentDist) { // 100 >= 35
+                //-------------------------------------
+                if (TargetDist >= currentDist) { // 100 >= 35
                         TargetIndex = i; // = 1
                         TargetDist = currentDist; // 35 sera maximo cerca targetDist
                         //Debug.Log("dins del if"+TargetDist);

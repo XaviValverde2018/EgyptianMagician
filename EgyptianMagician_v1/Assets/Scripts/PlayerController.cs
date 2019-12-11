@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     float moveSpeed = 4f;
     Vector3 forward, right;
     public Joystick joystick;
+    public GameObject Ssphere;
     //public float lifePlayer = 10.0f;
 
     // Start is called before the first frame update
@@ -26,13 +27,15 @@ public class PlayerController : MonoBehaviour
         if(Input.anyKey) {
             MovePlayer();
         }
-        
+        ConditionNotWalking();
     }
 
     void MovePlayer() {
         Vector3 direction = new Vector3(joystick.Horizontal, 0, joystick.Vertical);
         //Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        //Debug.Log(Input.GetAxis("Horizontal"));// value -1 to 1 
+
+
+
         Vector3 rightMovement = right * moveSpeed * Time.deltaTime * joystick.Horizontal; // right or left direction. 
         Vector3 upMovemenrt = forward * moveSpeed * Time.deltaTime * joystick.Vertical; // forward or back direction.
 
@@ -42,10 +45,20 @@ public class PlayerController : MonoBehaviour
         transform.position += rightMovement; // actualposition + new position
         transform.position += upMovemenrt; // actualposition + new position
 
-
-        for (int i = 0; i < PlayerTargeting.Instance.enemiesListInRoom.Count; i++) {
-           transform.LookAt(PlayerTargeting.Instance.enemiesListInRoom[i].transform);
-            //Debug.Log("Player Enter in the room!");
+        if (joystick.Horizontal == 0 && joystick.Vertical == 0) {
+            for (int i = 0; i < PlayerTargeting.Instance.enemiesListInRoom.Count; i++) {
+                transform.LookAt(PlayerTargeting.Instance.enemiesListInRoom[i].transform);
+                //Debug.Log("Player Enter in the room!");
+            }
+        }
+    }
+    void ConditionNotWalking() {
+        if (joystick.Horizontal == 0 && joystick.Vertical == 0) { //en teoria amn el OnPointerUp() funcionaria.
+            Debug.Log(joystick.Horizontal);// value -1 to 1 
+            Debug.Log(joystick.Vertical);// value -1 to 1 
+            Ssphere.SetActive(true);
+        } else {
+            Ssphere.SetActive(false);
         }
     }
 }

@@ -7,6 +7,7 @@ public class LifeController : MonoBehaviour
 {
     public Image LifeBar;
     public float Fill;
+    public AudioSource damageHorus;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,12 @@ public class LifeController : MonoBehaviour
         if (other.CompareTag("Player")) {
             Fill -= Time.deltaTime * 0.1f;
             LifeBar.fillAmount = Fill;
+            
+        }
+    }
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Player")) {
+            damageHorus.Play();
         }
     }
 }
