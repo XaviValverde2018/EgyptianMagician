@@ -8,4 +8,7 @@ public class LoadPlay : MonoBehaviour
    public void Play() {
         SceneManager.LoadScene("lvl1");
     }
+    public void Menu() {
+        SceneManager.LoadScene("menu_principal");
+    }
 }
