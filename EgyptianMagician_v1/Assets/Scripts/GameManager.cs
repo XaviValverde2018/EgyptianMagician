@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //EN ESTE SCRIPT SE UNIFICARA TODA LA LOGICA PASADA LA ALPHA. 
     public GameObject[] enemiesFindingRoom;
-    public int countEnemiesFindingRoomWithTag = 0;
+    public int countEnemiesFindingRoomWithTag;
 
 
 
@@ -24,5 +25,9 @@ public class GameManager : MonoBehaviour
         countEnemiesFindingRoomWithTag = GameObject.FindGameObjectsWithTag("Enemy").Length;
         enemiesFindingRoom = GameObject.FindGameObjectsWithTag("Enemy");
         Debug.Log(enemiesFindingRoom);
+        if (countEnemiesFindingRoomWithTag == 0) {
+            Debug.Log("no enemy");
+            SceneManager.LoadScene("gameoverwin");
+        }
     }
 }

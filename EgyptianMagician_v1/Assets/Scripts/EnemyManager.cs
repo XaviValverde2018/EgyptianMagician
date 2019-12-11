@@ -6,6 +6,7 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject value_enemy1;
     public GameObject enemy1;
+
     // Start is called before the first frame update
     void Start()
     {

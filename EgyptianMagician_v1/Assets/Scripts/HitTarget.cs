@@ -12,6 +12,7 @@ public class HitTarget : MonoBehaviour
         }
     }
     void Die() {
+        gameObject.SetActive(false);
         Destroy(gameObject);
 
     }

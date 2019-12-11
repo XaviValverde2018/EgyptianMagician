@@ -33,14 +33,17 @@ public class PlayerTargeting : MonoBehaviour
 
 
     public Rigidbody bullet;
-    public float damage = 50f;
+    public float damage;
     public float range = 100f;
 
     public int enemiesleft = 0;
     bool killedAllEnemies = false;
     public ParticleSystem rayosolar;
     public GameObject gota;
+    public GameObject piramid;
     public GameObject value_enemies;
+
+    public AudioSource hitAudio;
 
     private void OnDrawGizmos() {
         if (getATarget) {
@@ -63,6 +66,7 @@ public class PlayerTargeting : MonoBehaviour
 
     private void Start() {
         gota.SetActive(false);
+        piramid.SetActive(false);
         value_enemies.SetActive(false);
     }
 
@@ -93,8 +97,10 @@ public class PlayerTargeting : MonoBehaviour
 
                 //Debug.Log("isHit" + isHit);
                 if (isHit && hit.transform.CompareTag("Enemy")) {// si a impactado i el tag de quien ha impactado es Enemy
-                    
+
+                    hitAudio.Play();
                     gota.SetActive(true);
+                    piramid.SetActive(true);
                     //--------------------------------------
                     Debug.Log("le heeeeee dadoo");
                     HitTarget _hittarget = hit.transform.GetComponent<HitTarget>();
