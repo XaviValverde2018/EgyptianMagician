@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 266475745}
   - component: {fileID: 266475747}
   m_Layer: 5
-  m_Name: title_egyptianmagician
+  m_Name: title_egyptianmagician_guillem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
