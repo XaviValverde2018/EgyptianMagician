@@ -48,4 +48,5 @@ public class RoomNearest : MonoBehaviour
             enemiesListInRoom.Remove(other.gameObject);
         }
     }
+
 }

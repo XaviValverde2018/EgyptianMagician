@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerTargeting : MonoBehaviour
 {
     //Este script sirve para hacer target del player y los enemigos para saber cuales estan mas cerca o mas lejos. 
@@ -38,7 +38,9 @@ public class PlayerTargeting : MonoBehaviour
 
     public int enemiesleft = 0;
     bool killedAllEnemies = false;
-
+    public ParticleSystem rayosolar;
+    public GameObject gota;
+    public GameObject value_enemies;
 
     private void OnDrawGizmos() {
         if (getATarget) {
@@ -49,17 +51,23 @@ public class PlayerTargeting : MonoBehaviour
                     //condicion de solo pintar verde el mas cerca
                     //if()
                         Gizmos.color = Color.green;
+                        rayosolar.Play();
                 } else {
                     Gizmos.color = Color.red;
                 }
                 Gizmos.DrawRay(transform.position, enemiesListInRoom[i].transform.position - transform.position);
+                
             }
         }
     }
 
-
+    private void Start() {
+        gota.SetActive(false);
+        value_enemies.SetActive(false);
+    }
 
     void Update() {
+       
         CalculateNearestTarget(); // function to calculate de nearest target in the room.
         //if(getATarget) transform.LookAt(Vector3.forward,Vector3.zero);
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -79,12 +87,14 @@ public class PlayerTargeting : MonoBehaviour
             for (int i = 0; i < enemiesListInRoom.Count; i++) {
                 currentDist = Vector3.Distance(transform.position, enemiesListInRoom[i].transform.position);// distance: return distance between a and b. nos inventamos 35.
                 //Debug.Log("currentDist" +currentDist);
+                
                 RaycastHit hit;
                 bool isHit = Physics.Raycast(transform.position, enemiesListInRoom[i].transform.position - transform.position, out hit); //bool True if the ray intersects with a Collider, otherwise false.
 
                 //Debug.Log("isHit" + isHit);
                 if (isHit && hit.transform.CompareTag("Enemy")) {// si a impactado i el tag de quien ha impactado es Enemy
-
+                    
+                    gota.SetActive(true);
                     //--------------------------------------
                     Debug.Log("le heeeeee dadoo");
                     HitTarget _hittarget = hit.transform.GetComponent<HitTarget>();
@@ -92,6 +102,7 @@ public class PlayerTargeting : MonoBehaviour
                     //instiantatebullet.velocity = transform.TransformDirection(new Vector3(3.0f, 0, 0));
                     if(_hittarget != null) {
                         _hittarget.TakeDamage(damage);
+                       
                     }
 
 
@@ -104,6 +115,8 @@ public class PlayerTargeting : MonoBehaviour
                         //Debug.Log("dins del if"+TargetDist);
                     }
                 }
+                value_enemies.SetActive(true);
+                
 
                 if (closetDist >= currentDist) { //100>=35
                     closeDistIndex = i; // = 1
@@ -119,4 +132,6 @@ public class PlayerTargeting : MonoBehaviour
         }
         
     }
+
+
 }

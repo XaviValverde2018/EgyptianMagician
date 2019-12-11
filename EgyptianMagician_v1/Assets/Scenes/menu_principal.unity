@@ -175,6 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37614939}
   - component: {fileID: 37614938}
+  - component: {fileID: 37614940}
   m_Layer: 0
   m_Name: MainMenuLogic
   m_TagString: Untagged
@@ -208,6 +209,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &37614940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37614937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3c423d21d4bdf418a1c1d302cd3761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &266475741
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,8 +376,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 37614938}
-        m_MethodName: PlayButton
+      - m_Target: {fileID: 37614940}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
