@@ -8,4 +8,5 @@ public class MainMenuInTheMorning : MonoBehaviour
 	{
 		LoadingScreenInTheMorningLogic.instance.LoadScene("lvl1");
 	}
+
 }

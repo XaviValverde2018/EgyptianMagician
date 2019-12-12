@@ -11,4 +11,7 @@ public class LoadPlay : MonoBehaviour
     public void Menu() {
         SceneManager.LoadScene("menu_principal");
     }
+    public void Settings() {
+        SceneManager.LoadScene("settings");
+    }
 }
