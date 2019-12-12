@@ -15,7 +15,7 @@ public class God : MonoBehaviour
      * ESC = sortir tot
      * */
 
-    // Update is called once per frame
+    // Update is called once per framed
     public bool lifeplayergod=false;
     public HitTarget ht;
 
