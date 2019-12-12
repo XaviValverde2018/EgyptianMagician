@@ -8,6 +8,8 @@ public class LifeController : MonoBehaviour
     public Image LifeBar;
     public float Fill;
     public AudioSource damageHorus;
+    public God god_lifeplayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +26,10 @@ public class LifeController : MonoBehaviour
     }
     private void OnTriggerStay(Collider other) {
         if (other.CompareTag("Player")) {
-            Fill -= Time.deltaTime * 0.1f;
-            LifeBar.fillAmount = Fill;
-            
+            if (god_lifeplayer.lifeplayergod == false) {
+                Fill -= Time.deltaTime * 0.1f;
+                LifeBar.fillAmount = Fill;
+            }   
         }
     }
     private void OnTriggerEnter(Collider other) {
