@@ -72,7 +72,7 @@ public class PlayerTargeting : MonoBehaviour
 
     void Update() {
        
-        if(playerjoystickcontroller.joystick.Horizontal == 0 && playerjoystickcontroller.joystick.Vertical == 0) {
+        if(playerjoystickcontroller.rigidbodyHorusVelocity.velocity == playerjoystickcontroller.isWalkVector) {
             Debug.Log("estic parat");
         }
         CalculateNearestTarget(); // function to calculate de nearest target in the room.
@@ -108,15 +108,17 @@ public class PlayerTargeting : MonoBehaviour
                     HitTarget _hittarget = hit.transform.GetComponent<HitTarget>();
                     //Rigidbody instiantatebullet = Instantiate(bullet, transform.position, transform.rotation) as Rigidbody;
                     //instiantatebullet.velocity = transform.TransformDirection(new Vector3(3.0f, 0, 0));
-                    if (playerjoystickcontroller.joystick.Horizontal == 0 && playerjoystickcontroller.joystick.Vertical == 0) {
+                    //if (playerjoystickcontroller.rigidbodyHorusVelocity.velocity == playerjoystickcontroller.isWalkVector) {
                         if (_hittarget != null) {
+                            if(playerjoystickcontroller.currentPos == playerjoystickcontroller.oldPos) {
                             _hittarget.TakeDamage(damage);
-                        } else {
+                        }
+                    } else {
                             gota.SetActive(false);//aqui me quedat
                         }
                             
                         
-                    }
+                    //}
                
 
 

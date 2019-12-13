@@ -8,7 +8,7 @@ public class RoomNearest : MonoBehaviour
     List<GameObject> enemiesListInRoom = new List<GameObject>();
     public bool playerInThisRoom = false;
     public bool isClearRoom = false;
-    public ParticleSystem rayosolar;
+    public PlayerController _playercontroller;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,12 +33,12 @@ public class RoomNearest : MonoBehaviour
             playerInThisRoom = true;
             PlayerTargeting.Instance.enemiesListInRoom = new List<GameObject>(enemiesListInRoom);//revisarooooooooooo
             Debug.Log("Enemy count:" + PlayerTargeting.Instance.enemiesListInRoom.Count);
-            rayosolar.Play();
         }
         if (other.CompareTag("Enemy")) {
             enemiesListInRoom.Add(other.gameObject);
             //Debug.Log("Enemy name:" + other.gameObject.name);
         }
+
     }
     private void OnTriggerExit(Collider other) {
         if (other.CompareTag("Player")) {
@@ -46,6 +46,21 @@ public class RoomNearest : MonoBehaviour
         }
         if (other.CompareTag("Enemy")) {
             enemiesListInRoom.Remove(other.gameObject);
+        }
+    }
+    private void OnTriggerStay(Collider other) {
+        if (_playercontroller.currentPos == _playercontroller.oldPos) {
+            for (int i = 0; i < PlayerTargeting.Instance.enemiesListInRoom.Count; i++) {
+                _playercontroller.transform.LookAt(PlayerTargeting.Instance.enemiesListInRoom[i].transform);
+                _playercontroller.rayoSolar.Play();
+                Debug.Log("estic PARAT");
+
+                //Debug.Log("Player Enter in the room!");
+            }
+        } else {
+            _playercontroller.rayoSolar.Stop();
+            _playercontroller.transform.LookAt(null);
+            Debug.Log("estic MOVENTME");
         }
     }
 

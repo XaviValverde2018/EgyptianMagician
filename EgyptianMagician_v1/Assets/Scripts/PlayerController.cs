@@ -10,11 +10,21 @@ public class PlayerController : MonoBehaviour
     Vector3 forward, right;
     public Joystick joystick;
     public GameObject Ssphere;
+    public Rigidbody rigidbodyHorusVelocity;
+    public bool isWalking;
+    [SerializeField]
+    public Vector3 isWalkVector = new Vector3(0, 0, 0);
+
+    public Vector3 currentPos = new Vector3();
+    public Vector3 oldPos = new Vector3(0, 0, 0);
+    public ParticleSystem rayoSolar;
+    public GameObject playerpos;
     //public float lifePlayer = 10.0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        isWalking = false;
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
@@ -24,10 +34,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentPos = playerpos.transform.position;
+        //oldPos = currentPos;
+        if (currentPos == oldPos) {
+            //Debug.Log("estic ATURAT");
+        } else {
+            //Debug.Log("estic MOVENTME");
+        }
+        oldPos = currentPos;
         if(Input.anyKey) {
             MovePlayer();
         }
-        ConditionNotWalking();
+
     }
 
     void MovePlayer() {
@@ -45,20 +63,7 @@ public class PlayerController : MonoBehaviour
         transform.position += rightMovement; // actualposition + new position
         transform.position += upMovemenrt; // actualposition + new position
 
-        if (joystick.Horizontal == 0 && joystick.Vertical == 0) {
-            for (int i = 0; i < PlayerTargeting.Instance.enemiesListInRoom.Count; i++) {
-                transform.LookAt(PlayerTargeting.Instance.enemiesListInRoom[i].transform);
-                //Debug.Log("Player Enter in the room!");
-            }
-        }
+  
     }
-    void ConditionNotWalking() {
-        if (joystick.Horizontal == 0 && joystick.Vertical == 0) { //en teoria amn el OnPointerUp() funcionaria.
-            Debug.Log(joystick.Horizontal);// value -1 to 1 
-            Debug.Log(joystick.Vertical);// value -1 to 1 
-            Ssphere.SetActive(true);
-        } else {
-            Ssphere.SetActive(false);
-        }
-    }
+
 }
