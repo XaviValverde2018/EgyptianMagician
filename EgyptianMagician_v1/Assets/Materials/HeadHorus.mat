@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Orange_TSCP_test01
-  m_Shader: {fileID: 4800000, guid: 24a666c4cf4f5194ba2cdff51c1dc2f0, type: 3}
-  m_ShaderKeywords: OUTLINE_BLENDING
+  m_Name: HeadHorus
+  m_Shader: {fileID: 4800000, guid: ccfc7d68845db8341944b3091b59be55, type: 3}
+  m_ShaderKeywords: TCP2_BUMP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dc38c38bbdbe3bc4a89868a7dbb625db, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -64,30 +64,25 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _DstBlendOutline: 10
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset1: 0
-    - _Offset2: 0
-    - _Outline: 0.39
     - _Parallax: 0.02
-    - _RampSmooth: 0.01
-    - _RampThreshold: 0.75
+    - _RampSmooth: 0.1
+    - _RampThreshold: 0.5
+    - _Shininess: 0.1
     - _SmoothnessTextureChannel: 0
+    - _SpecSmooth: 0.05
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _SrcBlendOutline: 5
-    - _TexLod: 5
     - _UVSec: 0
-    - _ZSmooth: -0.5
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.47424728, b: 0, a: 1}
+    - _Color: {r: 0, g: 0.9811321, b: 0.90283036, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HColor: {r: 0.9339623, g: 0.44167677, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SColor: {r: 0.5660378, g: 0.2000871, b: 0, a: 1}
+    - _HColor: {r: 0, g: 0.9019608, b: 0.9528302, a: 1}
+    - _SColor: {r: 0, g: 0.09013365, b: 0.8018868, a: 1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
