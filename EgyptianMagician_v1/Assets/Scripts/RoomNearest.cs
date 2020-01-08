@@ -7,12 +7,12 @@ public class RoomNearest : MonoBehaviour
     //Este codigo sirve para tener una area donde poder hacer nearest con los enemigos. 
     List<GameObject> enemiesListInRoom = new List<GameObject>();
     public bool playerInThisRoom = false;
-    public bool isClearRoom = false;
+    public bool isClearRoom;
     public PlayerController _playercontroller;
     // Start is called before the first frame update
     void Start()
     {
-        
+        isClearRoom = false;
     }
 
     // Update is called once per frame
