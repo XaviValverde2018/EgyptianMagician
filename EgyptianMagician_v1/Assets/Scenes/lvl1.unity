@@ -1275,10 +1275,15 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6712b6355ad48db4da3146d419910a1a, type: 2}
+    - target: {fileID: -4232771640675314930, guid: 3759407759e7dc54a9d69761519dc2d3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7da12429cab14349b5a573aba076bd3, type: 2}
     - target: {fileID: -4216859302048453862, guid: 3759407759e7dc54a9d69761519dc2d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.32546765
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3759407759e7dc54a9d69761519dc2d3,
         type: 3}
@@ -1288,7 +1293,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 3759407759e7dc54a9d69761519dc2d3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.18
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3759407759e7dc54a9d69761519dc2d3,
         type: 3}
@@ -1345,36 +1350,36 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: -606809009980732087, guid: 3759407759e7dc54a9d69761519dc2d3,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8a8de81b70522c342a0c5253f11d5ee7, type: 2}
-    - target: {fileID: 2737165731623749620, guid: 3759407759e7dc54a9d69761519dc2d3,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 965e704c8d5ecca438ae5ad07cb78ce5, type: 2}
     - target: {fileID: -1611968616934765012, guid: 3759407759e7dc54a9d69761519dc2d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a640e8e53ef297647aa66ce6b6a67eef, type: 2}
-    - target: {fileID: -4232771640675314930, guid: 3759407759e7dc54a9d69761519dc2d3,
+    - target: {fileID: -606809009980732087, guid: 3759407759e7dc54a9d69761519dc2d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d7da12429cab14349b5a573aba076bd3, type: 2}
+      objectReference: {fileID: 2100000, guid: 8a8de81b70522c342a0c5253f11d5ee7, type: 2}
     - target: {fileID: -70053232445636565, guid: 3759407759e7dc54a9d69761519dc2d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.624
+      value: -0.173
       objectReference: {fileID: 0}
     - target: {fileID: -70053232445636565, guid: 3759407759e7dc54a9d69761519dc2d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.143
+      value: -0.003
       objectReference: {fileID: 0}
+    - target: {fileID: -70053232445636565, guid: 3759407759e7dc54a9d69761519dc2d3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.409
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737165731623749620, guid: 3759407759e7dc54a9d69761519dc2d3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 965e704c8d5ecca438ae5ad07cb78ce5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3759407759e7dc54a9d69761519dc2d3, type: 3}
 --- !u!1 &630789042 stripped
@@ -8992,11 +8997,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1093922098}
     m_Modifications:
-    - target: {fileID: 8170153791668043269, guid: 0d230cc8be529a542a08cb878ab14b18,
-        type: 3}
-      propertyPath: m_Name
-      value: Floating Joystick
-      objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9101,6 +9101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153791668043269, guid: 0d230cc8be529a542a08cb878ab14b18,
+        type: 3}
+      propertyPath: m_Name
+      value: Floating Joystick
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043271, guid: 0d230cc8be529a542a08cb878ab14b18,
         type: 3}
