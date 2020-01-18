@@ -20,7 +20,7 @@ public class PlayerTargeting : MonoBehaviour
         }
     }
     private static PlayerTargeting instance;
-    public bool getATarget = false;
+    public bool getATarget = false; //recordar a cambiar a false.
     float currentDist = 0; // distancia actual
     float closetDist = 100f; //distancia mas larga de template. Distancia cerca 
     float TargetDist = 100f; //  distancia del sujeto mas larga de template. sujeto distancia
@@ -40,20 +40,18 @@ public class PlayerTargeting : MonoBehaviour
     bool killedAllEnemies = false;
     
     public GameObject gota;
-    public GameObject piramid;
     public GameObject value_enemies;
 
     public AudioSource hitAudio;
     public PlayerController playerjoystickcontroller;
+
     private void OnDrawGizmos() {
         if (getATarget) {
             for(int i = 0; i < enemiesListInRoom.Count; i++) {
                 RaycastHit hit;
                 bool isHit = Physics.Raycast(transform.position, enemiesListInRoom[i].transform.position - transform.position, out hit, 20f, layerMask);
-                if(isHit&& hit.transform.CompareTag("Enemy")) {
-                    //condicion de solo pintar verde el mas cerca
-                    //if()
-                        Gizmos.color = Color.green;
+                if(isHit && hit.transform.CompareTag("Enemy")) {
+                    Gizmos.color = Color.green;
                         
                 } else {
                     Gizmos.color = Color.red;
@@ -66,15 +64,12 @@ public class PlayerTargeting : MonoBehaviour
 
     private void Start() {
         gota.SetActive(false);
-        piramid.SetActive(false);
         value_enemies.SetActive(false);
-    }
+
+}
 
     void Update() {
        
-        if(playerjoystickcontroller.rigidbodyHorusVelocity.velocity == playerjoystickcontroller.isWalkVector) {
-            Debug.Log("estic parat");
-        }
         CalculateNearestTarget(); // function to calculate de nearest target in the room.
         //if(getATarget) transform.LookAt(Vector3.forward,Vector3.zero);
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -87,41 +82,32 @@ public class PlayerTargeting : MonoBehaviour
     void CalculateNearestTarget() {
         //Debug.Log("fora del if"+TargetDist);
         if (enemiesListInRoom.Count != 0) { // si no hay enemigos en la sala, reiniciamos variables. 
-            currentDist = 0f; 
-            closeDistIndex = 0; 
-            TargetIndex = -1;
 
-            for (int i = 0; i < enemiesListInRoom.Count; i++) {
+            for (int i = 0; i < enemiesListInRoom.Count; i++) {//recorrem el bucle d'enemics.
                 currentDist = Vector3.Distance(transform.position, enemiesListInRoom[i].transform.position);// distance: return distance between a and b. nos inventamos 35.
                 //Debug.Log("currentDist" +currentDist);
                 
                 RaycastHit hit;
+
                 bool isHit = Physics.Raycast(transform.position, enemiesListInRoom[i].transform.position - transform.position, out hit); //bool True if the ray intersects with a Collider, otherwise false.
 
                 //Debug.Log("isHit" + isHit);
-                if (isHit && hit.transform.CompareTag("Enemy")) {// si a impactado i el tag de quien ha impactado es Enemy
-
-
-                    piramid.SetActive(true);
-                    //--------------------------------------
-                    Debug.Log("le heeeeee dadoo");
+                if (isHit) {// si a impactado
+                  /*
+                   * 
+                    Debug.Log("Enemic[i] localitzat amb raycast.");
                     HitTarget _hittarget = hit.transform.GetComponent<HitTarget>();
-                    //Rigidbody instiantatebullet = Instantiate(bullet, transform.position, transform.rotation) as Rigidbody;
-                    //instiantatebullet.velocity = transform.TransformDirection(new Vector3(3.0f, 0, 0));
-                    //if (playerjoystickcontroller.rigidbodyHorusVelocity.velocity == playerjoystickcontroller.isWalkVector) {
+
                         if (_hittarget != null) {
                             if(playerjoystickcontroller.currentPos == playerjoystickcontroller.oldPos) {
                             _hittarget.TakeDamage(damage);
                         }
                     } else {
-                            gota.SetActive(false);//aqui me quedat
-                        }
+                            gota.SetActive(false);
+                        }*/
                             
                         
                     //}
-               
-
-
 
                 //-------------------------------------
                 if (TargetDist >= currentDist) { // 100 >= 35
@@ -144,8 +130,15 @@ public class PlayerTargeting : MonoBehaviour
             closetDist = 100f;
             TargetDist = 100f;
             getATarget = true;
+        }//si hi ha enemics a la sala
+        else {// si no hi ha enemics a la sala
+            Debug.Log(enemiesListInRoom.Count);
+            currentDist = 0f;
+            closeDistIndex = 0;
+            TargetIndex = -1;
         }
-        
+
+
     }
 
 
