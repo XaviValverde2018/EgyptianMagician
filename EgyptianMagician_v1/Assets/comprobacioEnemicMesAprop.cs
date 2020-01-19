@@ -8,7 +8,10 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     public float distanciaEntrePlayerIEnemicActual;
     public float distanciaMesAprop;
 
+    public GameObject enemicMesAprop;
+
     //variables per a borrar, son per TEST
+    public int vidaEnemicComprobacio=99;
 
     private void OnDrawGizmos() {
         for(int i=0; i< llistaEnemics.Count; i++) {
@@ -27,15 +30,24 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     void Start()
     {
         distanciaMesAprop = 999.0f;
+        //vidaEnemicComprobacio = GameObject.Find("lilaEnemic20").GetComponent<EnemyManager>().vidaEnemics;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CalculAprop();
+        GameObject GOenemicMesaprop;
+        GOenemicMesaprop = CalculAprop();
+        //vidaEnemicComprobacio = GameObject.Find("lilaEnemic20").GetComponent<EnemyManager>().vidaEnemics;
+        Debug.Log("ENEMICMESAPROP: " + GOenemicMesaprop.name);
+        vidaEnemicComprobacio = GameObject.Find(GOenemicMesaprop.name).GetComponent<EnemyManager>().vidaEnemics;
+
+        // ERROR AMB TOT AIXO? QUE S'EXECUTA UN COP I HEM DE FER QUE S'EXECUTI CONTINUAMENT *************
+        Debug.Log("VIDAENEMICCOMPROBACIO: " + vidaEnemicComprobacio);
+
 
     }
-    void CalculAprop() {
+    GameObject CalculAprop() {
         if (llistaEnemics.Count != 0) {
 
             for (int i = 0; i < llistaEnemics.Count; i++) {// en aquest bucle busquem l'enemic de mes aprop.
@@ -48,6 +60,13 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
                 if (distanciaMesAprop == Vector3.Distance(transform.position, llistaEnemics[i].transform.position)) {
                     transform.LookAt(llistaEnemics[i].transform);
                     Debug.Log("l'enemic mes aprop es: " + llistaEnemics[i].name);
+                    enemicMesAprop = llistaEnemics[i];
+
+                    /*-------Lógica de la qual afecta l'enemic més aprop -------*/
+                    //vidaEnemicComprobacio = GameObject.Find("enemicMesAprop").GetComponent<EnemyManager>().vidaEnemics;
+                    //Debug.Log("vidaEnemicComprobacio: "+vidaEnemicComprobacio);
+                    /*-------FIN: Lógica de la qual afecta l'enemic més aprop -------*/
+
                 }
             }
             Debug.Log(distanciaMesAprop);
@@ -55,5 +74,9 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
         } else {
             Debug.Log("no queden enemics");
         }
+        return enemicMesAprop.gameObject;
+    }
+    void reduintVida() {
+
     }
 }

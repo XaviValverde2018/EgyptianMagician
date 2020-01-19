@@ -1132,7 +1132,8 @@ MonoBehaviour:
   - {fileID: 748179091}
   distanciaEntrePlayerIEnemicActual: 0
   distanciaMesAprop: 0
-  enemyManagerScript: {fileID: 705743939}
+  enemicMesAprop: {fileID: 0}
+  vidaEnemicComprobacio: 0
 --- !u!1 &637081133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,8 +1222,8 @@ GameObject:
   - component: {fileID: 673665476}
   - component: {fileID: 673665481}
   m_Layer: 0
-  m_Name: primerEnemic (1)
-  m_TagString: Untagged
+  m_Name: verdEnemic100
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1273,7 +1274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 965e704c8d5ecca438ae5ad07cb78ce5, type: 2}
+  - {fileID: 2100000, guid: 4e0a007476ddb6e4cb284d94e6a69047, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1328,7 +1329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856526944930f4419fe905d6bed02f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemics: 20
+  vidaEnemics: 100
+  _CEMA: {fileID: 509024962}
 --- !u!1 &705743933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,7 +1346,7 @@ GameObject:
   - component: {fileID: 705743934}
   - component: {fileID: 705743939}
   m_Layer: 0
-  m_Name: primerEnemic
+  m_Name: lilaEnemic20
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1396,7 +1398,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 965e704c8d5ecca438ae5ad07cb78ce5, type: 2}
+  - {fileID: 2100000, guid: 8a8de81b70522c342a0c5253f11d5ee7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1452,6 +1454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemics: 20
+  _CEMA: {fileID: 509024962}
 --- !u!224 &741360168 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18,
@@ -1650,8 +1653,8 @@ GameObject:
   - component: {fileID: 748179092}
   - component: {fileID: 748179097}
   m_Layer: 0
-  m_Name: primerEnemic (2)
-  m_TagString: Wall
+  m_Name: blauEnemic80
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1702,7 +1705,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 965e704c8d5ecca438ae5ad07cb78ce5, type: 2}
+  - {fileID: 2100000, guid: 9e09516ee14d3a345ad9797ae8e5db34, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1757,7 +1760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856526944930f4419fe905d6bed02f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemics: 20
+  vidaEnemics: 80
+  _CEMA: {fileID: 509024962}
 --- !u!1 &777789177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,6 +1825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemics: 20
+  _CEMA: {fileID: 0}
 --- !u!4 &788451280
 Transform:
   m_ObjectHideFlags: 0
@@ -2607,7 +2612,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.24
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

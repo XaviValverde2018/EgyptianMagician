@@ -6,8 +6,7 @@ public class EnemyManager : MonoBehaviour
 {
     //public GameObject value_enemy1;
     //public GameObject enemy1;
-    public int vidaEnemics = 20;
-
+    public int vidaEnemics;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +16,9 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //value_enemy1.transform.position = enemy1.transform.position;
         //value_enemy1.SetActive(true);
     }
+
 }
