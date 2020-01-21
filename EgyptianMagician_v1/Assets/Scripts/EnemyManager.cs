@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         //value_enemy1.SetActive(false);
     }
 
@@ -19,6 +20,11 @@ public class EnemyManager : MonoBehaviour
 
         //value_enemy1.transform.position = enemy1.transform.position;
         //value_enemy1.SetActive(true);
+    }
+    private void OnTriggerEnter(Collider other) {
+        if (other.transform.CompareTag("bullet")) {
+            vidaEnemics--;
+        }
     }
 
 }

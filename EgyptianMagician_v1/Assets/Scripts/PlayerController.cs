@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public Joystick joystick;
     public Rigidbody rigidbodyHorusVelocity;
     public bool isWalking;
-    [SerializeField]
 
     public Vector3 currentPos = new Vector3();
     public Vector3 oldPos = new Vector3();

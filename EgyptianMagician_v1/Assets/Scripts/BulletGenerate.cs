@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class BulletGenerate : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 30f;
     Rigidbody _rbBullet;
-    public comprobacioEnemicMesAprop _comprobacioEnemicMesAprop;
     public comprobacioEnemicMesAprop _target;
     public Vector3 moveBulletToEnemicMesAProp;
+    public bool hitEnemy = false;
+
     //public comprobacioEnemicMesAprop _comprobacioEnemicMesAprop;
     //public GameObject enemicMesAPropBullet;
     // Start is called before the first frame update
@@ -24,14 +25,26 @@ public class BulletGenerate : MonoBehaviour
     }
 
     void TranslateBulletToEnemicMesAProp() {
-        _rbBullet = GetComponent<Rigidbody>();
-        _target = GameObject.FindObjectOfType<comprobacioEnemicMesAprop>();
-        moveBulletToEnemicMesAProp = (_target.enemicMesAprop.transform.position - transform.position).normalized * speed;
-        _rbBullet.velocity = new Vector3(moveBulletToEnemicMesAProp.x, moveBulletToEnemicMesAProp.y, moveBulletToEnemicMesAProp.z);
+            _rbBullet = GetComponent<Rigidbody>();
+            _target = GameObject.FindObjectOfType<comprobacioEnemicMesAprop>();
+            moveBulletToEnemicMesAProp = (_target.enemicMesAprop.transform.position - transform.position).normalized * speed;
+            _rbBullet.velocity = new Vector3(moveBulletToEnemicMesAProp.x, moveBulletToEnemicMesAProp.y, moveBulletToEnemicMesAProp.z);
+        
         //enemicMesAPropBullet = _comprobacioEnemicMesAprop.enemicMesAprop;
-        Destroy(gameObject, 3f);
+        //Destroy(gameObject, 3f);
 
         //transform.Translate(0, 0, speed * Time.deltaTime, 0);
         //Destroy(this.gameObject, 1.5f);
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.transform.CompareTag("Enemy")){
+            Debug.Log("hit!");
+            hitEnemy = true;
+            Destroy(gameObject);
+        } else {
+            hitEnemy = false;
+        }
+    }
+
 }

@@ -76,7 +76,5 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
         }
         return enemicMesAprop.gameObject;
     }
-    void reduintVida() {
 
-    }
 }
