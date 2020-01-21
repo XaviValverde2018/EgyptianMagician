@@ -27,10 +27,10 @@ public class PlayerController : MonoBehaviour
     public float FireRate = 0.5f;
 
     // variables de find all enemies
-    public GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+    /*public GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
     public int closestIndex = 0;
     public float closestDistance = Mathf.Infinity;
-    public float tempDistance;
+    public float tempDistance;*/
 
     //public float lifePlayer = 10.0f;
 
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
             elapsedTime = 0f;
         }
     }
-    void ClosestEnemyBullet() {
+    /*void ClosestEnemyBullet() {
         for(int i =0; i<enemies.Length; i++) {
             tempDistance = Vector3.Distance(posicioGenerarBulletBala.transform.position, enemies[i].transform.position);
             if(tempDistance < closestDistance) {
@@ -108,6 +108,6 @@ public class PlayerController : MonoBehaviour
         GameObject closestEnemy = enemies[closestIndex];
         Vector3 bulletDirection = closestEnemy.transform.position - posicioGenerarBulletBala.transform.position;
         Quaternion bulletRotation = Quaternion.LookRotation(bulletDirection, Vector3.up);
-    }
+    }*/
 
 }
