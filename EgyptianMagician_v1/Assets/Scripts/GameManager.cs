@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
 
     void BuscarEnemicsPerPasarAlSeguentNivell() {
-        Debug.Log("countEnemiesFindingRoomWithTag: " + countEnemiesFindingRoomWithTag);
+        //Debug.Log("countEnemiesFindingRoomWithTag: " + countEnemiesFindingRoomWithTag);
         countEnemiesFindingRoomWithTag = GameObject.FindGameObjectsWithTag("Enemy").Length;
         enemiesFindingRoom = GameObject.FindGameObjectsWithTag("Enemy");
         Debug.Log(enemiesFindingRoom);

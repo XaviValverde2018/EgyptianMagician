@@ -9,12 +9,13 @@ public class BulletGenerate : MonoBehaviour
     public comprobacioEnemicMesAprop _target;
     public Vector3 moveBulletToEnemicMesAProp;
     public bool hitEnemy = false;
-
+    public PlayerController playerController;
     //public comprobacioEnemicMesAprop _comprobacioEnemicMesAprop;
     //public GameObject enemicMesAPropBullet;
     // Start is called before the first frame update
     void Start()
     {
+        playerController = GameObject.FindObjectOfType<PlayerController>();
         TranslateBulletToEnemicMesAProp();
     }
 
@@ -25,10 +26,15 @@ public class BulletGenerate : MonoBehaviour
     }
 
     void TranslateBulletToEnemicMesAProp() {
+        if (playerController.isWalking == false) {
             _rbBullet = GetComponent<Rigidbody>();
             _target = GameObject.FindObjectOfType<comprobacioEnemicMesAprop>();
             moveBulletToEnemicMesAProp = (_target.enemicMesAprop.transform.position - transform.position).normalized * speed;
             _rbBullet.velocity = new Vector3(moveBulletToEnemicMesAProp.x, moveBulletToEnemicMesAProp.y, moveBulletToEnemicMesAProp.z);
+        } else {
+            Debug.Log("we are walking");
+
+        }
         
         //enemicMesAPropBullet = _comprobacioEnemicMesAprop.enemicMesAprop;
         //Destroy(gameObject, 3f);

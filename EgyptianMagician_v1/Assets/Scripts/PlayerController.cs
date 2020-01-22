@@ -91,9 +91,11 @@ public class PlayerController : MonoBehaviour
 
     void ShootBullet() {
         elapsedTime += Time.deltaTime;
-        if (/*(isWalking==false)&&*/elapsedTime > FireRate) {
+        if ((isWalking==false)&&elapsedTime > FireRate) {
             Instantiate(bulletBala, posicioGenerarBulletBala.transform.position, posicioGenerarBulletBala.transform.rotation);
             elapsedTime = 0f;
+        } else {
+            Debug.Log("no instantiate");
         }
     }
     /*void ClosestEnemyBullet() {

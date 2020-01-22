@@ -1144,7 +1144,7 @@ MonoBehaviour:
   currentPos: {x: 0, y: 0, z: 0}
   oldPos: {x: 0, y: 0, z: 0}
   rayoSolar: {fileID: 0}
-  playerpos: {fileID: 0}
+  playerpos: {fileID: 509024955}
   bulletBala: {fileID: 6292748870726536541, guid: bdc1f55e68c41ca48a53df560234e7db,
     type: 3}
   posicioGenerarBulletBala: {fileID: 488058854}
@@ -1239,7 +1239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8451417853039742303, guid: bdc1f55e68c41ca48a53df560234e7db,
         type: 3}
-      propertyPath: _playercontroller
+      propertyPath: playerController
       value: 
       objectReference: {fileID: 509024961}
     m_RemovedComponents: []
@@ -1421,7 +1421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673665475}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.4, y: 0.98, z: 22.66}
+  m_LocalPosition: {x: -4.4, y: 0.98, z: 20.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1868,7 +1868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856526944930f4419fe905d6bed02f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemics: 80
+  vidaEnemics: 20
 --- !u!1 &777789177
 GameObject:
   m_ObjectHideFlags: 0

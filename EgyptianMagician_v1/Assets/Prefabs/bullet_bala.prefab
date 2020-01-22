@@ -106,11 +106,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f58c7cd6d063b4c8b29d0028615fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  _playercontroller: {fileID: 0}
+  speed: 100
   _target: {fileID: 0}
   moveBulletToEnemicMesAProp: {x: 0, y: 0, z: 0}
   hitEnemy: 0
+  playerController: {fileID: 0}
 --- !u!54 &704328439466925365
 Rigidbody:
   m_ObjectHideFlags: 0

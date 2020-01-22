@@ -43,7 +43,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
         vidaEnemicComprobacio = GameObject.Find(GOenemicMesaprop.name).GetComponent<EnemyManager>().vidaEnemics;
 
         // ERROR AMB TOT AIXO? QUE S'EXECUTA UN COP I HEM DE FER QUE S'EXECUTI CONTINUAMENT *************
-        Debug.Log("VIDAENEMICCOMPROBACIO: " + vidaEnemicComprobacio);
+        //Debug.Log("VIDAENEMICCOMPROBACIO: " + vidaEnemicComprobacio);
 
 
     }
@@ -69,7 +69,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
 
                 }
             }
-            Debug.Log(distanciaMesAprop);
+            //Debug.Log(distanciaMesAprop);
             //aqui fem el remove de la llista. 
         } else {
             Debug.Log("no queden enemics");

@@ -23,8 +23,14 @@ public class EnemyManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) {
         if (other.transform.CompareTag("bullet")) {
-            vidaEnemics--;
+            DamagePlayerToEnemy();
+            if(vidaEnemics <= 0) {
+                
+            }
         }
+    }
+    void DamagePlayerToEnemy() {
+        vidaEnemics--;
     }
 
 }
