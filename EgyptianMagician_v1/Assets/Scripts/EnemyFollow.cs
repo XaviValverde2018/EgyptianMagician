@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
     public float speed=3.0f;
-    private Transform target;
+    public Transform target;
     // Start is called before the first frame update
     void Start()
     {
