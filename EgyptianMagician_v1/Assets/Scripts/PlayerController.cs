@@ -6,20 +6,25 @@ public class PlayerController : MonoBehaviour
 {
 
     [SerializeField]
-    float moveSpeed = 4f;
-    Vector3 forward, right;
     public Joystick joystick;
+    Vector3 forward, right;
+
+    [Header("Status")]
+    public float moveSpeed = 4f;
+    public float lifePlayer;
+
+    [Header("Movement")]
     public Rigidbody rigidbodyHorusVelocity;
     public bool isWalking;
-
     public Vector3 currentPos = new Vector3();
     public Vector3 oldPos = new Vector3();
-
-    public ParticleSystem rayoSolar;
     public GameObject playerpos;
 
+    [Header("Particles")]
+    public ParticleSystem rayoSolar;
 
     // variables del SHOOT
+    [Header("Shoot")]
     public GameObject bulletBala;
     public GameObject posicioGenerarBulletBala;
     public float elapsedTime;
@@ -36,7 +41,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
@@ -91,12 +96,15 @@ public class PlayerController : MonoBehaviour
 
     void ShootBullet() {
         elapsedTime += Time.deltaTime;
-        if ((isWalking==false)&&elapsedTime > FireRate) {
+        if ((isWalking==false)&&elapsedTime > FireRate) {// disparar quan estigui quiet
             Instantiate(bulletBala, posicioGenerarBulletBala.transform.position, posicioGenerarBulletBala.transform.rotation);
             elapsedTime = 0f;
         } else {
-            Debug.Log("no instantiate");
+            Debug.Log("no instantiate"); // no disparar quan estigui moventse. 
         }
+    }
+    void playerDamage() {// función ocn la lógica de hacer daño al player
+
     }
     /*void ClosestEnemyBullet() {
         for(int i =0; i<enemies.Length; i++) {

@@ -799,6 +799,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440204345}
   m_CullTransparentMesh: 0
+--- !u!1 &450666357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 450666358}
+  - component: {fileID: 450666359}
+  m_Layer: 0
+  m_Name: AreaDamageEnemyToPlayer
+  m_TagString: EnemyDamageToPlayer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &450666358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450666357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 705743938}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &450666359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450666357}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &459505413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1072,7 @@ GameObject:
   - component: {fileID: 509024956}
   - component: {fileID: 509024961}
   - component: {fileID: 509024962}
+  - component: {fileID: 509024963}
   m_Layer: 0
   m_Name: elJugador
   m_TagString: Player
@@ -1137,14 +1182,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84afd691896b23f419106a2635e0e6a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
   joystick: {fileID: 741360169}
+  moveSpeed: 4
+  lifePlayer: 100
   rigidbodyHorusVelocity: {fileID: 0}
   isWalking: 0
   currentPos: {x: 0, y: 0, z: 0}
   oldPos: {x: 0, y: 0, z: 0}
-  rayoSolar: {fileID: 0}
   playerpos: {fileID: 509024955}
+  rayoSolar: {fileID: 0}
   bulletBala: {fileID: 6292748870726536541, guid: bdc1f55e68c41ca48a53df560234e7db,
     type: 3}
   posicioGenerarBulletBala: {fileID: 488058854}
@@ -1170,6 +1216,19 @@ MonoBehaviour:
   distanciaMesAprop: 0
   enemicMesAprop: {fileID: 0}
   vidaEnemicComprobacio: 0
+--- !u!114 &509024963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509024955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8a090b69734ca4384c0a7a58e2b5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerController: {fileID: 0}
 --- !u!1001 &593859577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1546,7 +1605,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 4.91, y: 0.98, z: 22.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 450666358}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}

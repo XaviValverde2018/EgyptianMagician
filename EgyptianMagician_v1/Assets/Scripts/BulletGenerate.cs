@@ -26,13 +26,13 @@ public class BulletGenerate : MonoBehaviour
     }
 
     void TranslateBulletToEnemicMesAProp() {
-        if (playerController.isWalking == false) {
+        if (playerController.isWalking == false) {// moviment del disparat de la bullet quan estigui parat
             _rbBullet = GetComponent<Rigidbody>();
             _target = GameObject.FindObjectOfType<comprobacioEnemicMesAprop>();
             moveBulletToEnemicMesAProp = (_target.enemicMesAprop.transform.position - transform.position).normalized * speed;
             _rbBullet.velocity = new Vector3(moveBulletToEnemicMesAProp.x, moveBulletToEnemicMesAProp.y, moveBulletToEnemicMesAProp.z);
         } else {
-            Debug.Log("we are walking");
+            Debug.Log("we are walking"); // no moviment quan estigui moventse
 
         }
         
@@ -46,7 +46,7 @@ public class BulletGenerate : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.transform.CompareTag("Enemy")){
             Debug.Log("hit!");
-            hitEnemy = true;
+            hitEnemy = true; // bolea que envia a EnemyManager.cs per a dirli que l'hem tocat.
             Destroy(gameObject);
         } else {
             hitEnemy = false;

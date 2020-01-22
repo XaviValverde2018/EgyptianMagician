@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - damage
   - bullet
+  - EnemyDamageToPlayer
   layers:
   - Default
   - TransparentFX
