@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    // This code is every Enemy
+
     //public GameObject value_enemy1;
     //public GameObject enemy1;
+    [Header("Enemy Status")]
     public int vidaEnemics;
     // Start is called before the first frame update
     void Start()

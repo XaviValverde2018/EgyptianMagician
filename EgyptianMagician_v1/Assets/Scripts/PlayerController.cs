@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
+    // This code is in elJugador
 
     [SerializeField]
     public Joystick joystick;

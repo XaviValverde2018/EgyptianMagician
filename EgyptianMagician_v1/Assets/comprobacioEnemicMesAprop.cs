@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class comprobacioEnemicMesAprop : MonoBehaviour
 {
+    // This code is in elJugador
+    [Header("List Enemys room")]
     public List<GameObject> llistaEnemics = new List<GameObject>();
+    [Header("Distance Enemy Values")]
     public float distanciaEntrePlayerIEnemicActual;
     public float distanciaMesAprop;
-
     public GameObject enemicMesAprop;
+    public int vidaEnemicComprobacio=99;//variables per a borrar, son per TEST
 
-    //variables per a borrar, son per TEST
-    public int vidaEnemicComprobacio=99;
 
     private void OnDrawGizmos() {
         for(int i=0; i< llistaEnemics.Count; i++) {

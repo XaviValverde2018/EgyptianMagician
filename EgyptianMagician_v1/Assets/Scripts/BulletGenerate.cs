@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BulletGenerate : MonoBehaviour
 {
+    //This code is in Prefab Bullet Player
+
     public float speed = 30f;
     Rigidbody _rbBullet;
     public comprobacioEnemicMesAprop _target;

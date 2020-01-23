@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class playerDamageEnemyTrigger : MonoBehaviour
 {
+    // This code is in elJugador
+
+    [Header ("Find elJugador Life")]
     public PlayerController _playerController;
     // Start is called before the first frame update
     void Start()
