@@ -9,6 +9,7 @@ TagManager:
   - damage
   - bullet
   - EnemyDamageToPlayer
+  - bulletEnemy
   layers:
   - Default
   - TransparentFX

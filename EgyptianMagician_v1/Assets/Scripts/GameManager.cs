@@ -34,10 +34,10 @@ public class GameManager : MonoBehaviour
         Debug.Log(enemiesFindingRoom);
         if (countEnemiesFindingRoomWithTag == 0) { // Activem el prefab per anar a la seguent escena. 
             Debug.Log("no enemy");
-            potsAnarAlSeguentNivell.SetActive(true);
+            //potsAnarAlSeguentNivell.SetActive(true);
             //SceneManager.LoadScene("gameoverwin");
         } else {
-            potsAnarAlSeguentNivell.SetActive(false);
+            //potsAnarAlSeguentNivell.SetActive(false);
         }
     }// Serveix per buscar a un array d'enemics i si es 0 activar pasar a nivell seguent. 
 }
