@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour
     //public GameObject enemy1;
     [Header("Enemy Status")]
     public int vidaEnemics;
+    public bool enemicMort;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,12 +29,15 @@ public class EnemyManager : MonoBehaviour
         if (other.transform.CompareTag("bullet")) {
             DamagePlayerToEnemy();
             if(vidaEnemics <= 0) {
-                
+                enemicMort = true;
+            } else {
+                enemicMort = false;
             }
         }
     }
     void DamagePlayerToEnemy() {
         vidaEnemics--;
     }
+   
 
 }

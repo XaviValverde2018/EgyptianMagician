@@ -11,7 +11,9 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     public float distanciaEntrePlayerIEnemicActual;
     public float distanciaMesAprop;
     public GameObject enemicMesAprop;
-    public int vidaEnemicComprobacio=99;//variables per a borrar, son per TEST
+    public int indexEnemicMesAprop;
+    [Header("Remove Enemy death List")]
+    public int vidaEnemicComprobacio = 99;//variables per a borrar, son per TEST
 
 
     private void OnDrawGizmos() {
@@ -46,7 +48,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
         // ERROR AMB TOT AIXO? QUE S'EXECUTA UN COP I HEM DE FER QUE S'EXECUTI CONTINUAMENT *************
         //Debug.Log("VIDAENEMICCOMPROBACIO: " + vidaEnemicComprobacio);
 
-
+        TreureEnemicMortDeLaLlista();
     }
     GameObject CalculAprop() {
         if (llistaEnemics.Count != 0) {
@@ -62,7 +64,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
                     transform.LookAt(llistaEnemics[i].transform);
                     Debug.Log("l'enemic mes aprop es: " + llistaEnemics[i].name);
                     enemicMesAprop = llistaEnemics[i];
-
+                    indexEnemicMesAprop = i;
                     /*-------Lógica de la qual afecta l'enemic més aprop -------*/
                     //vidaEnemicComprobacio = GameObject.Find("enemicMesAprop").GetComponent<EnemyManager>().vidaEnemics;
                     //Debug.Log("vidaEnemicComprobacio: "+vidaEnemicComprobacio);
@@ -76,6 +78,15 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
             Debug.Log("no queden enemics");
         }
         return enemicMesAprop.gameObject;
+    }
+    void TreureEnemicMortDeLaLlista() {
+        Debug.Log("Vida En Directe EMA:"+vidaEnemicComprobacio);
+        if (vidaEnemicComprobacio <=0/*posarcodidequannoliquedavidal'enemic*/) {
+            for(int i=0; i < llistaEnemics.Count; i++) {
+                llistaEnemics.Remove(llistaEnemics[2]);
+                Debug.Log(llistaEnemics[indexEnemicMesAprop].name);
+            }
+        }
     }
 
 }

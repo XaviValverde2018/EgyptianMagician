@@ -2121,6 +2121,8 @@ MonoBehaviour:
   distanciaMesAprop: 0
   enemicMesAprop: {fileID: 0}
   vidaEnemicComprobacio: 0
+  indexEnemicMesAprop: 0
+  enemicMort: 0
 --- !u!114 &509024963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4947,7 +4949,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 10733693acc6e244f98f6f1f68a8ba4a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.56
+      value: 5.658
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 10733693acc6e244f98f6f1f68a8ba4a,
         type: 3}
