@@ -19,9 +19,9 @@ public class playerDamageEnemyTrigger : MonoBehaviour
     {
         
     }
-    private void OnTriggerStay(Collider other) {
+    /*private void OnTriggerStay(Collider other) {
         if (other.CompareTag("EnemyDamageToPlayer")) {
             _playerController.lifePlayer -= 1*Time.deltaTime;
         }
-    }
+    }*/
 }
