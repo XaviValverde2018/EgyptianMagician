@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     public float elapsedTime;
     public float FireRate = 0.5f;
 
+
+
     // variables de find all enemies
     /*public GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
     public int closestIndex = 0;
@@ -52,6 +54,8 @@ public class PlayerController : MonoBehaviour
         currentPos = playerpos.transform.position;
         oldPos = currentPos;
         isWalking = false;
+
+
     }
 
     // Update is called once per frame
@@ -63,7 +67,7 @@ public class PlayerController : MonoBehaviour
             MovePlayer();
         }
         IsPlayerInMovement();
-        
+
 
     }
 
