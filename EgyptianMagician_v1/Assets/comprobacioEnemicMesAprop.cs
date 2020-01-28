@@ -15,7 +15,6 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     [Header("Remove Enemy death List")]
     public int vidaEnemicComprobacio = 99;//variables per a borrar, son per TEST
 
-
     private void OnDrawGizmos() {
         for(int i=0; i< llistaEnemics.Count; i++) {
             RaycastHit hit;
@@ -44,7 +43,6 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
         //vidaEnemicComprobacio = GameObject.Find("lilaEnemic20").GetComponent<EnemyManager>().vidaEnemics;
         Debug.Log("ENEMICMESAPROP: " + GOenemicMesaprop.name);
         vidaEnemicComprobacio = GameObject.Find(GOenemicMesaprop.name).GetComponent<EnemyManager>().vidaEnemics;
-
         // ERROR AMB TOT AIXO? QUE S'EXECUTA UN COP I HEM DE FER QUE S'EXECUTI CONTINUAMENT *************
         //Debug.Log("VIDAENEMICCOMPROBACIO: " + vidaEnemicComprobacio);
 
@@ -80,11 +78,11 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
         return enemicMesAprop.gameObject;
     }
     void TreureEnemicMortDeLaLlista() {
-        Debug.Log("Vida En Directe EMA:"+vidaEnemicComprobacio);
+        //Debug.Log("Vida En Directe EMA:"+vidaEnemicComprobacio);
         if (vidaEnemicComprobacio <=0/*posarcodidequannoliquedavidal'enemic*/) {
             for(int i=0; i < llistaEnemics.Count; i++) {
                 llistaEnemics.Remove(llistaEnemics[2]);
-                Debug.Log(llistaEnemics[indexEnemicMesAprop].name);
+                //Debug.Log(llistaEnemics[indexEnemicMesAprop].name);
             }
         }
     }
