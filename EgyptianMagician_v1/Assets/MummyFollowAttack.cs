@@ -11,12 +11,14 @@ public class MummyFollowAttack : MonoBehaviour
 
     [Header("Values Attack")]
     public float elapsedTime;
-    public float FireRate = 3.0f;
+    public float FireRate = 20.0f;
     public float FireRateSlow = 10.0f;
     public float resetElapsedTimeSlow;
+    public float MummyFollowAttackValue = 4.0f;
 
     [Header("Values SLOW")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
+    public int valueRandomSLOW = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +39,9 @@ public class MummyFollowAttack : MonoBehaviour
             resetElapsedTimeSlow += Time.deltaTime;
             if (elapsedTime > FireRate) {
                 // SLOW ----------------------------------
-                _playerController.lifePlayer -= 1*Time.deltaTime;
+                _playerController.lifePlayer -= MummyFollowAttackValue;
                 elapsedTime = 0f;
-                if (randomvalue < 10) {
+                if (randomvalue < valueRandomSLOW) {
                     StartCoroutine(CountDown());
                     _playerController.moveSpeed = 1.0f;
                 }

@@ -11,13 +11,14 @@ public class AmmitAttack : MonoBehaviour
 
     [Header("Values Attack")]
     public float elapsedTime;
-    public float FireRate = 100.0f; // LA VARIABLE PER AMPLIAR L'ATAC DE l'AMMIT.
+    public float FireRate = 100.0f; 
     public float FireRateSlow = 10.0f;
     public float resetElapsedTimeSlow;
+    public float AmmitAttackValue = 10.0f;
 
     [Header("Values SLOW")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
-
+    public int valueRandomSTUN = 10;
     // Start is called before the first frame update
     void Start() {
         _playerController = FindObjectOfType<PlayerController>();
@@ -35,15 +36,18 @@ public class AmmitAttack : MonoBehaviour
             resetElapsedTimeSlow += Time.deltaTime;
             if (elapsedTime > FireRate) {
                 // STUN ----------------------------------
-                _playerController.lifePlayer -= 10;
+                _playerController.lifePlayer -= AmmitAttackValue;
+                Debug.Log("Ammit Attack -10");
                // _playerController.lifePlayer -= 10 * Time.deltaTime;
                 elapsedTime = 0f;
-                /*if (randomvalue < 29) {
-                    StartCoroutine(CountDown());
-                    _playerController.moveSpeed = 0.0001f;
-                }*/
-                // STUN ----------------------------------
+            
             }
+            if (randomvalue < valueRandomSTUN) {
+                Debug.Log("StartCorutine, value moveSpeedPlayer:" + _playerController.moveSpeed);
+                StartCoroutine(CountDown());
+                _playerController.moveSpeed = 0.0001f;
+            }
+            // STUN --------------------------------------
         }
     }
 
@@ -55,7 +59,7 @@ public class AmmitAttack : MonoBehaviour
         yield return new WaitForSeconds(6);
         _playerController.moveSpeed = 4.0f;
         randomvalue = 31;
-        Debug.Log("CountDown");
+        Debug.Log("EndCorutine, value moveSpeedPlayer:" + _playerController.moveSpeed);
     }
 
 
