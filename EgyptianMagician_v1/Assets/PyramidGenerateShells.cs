@@ -11,7 +11,7 @@ public class PyramidGenerateShells : MonoBehaviour
     public int indexRandom;
     public GameObject enemyShield;
     public GameObject child_Shell_Element;
-
+    public EnemyManager _enemyManager;
     /*[Header("BulletValues")]
     public GameObject bulletShield;
     public GameObject posicioGenerarBulletShield;*/
@@ -39,6 +39,7 @@ public class PyramidGenerateShells : MonoBehaviour
         enemyShield = llistaEnemics[indexRandom];
         child_Shell_Element = enemyShield.transform.Find("Shell_Element").gameObject;
         child_Shell_Element.SetActive(true);
+
     }
    /*void ShootShield() {
      Instantiate(bulletShield, posicioGenerarBulletShield.transform.position, posicioGenerarBulletShield.transform.rotation);
