@@ -6,14 +6,20 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //EN ESTE SCRIPT SE UNIFICARA TODA LA LOGICA PASADA LA ALPHA. 
+    [Header("EnemiesList")]
     public GameObject[] enemiesFindingRoom;
     public int countEnemiesFindingRoomWithTag;
     public GameObject potsAnarAlSeguentNivell;
 
+    [Header("Gold Status")]
+    public int totalGold;
 
+    [Header("Exp Status")]
+    public int totalExp;
     // Start is called before the first frame update
     void Start()
     {
+
         countEnemiesFindingRoomWithTag = 99;
         enemiesFindingRoom = GameObject.FindGameObjectsWithTag("Enemy");
         Debug.Log(enemiesFindingRoom);
@@ -40,4 +46,6 @@ public class GameManager : MonoBehaviour
             //potsAnarAlSeguentNivell.SetActive(false);
         }
     }// Serveix per buscar a un array d'enemics i si es 0 activar pasar a nivell seguent. 
+
+     
 }
