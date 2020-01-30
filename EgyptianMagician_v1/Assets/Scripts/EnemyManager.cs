@@ -11,16 +11,27 @@ public class EnemyManager : MonoBehaviour
     [Header("Enemy Status")]
     public int vidaEnemics;
     public bool enemicMort;
+
+    [Header("Shield Status")]
+    public bool ShieldActive;
+    public PyramidGenerateShells _pyramidGenerateShells;
+    public int lifeShield = 500;
+    public int vidaEnemicActual;
     // Start is called before the first frame update
     void Start()
     {
+        // FUNCIONS DEL SHIELD PER A DESENVOLUPAR
+        //vidaEnemicActual = _pyramidGenerateShells.lifeEnemyShield;
+        //vidaEnemicActual += lifeShield;
+        //vidaEnemics += vidaEnemicActual;
 
-        //value_enemy1.SetActive(false);
     }
 
     // Update is called once per frame
+
     void Update()
     {
+
         Debug.Log("vidaEnemics: " + vidaEnemics);
         //value_enemy1.transform.position = enemy1.transform.position;
         //value_enemy1.SetActive(true);

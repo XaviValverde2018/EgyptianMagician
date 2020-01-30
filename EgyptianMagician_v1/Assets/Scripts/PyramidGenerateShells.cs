@@ -12,6 +12,7 @@ public class PyramidGenerateShells : MonoBehaviour
     public GameObject enemyShield;
     public GameObject child_Shell_Element;
     public EnemyManager _enemyManager;
+    public int lifeEnemyShield;
     /*[Header("BulletValues")]
     public GameObject bulletShield;
     public GameObject posicioGenerarBulletShield;*/
@@ -43,9 +44,8 @@ public class PyramidGenerateShells : MonoBehaviour
         if (child_Shell_Element != null) {
             _enemyManager = child_Shell_Element.GetComponentInChildren<EnemyManager>();
             Debug.Log("_enemyManager.vidaEnemics:" + _enemyManager.vidaEnemics);
-            _enemyManager.vidaEnemics += 500;
-            Debug.Log("_enemyManager.vidaEnemicsUpdate:" + _enemyManager.vidaEnemics);
-
+            //_enemyManager.vidaEnemics += 500;
+            lifeEnemyShield = _enemyManager.vidaEnemics;
         }
 
 
