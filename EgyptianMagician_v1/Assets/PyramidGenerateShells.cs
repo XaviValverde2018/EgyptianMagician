@@ -39,6 +39,16 @@ public class PyramidGenerateShells : MonoBehaviour
         enemyShield = llistaEnemics[indexRandom];
         child_Shell_Element = enemyShield.transform.Find("Shell_Element").gameObject;
         child_Shell_Element.SetActive(true);
+        child_Shell_Element = GameObject.FindGameObjectWithTag("Enemy");
+        if (child_Shell_Element != null) {
+            _enemyManager = child_Shell_Element.GetComponentInChildren<EnemyManager>();
+            Debug.Log("_enemyManager.vidaEnemics:" + _enemyManager.vidaEnemics);
+            _enemyManager.vidaEnemics += 500;
+            Debug.Log("_enemyManager.vidaEnemicsUpdate:" + _enemyManager.vidaEnemics);
+
+        }
+
+
 
     }
    /*void ShootShield() {

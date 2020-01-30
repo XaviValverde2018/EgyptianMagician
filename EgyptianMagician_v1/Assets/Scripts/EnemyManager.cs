@@ -21,7 +21,7 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log("vidaEnemics: " + vidaEnemics);
         //value_enemy1.transform.position = enemy1.transform.position;
         //value_enemy1.SetActive(true);
     }

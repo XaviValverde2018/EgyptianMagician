@@ -1965,7 +1965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856526944930f4419fe905d6bed02f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemics: 250
+  vidaEnemics: 20
   enemicMort: 0
 --- !u!114 &705743940
 MonoBehaviour:
@@ -8431,6 +8431,7 @@ MonoBehaviour:
   indexRandom: 0
   enemyShield: {fileID: 0}
   child_Shell_Element: {fileID: 0}
+  _enemyManager: {fileID: 0}
 --- !u!1 &1379795580
 GameObject:
   m_ObjectHideFlags: 0
