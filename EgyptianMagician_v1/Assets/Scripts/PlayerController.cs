@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     // This code is in elJugador
 
     [SerializeField]
@@ -39,6 +38,11 @@ public class PlayerController : MonoBehaviour
     public float birdHeight = 2.5f;
     public GameObject horusPrefab;
     public GameObject birdPrefab;
+
+    [Header("Boost Status")]
+    public ActiveBoostPrefab _chooseBoost;
+    public bool healthBoostActivated;
+
     // variables de find all enemies
     /*public GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
     public int closestIndex = 0;
@@ -67,6 +71,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthBoostActivated = _chooseBoost.Time_boost.healthBool;
         // logica per activar el modo BIRD
         PC_GM_BirdActivated = _gmActiveBird.GM_BirdActivated;
         if (PC_GM_BirdActivated) {
@@ -81,6 +86,9 @@ public class PlayerController : MonoBehaviour
                 MovePlayer();
             }
             IsPlayerInMovement();
+        }
+        if (healthBoostActivated) {
+            AddLifePlayer();
         }
 
 
@@ -146,6 +154,11 @@ public class PlayerController : MonoBehaviour
         horusPrefab.SetActive(false);
         birdPrefab.SetActive(true);
 
+    }
+    void AddLifePlayer() {
+        if (lifePlayer < 100) {
+            lifePlayer += 5 * Time.deltaTime;
+        }
     }
 
 

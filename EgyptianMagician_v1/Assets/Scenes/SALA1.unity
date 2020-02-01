@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 741360169}
   moveSpeed: 4
-  lifePlayer: 100
+  lifePlayer: 50
   rigidbodyHorusVelocity: {fileID: 0}
   isWalking: 0
   currentPos: {x: 0, y: 0, z: 0}
@@ -1935,6 +1935,8 @@ MonoBehaviour:
   birdHeight: 2.5
   horusPrefab: {fileID: 239583493}
   birdPrefab: {fileID: 8296172669064373540}
+  _chooseBoost: {fileID: 498993504}
+  healthBoostActivated: 0
 --- !u!114 &509024962
 MonoBehaviour:
   m_ObjectHideFlags: 0
