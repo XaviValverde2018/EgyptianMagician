@@ -27,20 +27,27 @@ public class ActiveBoostPrefab : MonoBehaviour
         if (Time_boost.healthBool) {
             healthBehavior();
         }
+        
     }
     void MeteorBehavior() {
         meteoritoPREFAB.SetActive(true);
         megarayoPREFAB.SetActive(false);
         healtPREFAB.SetActive(false);
+
     }
     void megarayoBehavior() {
         meteoritoPREFAB.SetActive(false);
         megarayoPREFAB.SetActive(true);
         healtPREFAB.SetActive(false);
+
     }
     void healthBehavior() {
         meteoritoPREFAB.SetActive(false);
         megarayoPREFAB.SetActive(false);
         healtPREFAB.SetActive(true);
+
     }
+
+
+
 }

@@ -31,9 +31,10 @@ public class EscollirBoost : MonoBehaviour
         if (healthChoose) {
             Debug.Log("healtChoose");
         }
-        if (NullBoost == false) {
+        /*
+        if (NullBoost == false) {// Modificar per a cambiar a 1 cop
             this.gameObject.SetActive(false);
-        }
+        }*/
 
     }
     public void MeteorClic() {

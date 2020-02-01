@@ -28,9 +28,12 @@ public class ActiveBoost : MonoBehaviour
         healthBool = _escollirboost.healthChoose;
         if (meteorBool) {
             MeteorBehavior();
+            StartCoroutine(CountDown());
+
         }
         if (megarayoBool) {
             MegarayoBehavior();
+
         }
         if (healthBool) {
             HealthBehavior();
@@ -55,5 +58,8 @@ public class ActiveBoost : MonoBehaviour
         meteorImage.SetActive(false);
         megarayoImage.SetActive(false);
         healthImage.SetActive(true);
+
     }
+
+
 }
