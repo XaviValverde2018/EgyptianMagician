@@ -538,8 +538,19 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c53286c6ee50d9748b023bb5be39386a, type: 2}
+    - target: {fileID: -1504981713932161579, guid: 31e06b921810d0e48ba455d72de7445d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31e06b921810d0e48ba455d72de7445d, type: 3}
+--- !u!1 &149797934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 31e06b921810d0e48ba455d72de7445d,
+    type: 3}
+  m_PrefabInstance: {fileID: 149797933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158457326
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +774,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45eb9eb0e03eb4a4d9e2a5894472d080, type: 3}
+--- !u!1 &239583493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1013993205016500759, guid: 45eb9eb0e03eb4a4d9e2a5894472d080,
+    type: 3}
+  m_PrefabInstance: {fileID: 239583492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &246471626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,6 +1661,8 @@ MonoBehaviour:
   PC_GM_BirdActivated: 0
   moveBirdSpeed: 20
   birdHeight: 2.5
+  horusPrefab: {fileID: 239583493}
+  birdPrefab: {fileID: 149797934}
 --- !u!114 &509024962
 MonoBehaviour:
   m_ObjectHideFlags: 0

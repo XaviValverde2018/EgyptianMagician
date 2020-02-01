@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
     public bool PC_GM_BirdActivated;
     public float moveBirdSpeed = 20f;
     public float birdHeight = 2.5f;
+    public GameObject horusPrefab;
+    public GameObject birdPrefab;
     // variables de find all enemies
     /*public GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
     public int closestIndex = 0;
@@ -69,9 +71,11 @@ public class PlayerController : MonoBehaviour
         PC_GM_BirdActivated = _gmActiveBird.GM_BirdActivated;
         if (PC_GM_BirdActivated) {
             Debug.Log("PC_GM_BirdActivated :"+PC_GM_BirdActivated);
+            BirdPrefabActive();
             BirdMovement();
         } else {// logica normal, sense el modo BIRD
             ShootBullet();
+            HorusPrefabActive();
             //ClosestEnemyBullet(); DESCLICAR
             if (Input.anyKey) {
                 MovePlayer();
@@ -133,6 +137,15 @@ public class PlayerController : MonoBehaviour
         transform.position += rightMovement; // actualposition + new position
         transform.position += upMovemenrt; // actualposition + new position
         this.transform.position = new Vector3(transform.position.x, birdHeight, transform.position.z);
+    }
+    void HorusPrefabActive() {
+        birdPrefab.SetActive(false);
+        horusPrefab.SetActive(true);
+    }
+    void BirdPrefabActive() {
+        horusPrefab.SetActive(false);
+        birdPrefab.SetActive(true);
+
     }
 
 
