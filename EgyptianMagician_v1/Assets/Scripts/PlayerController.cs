@@ -31,7 +31,9 @@ public class PlayerController : MonoBehaviour
     public float elapsedTime;
     public float FireRate = 0.5f;
 
-
+    [Header("Bird Activated")]
+    public GameManager _gmActiveBird;
+    public bool PC_GM_BirdActivated;
 
     // variables de find all enemies
     /*public GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -61,12 +63,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ShootBullet();
-        //ClosestEnemyBullet(); DESCLICAR
-        if (Input.anyKey) {
-            MovePlayer();
+        PC_GM_BirdActivated = _gmActiveBird.GM_BirdActivated;
+        if (PC_GM_BirdActivated) {
+            Debug.Log("wii");
+        } else {
+            ShootBullet();
+            //ClosestEnemyBullet(); DESCLICAR
+            if (Input.anyKey) {
+                MovePlayer();
+            }
+            IsPlayerInMovement();
         }
-        IsPlayerInMovement();
 
 
     }

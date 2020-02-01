@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
 
     [Header("Exp Status")]
     public int totalExp;
+
+    [Header("Bird Activated")]
+    public ActiveBird _activeBird;
+    public bool GM_BirdActivated;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +27,15 @@ public class GameManager : MonoBehaviour
         countEnemiesFindingRoomWithTag = 99;
         enemiesFindingRoom = GameObject.FindGameObjectsWithTag("Enemy");
         Debug.Log(enemiesFindingRoom);
+        GM_BirdActivated = _activeBird.birdActivated;
     }
 
     // Update is called once per frame
     void Update()
     {
         BuscarEnemicsPerPasarAlSeguentNivell();
+        GM_BirdActivated = _activeBird.birdActivated;
+
     }
 
 

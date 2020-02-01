@@ -32,7 +32,7 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
 
-        Debug.Log("vidaEnemics: " + vidaEnemics);
+        //Debug.Log("vidaEnemics: " + vidaEnemics);
         //value_enemy1.transform.position = enemy1.transform.position;
         //value_enemy1.SetActive(true);
     }
