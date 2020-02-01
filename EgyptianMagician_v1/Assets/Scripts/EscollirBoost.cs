@@ -9,10 +9,11 @@ public class EscollirBoost : MonoBehaviour
     public bool meteoritChoose;
     public bool megarayoChoose;
     public bool healthChoose;
-    public bool currentBoost;
+    public bool NullBoost;
     // Start is called before the first frame update
     void Start()
     {
+        NullBoost = true;
         boostList[0].onClick.AddListener(MeteorClic);
         boostList[1].onClick.AddListener(MegaRayoClic);
         boostList[2].onClick.AddListener(HealthClic);
@@ -30,21 +31,27 @@ public class EscollirBoost : MonoBehaviour
         if (healthChoose) {
             Debug.Log("healtChoose");
         }
+        if (NullBoost == false) {
+            this.gameObject.SetActive(false);
+        }
 
     }
     public void MeteorClic() {
         meteoritChoose = true;
         megarayoChoose = false;
         healthChoose = false;
+        NullBoost = false;
     }
     public void MegaRayoClic() {
         meteoritChoose = false;
         megarayoChoose = true;
         healthChoose = false;
+        NullBoost = false;
     }
     public void HealthClic() {
         meteoritChoose = false;
         megarayoChoose = false;
         healthChoose = true;
+        NullBoost = false;
     }
 }
