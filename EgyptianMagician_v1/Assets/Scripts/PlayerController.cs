@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 currentPos = new Vector3();
     public Vector3 oldPos = new Vector3();
     public GameObject playerpos;
+    public float playerHeight = 0.98f;
 
     [Header("Particles")]
     public ParticleSystem rayoSolar;
@@ -34,7 +35,8 @@ public class PlayerController : MonoBehaviour
     [Header("Bird Activated")]
     public GameManager _gmActiveBird;
     public bool PC_GM_BirdActivated;
-
+    public float moveBirdSpeed = 20f;
+    public float birdHeight = 2.5f;
     // variables de find all enemies
     /*public GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
     public int closestIndex = 0;
@@ -63,10 +65,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // logica per activar el modo BIRD
         PC_GM_BirdActivated = _gmActiveBird.GM_BirdActivated;
         if (PC_GM_BirdActivated) {
-            Debug.Log("wii");
-        } else {
+            Debug.Log("PC_GM_BirdActivated :"+PC_GM_BirdActivated);
+            BirdMovement();
+        } else {// logica normal, sense el modo BIRD
             ShootBullet();
             //ClosestEnemyBullet(); DESCLICAR
             if (Input.anyKey) {
@@ -90,6 +94,7 @@ public class PlayerController : MonoBehaviour
         transform.forward = heading; // de Z axis in worldspace. Green square.
         transform.position += rightMovement; // actualposition + new position
         transform.position += upMovemenrt; // actualposition + new position
+        this.transform.position = new Vector3(transform.position.x, playerHeight, transform.position.z);
 
     }
 
@@ -115,20 +120,21 @@ public class PlayerController : MonoBehaviour
             Debug.Log("no instantiate"); // no disparar quan estigui moventse. 
         }
     }
-    void playerDamage() {// función ocn la lógica de hacer daño al player
+    void BirdMovement() {// función ocn la lógica de hacer daño al player
+        Vector3 direction = new Vector3(joystick.Horizontal, 0, joystick.Vertical);
+        //Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
+        Vector3 rightMovement = right * moveBirdSpeed * Time.deltaTime * joystick.Horizontal; // right or left direction. 
+        Vector3 upMovemenrt = forward * moveBirdSpeed * Time.deltaTime * joystick.Vertical; // forward or back direction.
+
+        Vector3 heading = Vector3.Normalize(rightMovement + upMovemenrt); // total direction direction
+
+        transform.forward = heading; // de Z axis in worldspace. Green square.
+        transform.position += rightMovement; // actualposition + new position
+        transform.position += upMovemenrt; // actualposition + new position
+        this.transform.position = new Vector3(transform.position.x, birdHeight, transform.position.z);
     }
-    /*void ClosestEnemyBullet() {
-        for(int i =0; i<enemies.Length; i++) {
-            tempDistance = Vector3.Distance(posicioGenerarBulletBala.transform.position, enemies[i].transform.position);
-            if(tempDistance < closestDistance) {
-                closestDistance = tempDistance;
-                closestIndex = i;
-            }
-        }
-        GameObject closestEnemy = enemies[closestIndex];
-        Vector3 bulletDirection = closestEnemy.transform.position - posicioGenerarBulletBala.transform.position;
-        Quaternion bulletRotation = Quaternion.LookRotation(bulletDirection, Vector3.up);
-    }*/
+
+
 
 }
