@@ -124,5 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   _playerTarget: {fileID: 0}
+  _playerController: {fileID: 0}
   hitPlayer: 0
   moveBulletToPlayer: {x: 0, y: 0, z: 0}
+  gm_activeBird: {fileID: 0}
+  BEG_BirdActivated: 0

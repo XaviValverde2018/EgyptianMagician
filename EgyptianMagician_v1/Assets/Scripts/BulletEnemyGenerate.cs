@@ -5,13 +5,14 @@ using UnityEngine;
 public class BulletEnemyGenerate : MonoBehaviour
 {
     //This code is inBulletEnemy prefab
-
+    [Header("Enemy Bullet Status")]
     public float speed = 10f;
     Rigidbody _rbBulletEnemy;
     public comprobacioEnemicMesAprop _playerTarget;
     public PlayerController _playerController;
     public bool hitPlayer = false;
     public Vector3 moveBulletToPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class BulletEnemyGenerate : MonoBehaviour
     void Update()
     {
         ShootToPlayer();
+
     }
     void ShootToPlayer() {
         //Aqui hauriem de comprovar que existeix el player
@@ -44,4 +46,5 @@ public class BulletEnemyGenerate : MonoBehaviour
     void DamagePlayer() {
         _playerController.lifePlayer--;
     }
+
 }

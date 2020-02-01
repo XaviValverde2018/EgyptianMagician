@@ -204,6 +204,8 @@ MonoBehaviour:
   posicioGenerarBulletEnemy: {fileID: 571341258}
   elapsedTime: 0
   FireRate: 0.5
+  _gmBirdActivated: {fileID: 745894988}
+  ES_GM_BirdActivated: 0
 --- !u!114 &40108260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,6 +1441,7 @@ MonoBehaviour:
   currentPos: {x: 0, y: 0, z: 0}
   oldPos: {x: 0, y: 0, z: 0}
   playerpos: {fileID: 509024955}
+  playerHeight: 0.98
   rayoSolar: {fileID: 0}
   bulletBala: {fileID: 6292748870726536541, guid: bdc1f55e68c41ca48a53df560234e7db,
     type: 3}
@@ -1448,6 +1451,7 @@ MonoBehaviour:
   _gmActiveBird: {fileID: 745894988}
   PC_GM_BirdActivated: 0
   moveBirdSpeed: 20
+  birdHeight: 2.5
 --- !u!114 &509024962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1529,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: 6292748870726536541, guid: bdc1f55e68c41ca48a53df560234e7db,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1313431138135288400, guid: bdc1f55e68c41ca48a53df560234e7db,
         type: 3}
@@ -1851,7 +1855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.1
   target: {fileID: 509024960}
-  targetvector3: {fileID: 0}
 --- !u!1 &705743933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,7 +2004,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   target: {fileID: 509024960}
-  targetvector3: {fileID: 509024960}
 --- !u!1 &711638446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,6 +2827,8 @@ MonoBehaviour:
   posicioGenerarBulletEnemy: {fileID: 660133455}
   elapsedTime: 0
   FireRate: 2
+  _gmBirdActivated: {fileID: 745894988}
+  ES_GM_BirdActivated: 0
 --- !u!1 &777789177
 GameObject:
   m_ObjectHideFlags: 0
@@ -10265,11 +10269,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bullet_Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 677237687195902227, guid: 8ecb721a730485f48bd4aac845c4ed3c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5478738340465952286, guid: 8ecb721a730485f48bd4aac845c4ed3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10325,16 +10324,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5478738340465952286, guid: 8ecb721a730485f48bd4aac845c4ed3c,
+    - target: {fileID: 4001934787753899325, guid: 8ecb721a730485f48bd4aac845c4ed3c,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478738340465952286, guid: 8ecb721a730485f48bd4aac845c4ed3c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: gm_activeBird
+      value: 
+      objectReference: {fileID: 745894988}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ecb721a730485f48bd4aac845c4ed3c, type: 3}
 --- !u!1 &1911571130
@@ -11086,7 +11080,7 @@ PrefabInstance:
     - target: {fileID: 5390423752325878228, guid: 3c05a3e3d3f64f24fad5861487850bc9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1126122830529738457, guid: 3c05a3e3d3f64f24fad5861487850bc9,
         type: 3}
