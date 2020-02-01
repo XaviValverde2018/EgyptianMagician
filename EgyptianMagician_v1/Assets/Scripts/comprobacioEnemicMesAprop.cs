@@ -59,6 +59,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
             }
             for (int i = 0; i < llistaEnemics.Count; i++) {// En aquest bucle tenim el enemic mes aprop. 
                 if (distanciaMesAprop == Vector3.Distance(transform.position, llistaEnemics[i].transform.position)) {
+                    // MODIFICAR EL LOOKAT perque nomes s'activi quan BIRDACTIVATED = FALSE
                     transform.LookAt(llistaEnemics[i].transform);
                     Debug.Log("l'enemic mes aprop es: " + llistaEnemics[i].name);
                     enemicMesAprop = llistaEnemics[i];

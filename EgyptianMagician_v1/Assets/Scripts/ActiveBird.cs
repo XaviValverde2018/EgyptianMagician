@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ActiveBird : MonoBehaviour
 {
+    //This code is in Button Bird_boost
     public Button birdButton;
     public int add;
     public bool birdActivated;
