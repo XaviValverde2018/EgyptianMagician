@@ -28,7 +28,7 @@ public class ActiveBoost : MonoBehaviour
         healthBool = _escollirboost.healthChoose;
         if (meteorBool) {
             MeteorBehavior();
-            StartCoroutine(CountDown());
+            
 
         }
         if (megarayoBool) {
