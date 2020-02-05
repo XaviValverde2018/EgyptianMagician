@@ -24,7 +24,7 @@ public class BulletGenerate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DestroyIfBulletIsntMove();
     }
 
     void TranslateBulletToEnemicMesAProp() {
@@ -52,6 +52,11 @@ public class BulletGenerate : MonoBehaviour
             Destroy(gameObject);
         } else {
             hitEnemy = false;
+        }
+    }
+    void DestroyIfBulletIsntMove() {
+        if(_rbBullet.velocity == new Vector3(0, 0, 0)) {
+            Debug.Log("la bullet no s'esta movent");
         }
     }
 

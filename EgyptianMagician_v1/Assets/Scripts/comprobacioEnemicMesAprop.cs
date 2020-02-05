@@ -12,6 +12,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     public float distanciaMesAprop;
     public GameObject enemicMesAprop;
     public int indexEnemicMesAprop;
+    GameObject GOenemicMesaprop;
     [Header("Remove Enemy death List")]
     public int vidaEnemicComprobacio = 99;//variables per a borrar, son per TEST
 
@@ -38,7 +39,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject GOenemicMesaprop;
+
         GOenemicMesaprop = CalculAprop();
         //vidaEnemicComprobacio = GameObject.Find("lilaEnemic20").GetComponent<EnemyManager>().vidaEnemics;
         Debug.Log("ENEMICMESAPROP: " + GOenemicMesaprop.name);
@@ -46,9 +47,12 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
         // ERROR AMB TOT AIXO? QUE S'EXECUTA UN COP I HEM DE FER QUE S'EXECUTI CONTINUAMENT *************
         //Debug.Log("VIDAENEMICCOMPROBACIO: " + vidaEnemicComprobacio);
 
-        TreureEnemicMortDeLaLlista();
+        //TreureEnemicMortDeLaLlista();
     }
     GameObject CalculAprop() {
+        if (Input.GetKeyDown(KeyCode.A)) {
+            llistaEnemics.Remove(llistaEnemics[0]);
+        }
         if (llistaEnemics.Count != 0) {
 
             for (int i = 0; i < llistaEnemics.Count; i++) {// en aquest bucle busquem l'enemic de mes aprop.
@@ -78,14 +82,14 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
         }
         return enemicMesAprop.gameObject;
     }
-    void TreureEnemicMortDeLaLlista() {
+    /*void TreureEnemicMortDeLaLlista() {
         //Debug.Log("Vida En Directe EMA:"+vidaEnemicComprobacio);
-        if (vidaEnemicComprobacio <=0/*posarcodidequannoliquedavidal'enemic*/) {
+        if (vidaEnemicComprobacio <=0/*posarcodidequannoliquedavidal'enemic) {
             for(int i=0; i < llistaEnemics.Count; i++) {
                 llistaEnemics.Remove(llistaEnemics[2]);
                 //Debug.Log(llistaEnemics[indexEnemicMesAprop].name);
             }
         }
-    }
+    }*/
 
 }

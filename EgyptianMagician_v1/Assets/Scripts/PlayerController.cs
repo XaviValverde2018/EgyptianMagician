@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject playerpos;
     public float playerHeight = 0.98f;
 
+
     [Header("Particles")]
     public ParticleSystem rayoSolar;
 
@@ -86,6 +87,7 @@ public class PlayerController : MonoBehaviour {
                 MovePlayer();
             }
             IsPlayerInMovement();
+ 
         }
         if (healthBoostActivated) {
             AddLifePlayer();
