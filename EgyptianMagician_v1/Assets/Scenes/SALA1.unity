@@ -2015,11 +2015,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: bullet_bala
       objectReference: {fileID: 0}
-    - target: {fileID: 6292748870726536541, guid: bdc1f55e68c41ca48a53df560234e7db,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1313431138135288400, guid: bdc1f55e68c41ca48a53df560234e7db,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2074,16 +2069,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1313431138135288400, guid: bdc1f55e68c41ca48a53df560234e7db,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1313431138135288400, guid: bdc1f55e68c41ca48a53df560234e7db,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8451417853039742303, guid: bdc1f55e68c41ca48a53df560234e7db,
         type: 3}
