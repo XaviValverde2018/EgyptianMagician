@@ -2104,6 +2104,7 @@ MonoBehaviour:
   posicioGenerarBulletBala: {fileID: 488058854}
   elapsedTime: 0
   FireRate: 0.5
+  _comprobacioEnemicMesAprop: {fileID: 509024962}
   _gmActiveBird: {fileID: 745894988}
   PC_GM_BirdActivated: 0
   moveBirdSpeed: 20
@@ -2130,10 +2131,12 @@ MonoBehaviour:
   - {fileID: 748179091}
   - {fileID: 40108258}
   - {fileID: 705743933}
+  NoEnemicsOnRoom: 0
   distanciaEntrePlayerIEnemicActual: 0
   distanciaMesAprop: 0
   enemicMesAprop: {fileID: 0}
   indexEnemicMesAprop: 0
+  GOenemicMesaprop: {fileID: 0}
   vidaEnemicComprobacio: 0
   enemicTemplateMesLLuny: {fileID: 1650266906}
 --- !u!114 &509024963
@@ -21679,11 +21682,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4001934787753899325, guid: 8ecb721a730485f48bd4aac845c4ed3c,
-        type: 3}
-      propertyPath: gm_activeBird
-      value: 
-      objectReference: {fileID: 745894988}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ecb721a730485f48bd4aac845c4ed3c, type: 3}
 --- !u!1 &1911571130

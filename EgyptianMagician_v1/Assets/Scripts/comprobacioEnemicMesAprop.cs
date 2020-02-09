@@ -7,6 +7,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     // This code is in elJugador
     [Header("List Enemys room")]
     public List<GameObject> llistaEnemics = new List<GameObject>();
+    public bool NoEnemicsOnRoom; //funció per saber si queden o no enemics. si no queden = true. 
     [Header("Distance Enemy Values")]
     public float distanciaEntrePlayerIEnemicActual;
     public float distanciaMesAprop;
@@ -14,7 +15,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     public int indexEnemicMesAprop;
     public GameObject GOenemicMesaprop;
     [Header("Remove Enemy death List")]
-    public int vidaEnemicComprobacio = 99;//variables per a borrar, son per TEST
+    public int vidaEnemicComprobacio = 99;
     public GameObject enemicTemplateMesLLuny;
 
     private void OnDrawGizmos() {
@@ -34,6 +35,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     void Start()
     {
         distanciaMesAprop = 999.0f;
+        NoEnemicsOnRoom = false;
         //vidaEnemicComprobacio = GameObject.Find("lilaEnemic20").GetComponent<EnemyManager>().vidaEnemics;
     }
 
@@ -44,17 +46,22 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
         GOenemicMesaprop = CalculAprop();
         //vidaEnemicComprobacio = GameObject.Find("lilaEnemic20").GetComponent<EnemyManager>().vidaEnemics;
         Debug.Log("ENEMICMESAPROP: " + GOenemicMesaprop.name);
-        vidaEnemicComprobacio = GameObject.Find(GOenemicMesaprop.name).GetComponent<EnemyManager>().vidaEnemics;
+        if (vidaEnemicComprobacio != -100) {
+            vidaEnemicComprobacio = GameObject.Find(GOenemicMesaprop.name).GetComponent<EnemyManager>().vidaEnemics;
+        }
         // ERROR AMB TOT AIXO? QUE S'EXECUTA UN COP I HEM DE FER QUE S'EXECUTI CONTINUAMENT *************
         //Debug.Log("VIDAENEMICCOMPROBACIO: " + vidaEnemicComprobacio);
-        if (Input.GetKeyDown(KeyCode.A)) {
+        // MOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOLT IMPORTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANNT
+        /*if (Input.GetKeyDown(KeyCode.A)) {
             llistaEnemics.Remove(llistaEnemics[indexEnemicMesAprop]);
             Destroy(enemicMesAprop);
             enemicMesAprop = enemicTemplateMesLLuny;
             distanciaMesAprop = 999.0f;
 
-        }
+        }*/
         //TreureEnemicMortDeLaLlista();
+        MatarEnemics();
+        EnemicsOnRoom(); 
     }
     GameObject CalculAprop() {
 
@@ -96,5 +103,21 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
             }
         }
     }*/
+    void MatarEnemics() {
+        if (vidaEnemicComprobacio <= 0) {
+            llistaEnemics.Remove(llistaEnemics[indexEnemicMesAprop]);
+            Destroy(enemicMesAprop);
+            enemicMesAprop = enemicTemplateMesLLuny;
+            distanciaMesAprop = 999.0f;
+        }
+    }
+    void EnemicsOnRoom() {
+        if(llistaEnemics.Count == 0) {
+            NoEnemicsOnRoom = true;
+            vidaEnemicComprobacio = -100;
+        } else {
+            NoEnemicsOnRoom = false;
+        }
+    }
 
 }

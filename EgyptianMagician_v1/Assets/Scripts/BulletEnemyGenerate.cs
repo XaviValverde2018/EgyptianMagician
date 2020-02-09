@@ -12,7 +12,7 @@ public class BulletEnemyGenerate : MonoBehaviour
     public PlayerController _playerController;
     public bool hitPlayer = false;
     public Vector3 moveBulletToPlayer;
-
+    public Vector3 lastpositionPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +32,7 @@ public class BulletEnemyGenerate : MonoBehaviour
         //_rbBulletEnemy.velocity = new Vector3(1, 0, 0).normalized*speed;
         moveBulletToPlayer = (_playerTarget.transform.position - transform.position).normalized * speed;
         _rbBulletEnemy.velocity = new Vector3(moveBulletToPlayer.x, moveBulletToPlayer.y, moveBulletToPlayer.z);
+
     }
     private void OnTriggerEnter(Collider other) {
         if (other.transform.CompareTag("Player")) {

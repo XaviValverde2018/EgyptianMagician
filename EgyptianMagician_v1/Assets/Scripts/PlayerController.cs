@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject posicioGenerarBulletBala;
     public float elapsedTime;
     public float FireRate = 0.5f;
+    public comprobacioEnemicMesAprop _comprobacioEnemicMesAprop;
 
     [Header("Bird Activated")]
     public GameManager _gmActiveBird;
@@ -127,9 +128,11 @@ public class PlayerController : MonoBehaviour {
 
     void ShootBullet() {
         elapsedTime += Time.deltaTime;
-        if ((isWalking==false)&&elapsedTime > FireRate) {// disparar quan estigui quiet
-            Instantiate(bulletBala, posicioGenerarBulletBala.transform.position, posicioGenerarBulletBala.transform.rotation);
-            elapsedTime = 0f;
+        if ((isWalking==false)&&(elapsedTime > FireRate)) {// disparar quan estigui quiet
+            if (_comprobacioEnemicMesAprop.NoEnemicsOnRoom == false) {
+                Instantiate(bulletBala, posicioGenerarBulletBala.transform.position, posicioGenerarBulletBala.transform.rotation);
+                elapsedTime = 0f;
+            }
         } else {
             Debug.Log("no instantiate"); // no disparar quan estigui moventse. 
         }

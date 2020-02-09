@@ -39,4 +39,5 @@ public class LifeController : MonoBehaviour
             damageHorus.Play();
         }
     }*/
+
 }

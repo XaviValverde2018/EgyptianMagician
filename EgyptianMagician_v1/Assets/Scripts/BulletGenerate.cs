@@ -31,8 +31,10 @@ public class BulletGenerate : MonoBehaviour
         if (playerController.isWalking == false) {// moviment del disparat de la bullet quan estigui parat
             _rbBullet = GetComponent<Rigidbody>();
             _target = GameObject.FindObjectOfType<comprobacioEnemicMesAprop>();
-            moveBulletToEnemicMesAProp = (_target.enemicMesAprop.transform.position - transform.position).normalized * speed;
-            _rbBullet.velocity = new Vector3(moveBulletToEnemicMesAProp.x, moveBulletToEnemicMesAProp.y, moveBulletToEnemicMesAProp.z);
+            if (_target.NoEnemicsOnRoom == false) {
+                moveBulletToEnemicMesAProp = (_target.enemicMesAprop.transform.position - transform.position).normalized * speed;
+                _rbBullet.velocity = new Vector3(moveBulletToEnemicMesAProp.x, moveBulletToEnemicMesAProp.y, moveBulletToEnemicMesAProp.z);
+            }
         } else {
             Debug.Log("we are walking"); // no moviment quan estigui moventse
 
