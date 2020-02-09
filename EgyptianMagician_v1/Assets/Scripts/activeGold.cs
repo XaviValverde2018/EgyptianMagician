@@ -15,6 +15,7 @@ public class activeGold : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame

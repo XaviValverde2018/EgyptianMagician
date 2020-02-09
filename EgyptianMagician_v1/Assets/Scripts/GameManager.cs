@@ -13,9 +13,11 @@ public class GameManager : MonoBehaviour
 
     [Header("Gold Status")]
     public int totalGold;
+    public Text textGold;
 
     [Header("Exp Status")]
     public int totalExp;
+    public Text textExp;
 
     [Header("Bird Activated")]
     public ActiveBird _activeBird;
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
     {
         BuscarEnemicsPerPasarAlSeguentNivell();
         GM_BirdActivated = _activeBird.birdActivated;
+        textGold.text = totalGold.ToString();
 
     }
 
@@ -53,6 +56,7 @@ public class GameManager : MonoBehaviour
             //potsAnarAlSeguentNivell.SetActive(false);
         }
     }// Serveix per buscar a un array d'enemics i si es 0 activar pasar a nivell seguent. 
+
 
      
 }
