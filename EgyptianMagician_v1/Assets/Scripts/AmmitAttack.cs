@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
+
 public class AmmitAttack : MonoBehaviour 
 {
     //This code is in AreaDamageEnemyToPlayerSTUN prefab (inside Ammit)
@@ -16,9 +18,11 @@ public class AmmitAttack : MonoBehaviour
     public float resetElapsedTimeSlow;
     public float AmmitAttackValue = 10.0f;
 
-    [Header("Values SLOW")]
+    [Header("Values STUN")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
     public int valueRandomSTUN = 10;
+    public GameObject stunText;
+
     // Start is called before the first frame update
     void Start() {
         _playerController = FindObjectOfType<PlayerController>();
@@ -46,6 +50,8 @@ public class AmmitAttack : MonoBehaviour
                 Debug.Log("StartCorutine, value moveSpeedPlayer:" + _playerController.moveSpeed);
                 StartCoroutine(CountDown());
                 _playerController.moveSpeed = 0.0001f;
+                stunText.SetActive(true);
+
             }
             // STUN --------------------------------------
         }

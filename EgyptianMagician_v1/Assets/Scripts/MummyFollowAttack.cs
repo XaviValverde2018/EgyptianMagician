@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 public class MummyFollowAttack : MonoBehaviour
 {
     //This code is in AreaDamageEnemyToPlayer prefab (inside MummyFollow)
@@ -19,6 +20,7 @@ public class MummyFollowAttack : MonoBehaviour
     [Header("Values SLOW")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
     public int valueRandomSLOW = 10;
+    public GameObject slowText;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,7 @@ public class MummyFollowAttack : MonoBehaviour
                 if (randomvalue < valueRandomSLOW) {
                     StartCoroutine(CountDown());
                     _playerController.moveSpeed = 1.0f;
+                    slowText.SetActive(true);
                 }
                 // SLOW ----------------------------------
 

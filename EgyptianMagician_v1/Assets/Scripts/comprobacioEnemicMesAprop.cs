@@ -12,9 +12,10 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     public float distanciaMesAprop;
     public GameObject enemicMesAprop;
     public int indexEnemicMesAprop;
-    GameObject GOenemicMesaprop;
+    public GameObject GOenemicMesaprop;
     [Header("Remove Enemy death List")]
     public int vidaEnemicComprobacio = 99;//variables per a borrar, son per TEST
+    public GameObject enemicTemplateMesLLuny;
 
     private void OnDrawGizmos() {
         for(int i=0; i< llistaEnemics.Count; i++) {
@@ -46,13 +47,17 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
         vidaEnemicComprobacio = GameObject.Find(GOenemicMesaprop.name).GetComponent<EnemyManager>().vidaEnemics;
         // ERROR AMB TOT AIXO? QUE S'EXECUTA UN COP I HEM DE FER QUE S'EXECUTI CONTINUAMENT *************
         //Debug.Log("VIDAENEMICCOMPROBACIO: " + vidaEnemicComprobacio);
+        if (Input.GetKeyDown(KeyCode.A)) {
+            llistaEnemics.Remove(llistaEnemics[indexEnemicMesAprop]);
+            Destroy(enemicMesAprop);
+            enemicMesAprop = enemicTemplateMesLLuny;
+            distanciaMesAprop = 999.0f;
 
+        }
         //TreureEnemicMortDeLaLlista();
     }
     GameObject CalculAprop() {
-        if (Input.GetKeyDown(KeyCode.A)) {
-            llistaEnemics.Remove(llistaEnemics[0]);
-        }
+
         if (llistaEnemics.Count != 0) {
 
             for (int i = 0; i < llistaEnemics.Count; i++) {// en aquest bucle busquem l'enemic de mes aprop.

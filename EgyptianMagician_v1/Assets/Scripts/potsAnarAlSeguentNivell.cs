@@ -24,7 +24,7 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
     }
     void ActivarPasadorDeNivell() {
         countEnemicsLlista = _comprobacioEnemicMesAprop.llistaEnemics.Count;
-        if(countEnemicsLlista == 2) {
+        if(countEnemicsLlista <= 0) {
             bc.isTrigger = true;
             ps.Play();
         } else {
