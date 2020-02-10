@@ -9,6 +9,7 @@ public class ActiveBoostPrefab : MonoBehaviour
     public GameObject meteoritoPREFAB;
     public GameObject megarayoPREFAB;
     public GameObject healtPREFAB;
+    public GameManager _gm;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class ActiveBoostPrefab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time_boost.meteorBool) {
+        if (_gm.meteorBoolPlayerPrefs==false) {
             MeteorBehavior();
         }
         if (Time_boost.megarayoBool) {

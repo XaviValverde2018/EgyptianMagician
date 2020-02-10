@@ -12,6 +12,7 @@ public class ActiveBoost : MonoBehaviour
     public GameObject meteorImage;
     public GameObject megarayoImage;
     public GameObject healthImage;
+    public GameManager _gm;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class ActiveBoost : MonoBehaviour
         meteorBool = _escollirboost.meteoritChoose;
         megarayoBool = _escollirboost.megarayoChoose;
         healthBool = _escollirboost.healthChoose;
-        if (meteorBool) {
+        if (_gm.meteorBoolPlayerPrefs) {
             MeteorBehavior();
             
 

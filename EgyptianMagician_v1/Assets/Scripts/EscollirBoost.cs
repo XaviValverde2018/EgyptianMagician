@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class EscollirBoost : MonoBehaviour
 {
     //This code is in ChooseButtonCanvas 
@@ -10,7 +11,9 @@ public class EscollirBoost : MonoBehaviour
     public bool megarayoChoose;
     public bool healthChoose;
     public bool NullBoost;
+    public GameObject meteorButton;
     // Start is called before the first frame update
+
     void Start()
     {
         NullBoost = true;
@@ -24,6 +27,9 @@ public class EscollirBoost : MonoBehaviour
     {
         if (meteoritChoose) {
             Debug.Log("meteorchoose");
+            meteorButton.SetActive(true);
+            this.gameObject.SetActive(false);
+            SceneManager.LoadScene(6);
         }
         if (megarayoChoose) {
             Debug.Log("megarayoChoose");
@@ -38,6 +44,7 @@ public class EscollirBoost : MonoBehaviour
 
     }
     public void MeteorClic() {
+        PlayerPrefs.SetInt("meteorBool", 1);
         meteoritChoose = true;
         megarayoChoose = false;
         healthChoose = false;

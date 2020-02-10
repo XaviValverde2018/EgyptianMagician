@@ -22,9 +22,18 @@ public class GameManager : MonoBehaviour
     [Header("Bird Activated")]
     public ActiveBird _activeBird;
     public bool GM_BirdActivated;
+
+    [Header("PlayerPrefs")]
+    public bool meteorBoolPlayerPrefs;
+    public int meteorBoolPlayerPrefsValue;
     // Start is called before the first frame update
     void Start()
     {
+
+        meteorBoolPlayerPrefsValue = PlayerPrefs.GetInt("meteorBool");
+        if(meteorBoolPlayerPrefsValue == 1) {
+            meteorBoolPlayerPrefs = true;
+        }
 
         countEnemiesFindingRoomWithTag = 99;
         enemiesFindingRoom = GameObject.FindGameObjectsWithTag("Enemy");

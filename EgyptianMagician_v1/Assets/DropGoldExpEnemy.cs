@@ -27,9 +27,12 @@ public class DropGoldExpEnemy : MonoBehaviour
     void Update()
     {
         DropDie();
+
     }
     void DropDie() {
-        if (_enemymanager.vidaEnemics <= 0) {
+        if (_enemymanager.vidaEnemics <= 0) {// no funciona del tot i abans si funcionava...
+            Debug.Log("instantiate?");
+
             for (int i = 0; i < _goldvalue; i++) {
                 Instantiate(_goldPrefab[i], _spawnsTransform[randomvalue].transform.position, _goldPrefab[i].transform.rotation);
                 randomvalue = Random.Range(0, 2);// es pot comentar aquesta linea de codi i posar la i dins _spawnsTransform[i].transform.position
