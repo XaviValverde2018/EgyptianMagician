@@ -12,6 +12,7 @@ TagManager:
   - bulletEnemy
   - gold
   - Exp
+  - meteorito
   layers:
   - Default
   - TransparentFX

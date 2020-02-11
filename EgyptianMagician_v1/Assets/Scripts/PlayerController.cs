@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour {
         } else {// logica normal, sense el modo BIRD
             ShootBullet();
             HorusPrefabActive();
+            this.transform.position = new Vector3(transform.position.x, playerHeight, transform.position.z);
             //ClosestEnemyBullet(); DESCLICAR
             if (Input.anyKey) {
                 MovePlayer();
