@@ -14,6 +14,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     public GameObject enemicMesAprop;
     public int indexEnemicMesAprop;
     public GameObject GOenemicMesaprop;
+    public Vector3 targetposition;
     [Header("Remove Enemy death List")]
     public int vidaEnemicComprobacio = 99;
     public GameObject enemicTemplateMesLLuny;
@@ -76,7 +77,8 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
             for (int i = 0; i < llistaEnemics.Count; i++) {// En aquest bucle tenim el enemic mes aprop. 
                 if (distanciaMesAprop == Vector3.Distance(transform.position, llistaEnemics[i].transform.position)) {
                     // MODIFICAR EL LOOKAT perque nomes s'activi quan BIRDACTIVATED = FALSE
-                    transform.LookAt(llistaEnemics[i].transform);
+                    targetposition = new Vector3(llistaEnemics[i].transform.position.x, transform.position.y, llistaEnemics[i].transform.position.z);
+                    transform.LookAt(targetposition);
                     Debug.Log("l'enemic mes aprop es: " + llistaEnemics[i].name);
                     enemicMesAprop = llistaEnemics[i];
                     indexEnemicMesAprop = i;

@@ -80,10 +80,12 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("PC_GM_BirdActivated :"+PC_GM_BirdActivated);
             BirdPrefabActive();
             BirdMovement();
+            _comprobacioEnemicMesAprop.distanciaMesAprop = 999.0f;
         } else {// logica normal, sense el modo BIRD
             ShootBullet();
             HorusPrefabActive();
             this.transform.position = new Vector3(transform.position.x, playerHeight, transform.position.z);
+
             //ClosestEnemyBullet(); DESCLICAR
             if (Input.anyKey) {
                 MovePlayer();
@@ -111,6 +113,8 @@ public class PlayerController : MonoBehaviour {
         transform.position += rightMovement; // actualposition + new position
         transform.position += upMovemenrt; // actualposition + new position
         this.transform.position = new Vector3(transform.position.x, playerHeight, transform.position.z);
+        transform.LookAt(_comprobacioEnemicMesAprop.targetposition);
+        _comprobacioEnemicMesAprop.distanciaMesAprop = 999.0f;
 
     }
 
