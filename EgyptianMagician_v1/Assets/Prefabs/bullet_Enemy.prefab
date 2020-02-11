@@ -122,8 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 198df0522315cfa4590360b79276e471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 3
   _playerTarget: {fileID: 0}
   _playerController: {fileID: 0}
   hitPlayer: 0
   moveBulletToPlayer: {x: 0, y: 0, z: 0}
+  lastpositionPlayer: {x: 0, y: 0, z: 0}

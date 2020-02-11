@@ -15,11 +15,12 @@ public class ApofisBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         _playerController = GameObject.FindObjectOfType<PlayerController>();
+        ShootToPlayer();
     }
 
     // Update is called once per frame
     void Update() {
-        ShootToPlayer();
+        _rbBulletEnemy.AddForce(moveBulletToPlayer, ForceMode.Acceleration);
         //Debug.Log("veneno");
     }
     void ShootToPlayer() {
@@ -27,8 +28,9 @@ public class ApofisBullet : MonoBehaviour
         _playerTarget = GameObject.FindObjectOfType<comprobacioEnemicMesAprop>();
         _rbBulletEnemy = GetComponent<Rigidbody>();
         //_rbBulletEnemy.velocity = new Vector3(1, 0, 0).normalized*speed;
-        moveBulletToPlayer = (_playerTarget.transform.position - transform.position).normalized * speed;
-        _rbBulletEnemy.velocity = new Vector3(moveBulletToPlayer.x, moveBulletToPlayer.y, moveBulletToPlayer.z);
+        moveBulletToPlayer = (_playerTarget.transform.position - transform.position)* speed;
+        
+       // _rbBulletEnemy.velocity = new Vector3(moveBulletToPlayer.x, moveBulletToPlayer.y, moveBulletToPlayer.z);
     }
     private void OnTriggerEnter(Collider other) {
         if (other.transform.CompareTag("Player")) {
@@ -38,6 +40,9 @@ public class ApofisBullet : MonoBehaviour
             Destroy(gameObject);
         } else {
             hitPlayer = false;
+        }
+        if (other.transform.CompareTag("Wall")) {
+            Destroy(this.gameObject);
         }
     }
     void DamagePlayer() {

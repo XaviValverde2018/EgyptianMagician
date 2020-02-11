@@ -24,7 +24,7 @@ public class BulletGenerate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DestroyIfBulletIsntMove();
+        //DestroyIfBulletIsntMove();
     }
 
     void TranslateBulletToEnemicMesAProp() {
