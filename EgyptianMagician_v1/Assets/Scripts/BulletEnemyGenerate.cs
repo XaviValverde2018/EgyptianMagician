@@ -24,7 +24,7 @@ public class BulletEnemyGenerate : MonoBehaviour
     void Update()
     {
         _rbBulletEnemy.AddForce(moveBulletToPlayer, ForceMode.Force);
-
+       
 
     }
     void ShootToPlayer() {

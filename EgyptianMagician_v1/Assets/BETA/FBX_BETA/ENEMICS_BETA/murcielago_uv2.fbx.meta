@@ -15,7 +15,7 @@ ModelImporter:
       name: Wings_blinn1SG
     second: {fileID: 2100000, guid: f504458db0d912f418e9c02bd13c8a2e, type: 2}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 0

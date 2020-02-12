@@ -17,5 +17,6 @@ public class BatFollow : MonoBehaviour {
     void Update() {
 
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, transform.position.y, target.position.z), speed * Time.deltaTime);
+        transform.LookAt(target);
     }
 }
