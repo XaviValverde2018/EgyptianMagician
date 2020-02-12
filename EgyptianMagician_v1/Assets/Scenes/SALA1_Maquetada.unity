@@ -2424,6 +2424,7 @@ MonoBehaviour:
   posicioGenerarBulletBala: {fileID: 488058854}
   elapsedTime: 0
   FireRate: 0.5
+  _comprobacioEnemicMesAprop: {fileID: 0}
   _gmActiveBird: {fileID: 0}
   PC_GM_BirdActivated: 0
   moveBirdSpeed: 20
@@ -2447,11 +2448,15 @@ MonoBehaviour:
   llistaEnemics:
   - {fileID: 1061133125970305019}
   - {fileID: 4560707289165203353}
+  NoEnemicsOnRoom: 0
   distanciaEntrePlayerIEnemicActual: 0
   distanciaMesAprop: 0
   enemicMesAprop: {fileID: 0}
   indexEnemicMesAprop: 0
+  GOenemicMesaprop: {fileID: 0}
+  targetposition: {x: 0, y: 0, z: 0}
   vidaEnemicComprobacio: 0
+  enemicTemplateMesLLuny: {fileID: 0}
 --- !u!114 &509024963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3927,9 +3932,13 @@ MonoBehaviour:
   countEnemiesFindingRoomWithTag: 0
   potsAnarAlSeguentNivell: {fileID: 1184403387}
   totalGold: 0
+  textGold: {fileID: 0}
   totalExp: 0
+  textExp: {fileID: 0}
   _activeBird: {fileID: 0}
   GM_BirdActivated: 0
+  meteorBoolPlayerPrefs: 0
+  meteorBoolPlayerPrefsValue: 0
 --- !u!4 &745894989
 Transform:
   m_ObjectHideFlags: 0
