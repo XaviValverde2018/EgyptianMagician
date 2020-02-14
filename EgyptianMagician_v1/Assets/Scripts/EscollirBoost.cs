@@ -29,7 +29,7 @@ public class EscollirBoost : MonoBehaviour
             Debug.Log("meteorchoose");
             meteorButton.SetActive(true);
             this.gameObject.SetActive(false);
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(7);
         }
         if (megarayoChoose) {
             Debug.Log("megarayoChoose");

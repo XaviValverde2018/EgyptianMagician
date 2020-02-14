@@ -40,8 +40,9 @@ public class MeteorBehavior : MonoBehaviour
             meteorButton.interactable = false;
             //Instantiate(meteoritoPREFAB1, meteoritoPREFAB1.transform);
             meteoritoPREFAB1.SetActive(true);
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1.5f);
             meteoritoPREFAB1.SetActive(false);
+            yield return new WaitForSeconds(10);
             meteorButton.interactable = true;
         }
         if(randomvalue == 2) {
@@ -49,8 +50,9 @@ public class MeteorBehavior : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             meteorButton.interactable = false;
             meteoritoPREFAB2.SetActive(true);
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1.5f);
            meteoritoPREFAB2.SetActive(false);
+            yield return new WaitForSeconds(10);
             meteorButton.interactable = true;
         } 
     }
