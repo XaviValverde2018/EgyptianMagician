@@ -5,21 +5,32 @@ using UnityEngine;
 public class BoostButtonManager : MonoBehaviour
 {
     public GameManager _gm;
-    public GameObject meteoritoPREFAB;
+    public GameObject meteoritoButton;
+    public GameObject healthButton;
     // Start is called before the first frame update
     void Start()
     {
         meteoritoPREFABactivado();
+        healthPREFABactivado();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void meteoritoPREFABactivado() {
         if (_gm.meteorBoolPlayerPrefs) {
-            meteoritoPREFAB.SetActive(true);
+            meteoritoButton.SetActive(true);
+        } else {
+            meteoritoButton.SetActive(false);
+        }
+    }
+    void healthPREFABactivado() {
+        if (_gm.healthBoolPlayerPrefs) {
+            healthButton.SetActive(true);
+        } else {
+            healthButton.SetActive(false);
         }
     }
 }

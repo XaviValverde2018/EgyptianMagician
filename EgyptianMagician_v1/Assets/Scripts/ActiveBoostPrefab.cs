@@ -25,7 +25,7 @@ public class ActiveBoostPrefab : MonoBehaviour
         if (Time_boost.megarayoBool) {
             megarayoBehavior();
         }
-        if (Time_boost.healthBool) {
+        if (_gm.healthBoolPlayerPrefs == false) {
             healthBehavior();
         }
         

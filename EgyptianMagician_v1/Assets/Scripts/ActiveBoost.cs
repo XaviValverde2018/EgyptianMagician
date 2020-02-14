@@ -36,7 +36,7 @@ public class ActiveBoost : MonoBehaviour
             MegarayoBehavior();
 
         }
-        if (healthBool) {
+        if (_gm.healthBoolPlayerPrefs) {
             HealthBehavior();
         }
         

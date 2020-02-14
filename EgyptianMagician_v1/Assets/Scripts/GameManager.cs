@@ -26,13 +26,26 @@ public class GameManager : MonoBehaviour
     [Header("PlayerPrefs")]
     public bool meteorBoolPlayerPrefs;
     public int meteorBoolPlayerPrefsValue;
+    public bool healthBoolPlayerPrefs;
+    public int healthBoolPlayerPrefsValue;
     // Start is called before the first frame update
+
     void Start()
     {
 
         meteorBoolPlayerPrefsValue = PlayerPrefs.GetInt("meteorBool");
         if(meteorBoolPlayerPrefsValue == 1) {
             meteorBoolPlayerPrefs = true;
+        }
+        if(meteorBoolPlayerPrefsValue == 0) {
+            meteorBoolPlayerPrefs = false;
+        }
+        healthBoolPlayerPrefsValue = PlayerPrefs.GetInt("healthBool");
+        if (healthBoolPlayerPrefsValue == 1) {
+            healthBoolPlayerPrefs = true;
+        }
+        if(healthBoolPlayerPrefsValue == 0) {
+            healthBoolPlayerPrefs = false;
         }
 
         countEnemiesFindingRoomWithTag = 99;
@@ -48,6 +61,8 @@ public class GameManager : MonoBehaviour
         GM_BirdActivated = _activeBird.birdActivated;
         textGold.text = totalGold.ToString();
 
+        Debug.Log(PlayerPrefs.GetInt("healthBool"));
+        Debug.Log(PlayerPrefs.GetInt("meteorBool"));
     }
 
 

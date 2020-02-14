@@ -12,6 +12,7 @@ public class EscollirBoost : MonoBehaviour
     public bool healthChoose;
     public bool NullBoost;
     public GameObject meteorButton;
+    public GameObject healthButton;
     // Start is called before the first frame update
 
     void Start()
@@ -20,6 +21,8 @@ public class EscollirBoost : MonoBehaviour
         boostList[0].onClick.AddListener(MeteorClic);
         boostList[1].onClick.AddListener(MegaRayoClic);
         boostList[2].onClick.AddListener(HealthClic);
+        Debug.Log(PlayerPrefs.GetInt("healthBool"));
+        Debug.Log(PlayerPrefs.GetInt("meteorBool"));
     }
 
     // Update is called once per frame
@@ -29,13 +32,20 @@ public class EscollirBoost : MonoBehaviour
             Debug.Log("meteorchoose");
             meteorButton.SetActive(true);
             this.gameObject.SetActive(false);
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(7);// aixo s'ha de cambiar per sala tutorial normal.
+
         }
         if (megarayoChoose) {
             Debug.Log("megarayoChoose");
         }
         if (healthChoose) {
             Debug.Log("healtChoose");
+            healthButton.SetActive(true);
+            this.gameObject.SetActive(false);
+            SceneManager.LoadScene(7);
+            Debug.Log(PlayerPrefs.GetInt("healthBool"));
+            Debug.Log(PlayerPrefs.GetInt("meteorBool"));
+
         }
         /*
         if (NullBoost == false) {// Modificar per a cambiar a 1 cop
@@ -57,9 +67,11 @@ public class EscollirBoost : MonoBehaviour
         NullBoost = false;
     }
     public void HealthClic() {
+        PlayerPrefs.SetInt("healthBool", 1);
         meteoritChoose = false;
         megarayoChoose = false;
         healthChoose = true;
         NullBoost = false;
+        
     }
 }
