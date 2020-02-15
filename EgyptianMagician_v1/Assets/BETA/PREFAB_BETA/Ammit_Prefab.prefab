@@ -251,7 +251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1801621800
 RectTransform:
   m_ObjectHideFlags: 0
@@ -366,7 +366,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -423,7 +423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &418878882780907098
 RectTransform:
   m_ObjectHideFlags: 0
@@ -602,8 +602,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.596829, y: 3.8108673, z: 4.999999}
-  m_Center: {x: 0.4743724, y: 1.4054337, z: 3.641886e-16}
+  m_Size: {x: 5.5917053, y: 3.8108673, z: 8.393193}
+  m_Center: {x: 0.14258027, y: 1.4054337, z: 1.6965976}
 --- !u!114 &7288875509438909944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,7 +624,8 @@ MonoBehaviour:
   AmmitAttackValue: 10
   randomvalue: 0
   valueRandomSTUN: 10
-  stunText: {fileID: 0}
+  STUNimage: {fileID: 0}
+  birdButtonSTUN: {fileID: 0}
 --- !u!1 &7288875509485146166
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,8 +726,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.704485, y: 3.5902605, z: 5.1452513}
-  m_Center: {x: -0.0987134, y: 1.2951303, z: -0.009319544}
+  m_Size: {x: 5.704485, y: 3.5902605, z: 6.9963546}
+  m_Center: {x: -0.0987134, y: 1.2951303, z: 0.9162321}
 --- !u!54 &7288875509485146161
 Rigidbody:
   m_ObjectHideFlags: 0

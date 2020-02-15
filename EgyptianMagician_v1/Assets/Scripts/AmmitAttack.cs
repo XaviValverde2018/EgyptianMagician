@@ -21,7 +21,9 @@ public class AmmitAttack : MonoBehaviour
     [Header("Values STUN")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
     public int valueRandomSTUN = 10;
-    public GameObject stunText;
+   // public GameObject stunText;
+    public GameObject STUNimage;
+    public Button birdButtonSTUN;
 
     // Start is called before the first frame update
     void Start() {
@@ -50,8 +52,12 @@ public class AmmitAttack : MonoBehaviour
                 Debug.Log("StartCorutine, value moveSpeedPlayer:" + _playerController.moveSpeed);
                 StartCoroutine(CountDown());
                 _playerController.moveSpeed = 0.0001f;
-                stunText.SetActive(true);
+                //stunText.SetActive(true);
+                STUNimage.SetActive(true);
+                birdButtonSTUN.interactable = false;
 
+            } else {
+                STUNimage.SetActive(false);
             }
             // STUN --------------------------------------
         }
@@ -63,6 +69,8 @@ public class AmmitAttack : MonoBehaviour
 
     IEnumerator CountDown() {
         yield return new WaitForSeconds(6);
+        STUNimage.SetActive(false);
+        birdButtonSTUN.interactable = true;
         _playerController.moveSpeed = 4.0f;
         randomvalue = 31;
         Debug.Log("EndCorutine, value moveSpeedPlayer:" + _playerController.moveSpeed);
