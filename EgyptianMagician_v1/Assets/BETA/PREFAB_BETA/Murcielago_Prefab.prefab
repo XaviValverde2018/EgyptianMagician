@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 772551675384216494}
   - component: {fileID: 772551675384216495}
   - component: {fileID: 5173403722094223825}
+  - component: {fileID: 1002447245161006296}
   m_Layer: 0
   m_Name: Murcielago_Prefab
   m_TagString: Enemy
@@ -437,8 +438,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.082952, y: 1, z: 1.8275756}
+  m_Center: {x: 0.0006222722, y: 0, z: 0.4137879}
 --- !u!54 &772551675384216480
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -517,6 +518,24 @@ MonoBehaviour:
   SliderCanvas: {fileID: 9033508660743915635}
   _enemyManager: {fileID: 772551675384216481}
   slider: {fileID: 2849136183728956799}
+--- !u!114 &1002447245161006296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772551675384216492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df276b2b1246534b9463efe12897bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _em: {fileID: 772551675384216481}
+  elapsedTime: 0
+  FireRate: 20
+  meteoritoDamage: 0
+  enemyIsInsideMeteoritoArea: 0
+  meteor_iconActiveDamaga: {fileID: 6645165397379761867}
 --- !u!1 &772551675476489355
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +913,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1023,6 +1042,79 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &6645165397379761867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7954968205894001343}
+  - component: {fileID: 73713885485257494}
+  - component: {fileID: 2608059532149538096}
+  m_Layer: 0
+  m_Name: meteor_iconActiveDamaga
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7954968205894001343
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6645165397379761867}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 1.735}
+  m_LocalScale: {x: 0.0067000063, y: 0.039839998, z: 0.013400013}
+  m_Children: []
+  m_Father: {fileID: 8405066537650126487}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.773, y: 0.687}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &73713885485257494
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6645165397379761867}
+  m_CullTransparentMesh: 0
+--- !u!114 &2608059532149538096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6645165397379761867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f22506e0549f7844bbf348d6f3c3d1ca, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &9033508660743915635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,7 +1133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8405066537650126487
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1054,6 +1146,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1546038130844590317}
+  - {fileID: 7954968205894001343}
   m_Father: {fileID: 772551675384216484}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

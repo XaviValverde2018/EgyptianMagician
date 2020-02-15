@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Status")]
     public float moveSpeed = 4f;
     public float lifePlayer;
+    public float maxlifeplayer;
 
     [Header("Movement")]
     public Rigidbody rigidbodyHorusVelocity;
@@ -44,6 +45,9 @@ public class PlayerController : MonoBehaviour {
     [Header("Boost Status")]
     public ActiveBoostPrefab _chooseBoost;
     public bool healthBoostActivated;
+    public float elapsedTimeHealth;
+    public float FireRateHealth = 0.5f;
+    public float healthvalue = 20.0f;
 
     // variables de find all enemies
     /*public GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -93,9 +97,7 @@ public class PlayerController : MonoBehaviour {
             IsPlayerInMovement();
  
         }
-        if (healthBoostActivated) {
-            AddLifePlayer();
-        }
+        
 
 
     }
@@ -166,9 +168,22 @@ public class PlayerController : MonoBehaviour {
 
     }
     void AddLifePlayer() {
-        if (lifePlayer < 100) {
-            lifePlayer += 5 * Time.deltaTime;
+        if (lifePlayer < maxlifeplayer) {
+            if (elapsedTimeHealth > FireRateHealth) {
+                lifePlayer += healthvalue;
+                elapsedTimeHealth = 0f;
+            }
         }
+    }
+    private void OnTriggerStay(Collider other) {
+        elapsedTimeHealth += Time.deltaTime;
+        if (other.CompareTag("health")) {
+            AddLifePlayer();
+        }
+    }
+    private void OnTriggerExit(Collider other) {
+        if(other.CompareTag("health"))
+        elapsedTimeHealth = 0f;
     }
 
 

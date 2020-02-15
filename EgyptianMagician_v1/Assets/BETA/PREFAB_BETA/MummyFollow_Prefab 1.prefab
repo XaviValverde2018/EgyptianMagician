@@ -233,6 +233,79 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1292955507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1292955508}
+  - component: {fileID: 1292955510}
+  - component: {fileID: 1292955509}
+  m_Layer: 0
+  m_Name: meteor_iconActiveDamaga
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1292955508
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292955507}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -7.011}
+  m_LocalScale: {x: 0.0067023686, y: 0.039840695, z: 0.0133972345}
+  m_Children: []
+  m_Father: {fileID: 2129895803}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -346.51, y: -453.53}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1292955510
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292955507}
+  m_CullTransparentMesh: 0
+--- !u!114 &1292955509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292955507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f22506e0549f7844bbf348d6f3c3d1ca, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1978690046
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +410,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
   m_Children:
   - {fileID: 891778767}
+  - {fileID: 1292955508}
   m_Father: {fileID: 1292004117784308905}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -749,8 +823,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.4389362, y: 4.8474445, z: 1.840021}
+  m_Center: {x: -0.06807184, y: 1.9237223, z: -0.120651305}
 --- !u!54 &1292004117784308909
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -779,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856526944930f4419fe905d6bed02f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemics: 25
+  vidaEnemics: 99
   enemicMort: 0
   ShieldActive: 0
   _pyramidGenerateShells: {fileID: 0}
@@ -827,22 +901,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goldPrefab:
   - {fileID: 1729234101540568024, guid: 1eddd2c4b79fcb641bb5f79b32e20f95, type: 3}
-  - {fileID: 1729234101540568024, guid: 1eddd2c4b79fcb641bb5f79b32e20f95, type: 3}
-  - {fileID: 1729234101540568024, guid: 1eddd2c4b79fcb641bb5f79b32e20f95, type: 3}
   _goldvalue: 3
   _enemymanager: {fileID: 1292004117784308908}
   randomvalue: 0
   _spawnsTransform:
   - {fileID: 1292004117127909675}
-  - {fileID: 1292004118423587758}
-  - {fileID: 1292004118308088010}
   _expPrefab:
   - {fileID: 7583459215252374649, guid: b3fab888fd63fc040b1c190d2dfa50b4, type: 3}
-  - {fileID: 7583459215252374649, guid: b3fab888fd63fc040b1c190d2dfa50b4, type: 3}
-  _expvalue: 2
+  _expvalue: 1
   _spawnsExpTransform:
   - {fileID: 1292004116957609097}
-  - {fileID: 1292004116534955690}
 --- !u!114 &1292004117784308896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,8 +926,9 @@ MonoBehaviour:
   _em: {fileID: 1292004117784308908}
   elapsedTime: 0
   FireRate: 10
-  meteoritoDamage: 20
+  meteoritoDamage: 10
   enemyIsInsideMeteoritoArea: 0
+  meteor_iconActiveDamaga: {fileID: 1292955507}
 --- !u!114 &461522244
 MonoBehaviour:
   m_ObjectHideFlags: 0

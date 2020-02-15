@@ -8,6 +8,7 @@ public class MeteorBehavior : MonoBehaviour
     public GameObject meteoritoPREFAB;
     public Button meteorButton;
     public bool meteorActivated;
+    public GameObject meteoritoPointGenerate;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +24,14 @@ public class MeteorBehavior : MonoBehaviour
         StartCoroutine(CountDown());
     }
     IEnumerator CountDown() {
-            meteorButton.interactable = true;
-            yield return new WaitForSeconds(0.1f);
-            meteorButton.interactable = false;
-            meteoritoPREFAB.SetActive(true);
-            yield return new WaitForSeconds(1.5f);
-            meteoritoPREFAB.SetActive(false);
-            yield return new WaitForSeconds(10);
-            meteorButton.interactable = true;
+        Instantiate(meteoritoPREFAB, meteoritoPointGenerate.transform);
+        meteorButton.interactable = true;
+        meteorActivated = true;
+        yield return new WaitForSeconds(0.1f);
+        meteorButton.interactable = false;
+        yield return new WaitForSeconds(1.5f);
+        meteorActivated = true;
+        yield return new WaitForSeconds(10);
+        meteorButton.interactable = true;
     }
 }
