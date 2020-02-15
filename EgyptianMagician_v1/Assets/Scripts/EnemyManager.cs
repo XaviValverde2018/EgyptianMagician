@@ -41,6 +41,7 @@ public class EnemyManager : MonoBehaviour
             DamagePlayerToEnemy();
             if(vidaEnemics <= 0) {
                 enemicMort = true;
+
             } else {
                 enemicMort = false;
             }

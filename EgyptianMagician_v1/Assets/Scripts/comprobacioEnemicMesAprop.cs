@@ -82,6 +82,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
                     Debug.Log("l'enemic mes aprop es: " + llistaEnemics[i].name);
                     enemicMesAprop = llistaEnemics[i];
                     indexEnemicMesAprop = i;
+
                     /*-------Lógica de la qual afecta l'enemic més aprop -------*/
                     //vidaEnemicComprobacio = GameObject.Find("enemicMesAprop").GetComponent<EnemyManager>().vidaEnemics;
                     //Debug.Log("vidaEnemicComprobacio: "+vidaEnemicComprobacio);

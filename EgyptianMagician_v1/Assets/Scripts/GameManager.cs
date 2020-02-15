@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int totalExp;
     public Text textExp;
     public Slider sliderExp;
+    public float totalvalueexp;
 
     [Header("Bird Activated")]
     public ActiveBird _activeBird;
@@ -56,7 +57,9 @@ public class GameManager : MonoBehaviour
         Debug.Log(enemiesFindingRoom);
         GM_BirdActivated = _activeBird.birdActivated;
 
-        sliderExp.value = CalculateExpValue();
+        //Eliminar aquesta linea de codi
+        //PlayerPrefs.DeleteKey("expValue");
+
     }
 
     // Update is called once per frame
@@ -70,7 +73,10 @@ public class GameManager : MonoBehaviour
         Debug.Log(PlayerPrefs.GetInt("meteorBool"));
 
         PlayerPrefs.SetInt("expValue", totalExp);
-        sliderExp.value = CalculateExpValue();
+        
+        totalvalueexp = totalExp / 30.0f;
+        sliderExp.value = totalvalueexp;
+
     }
 
 
@@ -89,8 +95,5 @@ public class GameManager : MonoBehaviour
         }
     }// Serveix per buscar a un array d'enemics i si es 0 activar pasar a nivell seguent. 
 
-    float CalculateExpValue() {
-        return totalExp / 1;
-    }
      
 }
