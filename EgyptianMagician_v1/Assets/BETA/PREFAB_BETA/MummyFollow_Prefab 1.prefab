@@ -714,7 +714,8 @@ MonoBehaviour:
   MummyFollowAttackValue: 4
   randomvalue: 0
   valueRandomSLOW: 10
-  slowText: {fileID: 0}
+  SLOWImage: {fileID: 0}
+  birdButtonSTUN: {fileID: 0}
 --- !u!1 &1292004117784308903
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,14 +902,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goldPrefab:
   - {fileID: 1729234101540568024, guid: 1eddd2c4b79fcb641bb5f79b32e20f95, type: 3}
-  _goldvalue: 3
+  - {fileID: 1729234101540568024, guid: 1eddd2c4b79fcb641bb5f79b32e20f95, type: 3}
+  - {fileID: 1729234101540568024, guid: 1eddd2c4b79fcb641bb5f79b32e20f95, type: 3}
+  _goldvalue: 2
   _enemymanager: {fileID: 1292004117784308908}
   randomvalue: 0
   _spawnsTransform:
   - {fileID: 1292004117127909675}
+  - {fileID: 1292004118423587758}
+  - {fileID: 1292004118308088010}
   _expPrefab:
   - {fileID: 7583459215252374649, guid: b3fab888fd63fc040b1c190d2dfa50b4, type: 3}
-  _expvalue: 1
+  _expvalue: 0
   _spawnsExpTransform:
   - {fileID: 1292004116957609097}
 --- !u!114 &1292004117784308896

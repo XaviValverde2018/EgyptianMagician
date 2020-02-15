@@ -19,7 +19,8 @@ public class BatFollowAttack : MonoBehaviour {
     [Header("Values SLOW")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
     public int valueRandomPOISON = 10;
-    public GameObject PoisonText;
+    public GameObject POISONImage;
+    //public GameObject PoisonText;
 
     // Start is called before the first frame update
     void Start() {
@@ -42,10 +43,8 @@ public class BatFollowAttack : MonoBehaviour {
                 elapsedTime = 0f;
                 if (randomvalue < valueRandomPOISON) {
                     StartCoroutine(CountDown());
-                    PoisonText.SetActive(true);
-                } else {
-                    PoisonText.SetActive(false);
-                }
+                    POISONImage.SetActive(true);
+                } 
                 // POISON ----------------------------------
 
             } else {
@@ -60,9 +59,10 @@ public class BatFollowAttack : MonoBehaviour {
     }
 
     IEnumerator CountDown() {
-        _playerController.lifePlayer -= 0.2f;
-        yield return new WaitForSeconds(3);
-        _playerController.lifePlayer -= 0.2f;
+        _playerController.lifePlayer -= 1f;
+        yield return new WaitForSeconds(3);      
+        _playerController.lifePlayer -= 1f;
+        POISONImage.SetActive(false);
         randomvalue = 31;
         Debug.Log("CountDownBatPoison");
     }

@@ -15,7 +15,7 @@ public class ActiveExp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(Vector3.up * 30.0f * Time.deltaTime);
     }
     private void OnTriggerEnter(Collider other) {
         if (other.transform.CompareTag("Player")) {

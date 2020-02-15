@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [Header("Exp Status")]
     public int totalExp;
     public Text textExp;
+    public Slider sliderExp;
 
     [Header("Bird Activated")]
     public ActiveBird _activeBird;
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
     public int meteorBoolPlayerPrefsValue;
     public bool healthBoolPlayerPrefs;
     public int healthBoolPlayerPrefsValue;
+
+
     // Start is called before the first frame update
 
     void Start()
@@ -52,6 +55,8 @@ public class GameManager : MonoBehaviour
         enemiesFindingRoom = GameObject.FindGameObjectsWithTag("Enemy");
         Debug.Log(enemiesFindingRoom);
         GM_BirdActivated = _activeBird.birdActivated;
+
+        sliderExp.value = CalculateExpValue();
     }
 
     // Update is called once per frame
@@ -63,6 +68,9 @@ public class GameManager : MonoBehaviour
 
         Debug.Log(PlayerPrefs.GetInt("healthBool"));
         Debug.Log(PlayerPrefs.GetInt("meteorBool"));
+
+        PlayerPrefs.SetInt("expValue", totalExp);
+        sliderExp.value = CalculateExpValue();
     }
 
 
@@ -81,6 +89,8 @@ public class GameManager : MonoBehaviour
         }
     }// Serveix per buscar a un array d'enemics i si es 0 activar pasar a nivell seguent. 
 
-
+    float CalculateExpValue() {
+        return totalExp / 1;
+    }
      
 }

@@ -20,7 +20,8 @@ public class MummyFollowAttack : MonoBehaviour
     [Header("Values SLOW")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
     public int valueRandomSLOW = 10;
-    public GameObject slowText;
+    public GameObject SLOWImage;
+    public Button birdButtonSTUN;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +47,8 @@ public class MummyFollowAttack : MonoBehaviour
                 if (randomvalue < valueRandomSLOW) {
                     StartCoroutine(CountDown());
                     _playerController.moveSpeed = 1.0f;
-                    slowText.SetActive(true);
+                    SLOWImage.SetActive(true);
+                    birdButtonSTUN.interactable = false;
                 }
                 // SLOW ----------------------------------
 
@@ -63,6 +65,8 @@ public class MummyFollowAttack : MonoBehaviour
 
     IEnumerator CountDown() {
         yield return new WaitForSeconds(3);
+        SLOWImage.SetActive(false);
+        birdButtonSTUN.interactable = true;
         _playerController.moveSpeed = 4.0f;
         randomvalue = 31;
         Debug.Log("CountDown");
