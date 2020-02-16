@@ -35,7 +35,7 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
-            SceneManager.LoadScene(6);//6 = SALA 1
+            SceneManager.LoadScene("SALATUTORIAL");//6 = SALA 1
         }
     }
 }

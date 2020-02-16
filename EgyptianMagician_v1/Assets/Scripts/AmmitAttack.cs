@@ -68,7 +68,7 @@ public class AmmitAttack : MonoBehaviour
     }
 
     IEnumerator CountDown() {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(2);
         STUNimage.SetActive(false);
         birdButtonSTUN.interactable = true;
         _playerController.moveSpeed = 4.0f;

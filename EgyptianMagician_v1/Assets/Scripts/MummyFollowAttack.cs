@@ -64,7 +64,7 @@ public class MummyFollowAttack : MonoBehaviour
     }
 
     IEnumerator CountDown() {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         SLOWImage.SetActive(false);
         birdButtonSTUN.interactable = true;
         _playerController.moveSpeed = 4.0f;

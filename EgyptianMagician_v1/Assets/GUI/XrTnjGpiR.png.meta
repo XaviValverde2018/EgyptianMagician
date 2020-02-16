@@ -1,67 +1,67 @@
 fileFormatVersion: 2
-guid: f7bb857ec879bc0489d57fdf9cb91360
+guid: f0e454f234243c042980465ff8e6004c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4443944964450849980
-    second: Escudo piramide - GUI_0
+      213: 6287033190050708707
+    second: XrTnjGpiR_0
   - first:
-      213: 7289386287566518505
-    second: Escudo piramide - GUI_1
+      213: -1302271143823234205
+    second: XrTnjGpiR_1
   - first:
-      213: -6290015818588011861
-    second: Escudo piramide - GUI_2
+      213: -2688276308319450956
+    second: XrTnjGpiR_2
   - first:
-      213: -1726090600385312597
-    second: Escudo piramide - GUI_3
+      213: 6910382695316329906
+    second: XrTnjGpiR_3
   - first:
-      213: 6317303980479607065
-    second: Escudo piramide - GUI_4
+      213: 7300799931263601134
+    second: XrTnjGpiR_4
   - first:
-      213: 4392494619946824968
-    second: Escudo piramide - GUI_5
+      213: -1092386744862700702
+    second: XrTnjGpiR_5
   - first:
-      213: 8679424496477119838
-    second: Escudo piramide - GUI_6
+      213: 5361425024444373886
+    second: XrTnjGpiR_6
   - first:
-      213: 8035462796372301132
-    second: Escudo piramide - GUI_7
+      213: 1850763058632436145
+    second: XrTnjGpiR_7
   - first:
-      213: 2293366519030133162
-    second: Escudo piramide - GUI_8
+      213: -2517750362959168884
+    second: XrTnjGpiR_8
   - first:
-      213: -7375943864283919309
-    second: Escudo piramide - GUI_9
+      213: -9119311184661652892
+    second: XrTnjGpiR_9
   - first:
-      213: 2301748812020059093
-    second: Escudo piramide - GUI_10
+      213: -9049467985173026406
+    second: XrTnjGpiR_10
   - first:
-      213: -4668416701405637647
-    second: Escudo piramide - GUI_11
+      213: -2106673262182609989
+    second: XrTnjGpiR_11
   - first:
-      213: 4376391831294636510
-    second: Escudo piramide - GUI_12
+      213: 7702480607784169682
+    second: XrTnjGpiR_12
   - first:
-      213: -8292576176179727317
-    second: Escudo piramide - GUI_13
+      213: 1009252991097906862
+    second: XrTnjGpiR_13
   - first:
-      213: 6308039185666003678
-    second: Escudo piramide - GUI_14
+      213: 6577386361525555240
+    second: XrTnjGpiR_14
   - first:
-      213: 108019088232185065
-    second: Escudo piramide - GUI_15
+      213: -4007434251708583984
+    second: XrTnjGpiR_15
   - first:
-      213: -8341649775583079743
-    second: Escudo piramide - GUI_16
+      213: -4100095014403892977
+    second: XrTnjGpiR_16
   - first:
-      213: 8554592293208498843
-    second: Escudo piramide - GUI_17
+      213: 7658611639933168203
+    second: XrTnjGpiR_17
   - first:
-      213: 150570172104261020
-    second: Escudo piramide - GUI_18
+      213: -4898693665931064749
+    second: XrTnjGpiR_18
   - first:
-      213: 2546118832127455335
-    second: Escudo piramide - GUI_19
+      213: -8159542166633999400
+    second: XrTnjGpiR_19
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -182,421 +182,421 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Escudo piramide - GUI_0
+      name: XrTnjGpiR_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 540
-        width: 180
-        height: 180
+        y: 576
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 178f4b6f3b0c1894f8b3fb2a982eaddd
-      internalID: -4443944964450849980
+      spriteID: 51ea38a7125f4a3429a1546baebbc942
+      internalID: 6287033190050708707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Escudo piramide - GUI_1
+      name: XrTnjGpiR_1
       rect:
         serializedVersion: 2
-        x: 180
-        y: 540
-        width: 180
-        height: 180
+        x: 192
+        y: 576
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b8b0563144a175488ef773237e5e1c6
-      internalID: 7289386287566518505
+      spriteID: fccf9d05bbf3d534c999c6b9d576e261
+      internalID: -1302271143823234205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Escudo piramide - GUI_2
+      name: XrTnjGpiR_2
       rect:
         serializedVersion: 2
-        x: 360
-        y: 540
-        width: 180
-        height: 180
+        x: 384
+        y: 576
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da32dc10eec4e7842bc8c715b2b94e2e
-      internalID: -6290015818588011861
+      spriteID: c94093e3e2767de47b67c69fa373a01d
+      internalID: -2688276308319450956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Escudo piramide - GUI_3
+      name: XrTnjGpiR_3
       rect:
         serializedVersion: 2
-        x: 540
-        y: 540
-        width: 180
-        height: 180
+        x: 576
+        y: 576
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acad1918f50dd2143be553833fdc7be3
-      internalID: -1726090600385312597
+      spriteID: 0a8436bbb23d02947a54fed4bf41b29e
+      internalID: 6910382695316329906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Escudo piramide - GUI_4
+      name: XrTnjGpiR_4
       rect:
         serializedVersion: 2
-        x: 720
-        y: 540
-        width: 180
-        height: 180
+        x: 768
+        y: 576
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc601d839dca2bc43b9053f1ccb80908
-      internalID: 6317303980479607065
+      spriteID: 69903ed10d1f5bb4e9980f83d46a93bd
+      internalID: 7300799931263601134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Escudo piramide - GUI_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 360
-        width: 180
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a11dfc9a4c1a984eb6262e0d7f106e7
-      internalID: 4392494619946824968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Escudo piramide - GUI_6
-      rect:
-        serializedVersion: 2
-        x: 181
-        y: 360
-        width: 180
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc5a887bcb1366c4482a274e05d7a86d
-      internalID: 8679424496477119838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Escudo piramide - GUI_7
-      rect:
-        serializedVersion: 2
-        x: 361
-        y: 360
-        width: 180
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12df2f9facf389c449afd7cb50ca3782
-      internalID: 8035462796372301132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Escudo piramide - GUI_8
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 360
-        width: 180
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7272ac58a9792ef4db7690c9ea1a39e5
-      internalID: 2293366519030133162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Escudo piramide - GUI_9
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 360
-        width: 180
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5152097412e4ef4cacde9e43eb4ebdd
-      internalID: -7375943864283919309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Escudo piramide - GUI_10
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 180
-        width: 180
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d6afd3313e154b46bf1ff7a53228391
-      internalID: 2301748812020059093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Escudo piramide - GUI_11
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 180
-        width: 180
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8a858c61576b804287c4dbddcde3397
-      internalID: -4668416701405637647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Escudo piramide - GUI_12
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 180
-        width: 180
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09490c0a17c53754eb317ea39866e864
-      internalID: 4376391831294636510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Escudo piramide - GUI_13
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 180
-        width: 180
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddb97d4303cfa1e4c94a1cf6c2c8ea66
-      internalID: -8292576176179727317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Escudo piramide - GUI_14
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 180
-        width: 180
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69414f1882c647949af27d9cbb26d476
-      internalID: 6308039185666003678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Escudo piramide - GUI_15
+      name: XrTnjGpiR_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 180
-        height: 180
+        y: 384
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 022cabb2088f8bd4685a99557c8e9ac7
-      internalID: 108019088232185065
+      spriteID: 1ec9626f329fb9b4a847c57c03776d05
+      internalID: -1092386744862700702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Escudo piramide - GUI_16
+      name: XrTnjGpiR_6
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
-        width: 180
-        height: 180
+        x: 192
+        y: 384
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc0ecafbe1d7d1d45816eb62420eab25
-      internalID: -8341649775583079743
+      spriteID: 896829e09ab4b034382d90285c5af1d0
+      internalID: 5361425024444373886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Escudo piramide - GUI_17
+      name: XrTnjGpiR_7
       rect:
         serializedVersion: 2
-        x: 360
-        y: 0
-        width: 180
-        height: 180
+        x: 384
+        y: 384
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b89b33ea460c33a4591f1d885a312411
-      internalID: 8554592293208498843
+      spriteID: 28d2d15036518e74fa5d037e639a5738
+      internalID: 1850763058632436145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Escudo piramide - GUI_18
+      name: XrTnjGpiR_8
       rect:
         serializedVersion: 2
-        x: 540
-        y: 0
-        width: 180
-        height: 180
+        x: 576
+        y: 384
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44395f5bcafbfac41be8d8472181243a
-      internalID: 150570172104261020
+      spriteID: fc8a1685145f59d4bb202cac53a5245f
+      internalID: -2517750362959168884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Escudo piramide - GUI_19
+      name: XrTnjGpiR_9
       rect:
         serializedVersion: 2
-        x: 720
-        y: 0
-        width: 180
-        height: 180
+        x: 768
+        y: 384
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa3b70060bfc43b4c9e474ed4f737a86
-      internalID: 2546118832127455335
+      spriteID: 79ac8b1cfac6b784e9c5e45cba576744
+      internalID: -9119311184661652892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XrTnjGpiR_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0e2bcc7a896a444bbc209a45b24af6
+      internalID: -9049467985173026406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XrTnjGpiR_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a801d809354ba4d913ea96dab4d0e4
+      internalID: -2106673262182609989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XrTnjGpiR_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d0b1148fa041248ae5dea7dc450582
+      internalID: 7702480607784169682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XrTnjGpiR_13
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa9f6e1b0b884941a4b2e12712fb5a7
+      internalID: 1009252991097906862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XrTnjGpiR_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d716d13ee40c949449fbaa648536a06b
+      internalID: 6577386361525555240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XrTnjGpiR_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a909e5c75a30d4aad598e65ad61519
+      internalID: -4007434251708583984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XrTnjGpiR_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5c9887789497a408b3f4d789fc5cc6
+      internalID: -4100095014403892977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XrTnjGpiR_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2e8d3cdb714d34a845ad9cc66b995c
+      internalID: 7658611639933168203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XrTnjGpiR_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13b0cc0f06424a4f919f92bbdedf57e
+      internalID: -4898693665931064749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XrTnjGpiR_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b554f344c02dd488333aa87c80838e
+      internalID: -8159542166633999400
       vertices: []
       indices: 
       edges: []
@@ -604,7 +604,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 428e66f4864f10745bddd2997c9bf8d6
+    spriteID: 1b9b9cf1fd19fb742804093649cca537
     internalID: 0
     vertices: []
     indices: 

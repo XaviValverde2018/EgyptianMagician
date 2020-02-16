@@ -5,27 +5,30 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/logo.unity
     guid: 77bac1a013314ac4da185373356b3cd0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/menu_principal.unity
     guid: 1a1756118ba3efb439c7f2104baa09d1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/lvl1.unity
     guid: 5ea0d732eb2d5a6409e832f8371240d1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/gameoverwin.unity
     guid: 931bf29920343aa45a9fa7b956b3093c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/muerte.unity
     guid: 83cbb684e8952c04a8a447918b9ba528
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/settings.unity
     guid: fcf95a416ed8a644281a5e032c539493
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SALA1.unity
     guid: fa1d1b817cef1b64b93e44b9064c1d33
+  - enabled: 1
+    path: Assets/Scenes/SALATUTORIAL.unity
+    guid: 017fcf7dca994c74d98a224d2adbfa56
   - enabled: 1
     path: Assets/Scenes/SALA1_BETA.unity
     guid: 9ee528ccd3ea90342889ca194804b63e

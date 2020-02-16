@@ -60,7 +60,7 @@ public class BatFollowAttack : MonoBehaviour {
 
     IEnumerator CountDown() {
         _playerController.lifePlayer -= 1f;
-        yield return new WaitForSeconds(3);      
+        yield return new WaitForSeconds(0.5f);      
         _playerController.lifePlayer -= 1f;
         POISONImage.SetActive(false);
         randomvalue = 31;

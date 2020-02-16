@@ -1581,7 +1581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &509024956
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2363,7 +2363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &745894988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2383,6 +2383,8 @@ MonoBehaviour:
   textGold: {fileID: 0}
   totalExp: 0
   textExp: {fileID: 0}
+  sliderExp: {fileID: 0}
+  totalvalueexp: 0
   _activeBird: {fileID: 1911571135}
   GM_BirdActivated: 0
   meteorBoolPlayerPrefs: 0
@@ -2418,7 +2420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &777789178
 Transform:
   m_ObjectHideFlags: 0
@@ -2446,6 +2448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: roc_01_uv
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ad70a165a6b4cf141a5714a6efeebbf7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ad70a165a6b4cf141a5714a6efeebbf7,
         type: 3}
@@ -3354,6 +3361,7 @@ MonoBehaviour:
   meteoritoPREFAB: {fileID: 1618028889}
   meteorButton: {fileID: 1118323987}
   meteorActivated: 0
+  meteoritoPointGenerate: {fileID: 0}
 --- !u!114 &1118323987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3536,7 +3544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1135535587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3677,7 +3685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1184403388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8549,7 +8557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1270591927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8768,7 +8776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1328357167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9072,7 +9080,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 03acac1a19ed68944ae59be9995b306f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19222,7 +19230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1676002320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19854,6 +19862,8 @@ MonoBehaviour:
   healthPREFAB: {fileID: 48469161}
   healthButton: {fileID: 1806122563}
   healthActivated: 0
+  _targetPlayer: {fileID: 0}
+  positionJugador: {fileID: 0}
 --- !u!114 &1806122563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20826,7 +20836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2140825467
 BoxCollider:
   m_ObjectHideFlags: 0

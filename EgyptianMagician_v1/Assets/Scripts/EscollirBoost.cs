@@ -32,7 +32,7 @@ public class EscollirBoost : MonoBehaviour
             Debug.Log("meteorchoose");
             meteorButton.SetActive(true);
             this.gameObject.SetActive(false);
-            SceneManager.LoadScene(7);// aixo s'ha de cambiar per sala tutorial normal.
+            SceneManager.LoadScene("SALA1_BETA");// aixo s'ha de cambiar per sala tutorial normal.
 
         }
         if (megarayoChoose) {
@@ -42,7 +42,7 @@ public class EscollirBoost : MonoBehaviour
             Debug.Log("healtChoose");
             healthButton.SetActive(true);
             this.gameObject.SetActive(false);
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene("SALA1_BETA");
             Debug.Log(PlayerPrefs.GetInt("healthBool"));
             Debug.Log(PlayerPrefs.GetInt("meteorBool"));
 
