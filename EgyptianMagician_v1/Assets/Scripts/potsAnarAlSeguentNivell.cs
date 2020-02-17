@@ -8,12 +8,12 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
     public comprobacioEnemicMesAprop _comprobacioEnemicMesAprop;
     public int countEnemicsLlista;
     BoxCollider bc;
-    ParticleSystem ps;
+    public GameObject ps;
         // Start is called before the first frame update
     void Start()
     {
         bc = GetComponent<BoxCollider>();
-        ps = GetComponent<ParticleSystem>();
+        
         bc.isTrigger = false;
     }
 
@@ -26,10 +26,10 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
         countEnemicsLlista = _comprobacioEnemicMesAprop.llistaEnemics.Count;
         if(countEnemicsLlista <= 0) {
             bc.isTrigger = true;
-            ps.Play();
+            ps.SetActive(true);
         } else {
             bc.isTrigger = false;
-            ps.Stop();
+            ps.SetActive(false);
         }
         Debug.Log("countEnemicsLlista: " + countEnemicsLlista);
     }
