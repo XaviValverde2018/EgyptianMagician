@@ -49,6 +49,14 @@ public class PlayerController : MonoBehaviour {
     public float FireRateHealth = 0.5f;
     public float healthvalue = 20.0f;
 
+    [Header("Animations")]
+    public Animator walkHorusAnimation;
+    public Animator shootHorusAnimation;
+    public bool iswalkAnimation;
+    public GameObject CetroWalk;
+    public GameObject CetroShoot;
+    public GameObject RayoWalk;
+    public GameObject RayoShoot;
     // variables de find all enemies
     /*public GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
     public int closestIndex = 0;
@@ -115,8 +123,14 @@ public class PlayerController : MonoBehaviour {
         transform.position += rightMovement; // actualposition + new position
         transform.position += upMovemenrt; // actualposition + new position
         this.transform.position = new Vector3(transform.position.x, playerHeight, transform.position.z);
-        transform.LookAt(_comprobacioEnemicMesAprop.targetposition);
+        //transform.LookAt(_comprobacioEnemicMesAprop.targetposition);
         _comprobacioEnemicMesAprop.distanciaMesAprop = 999.0f;
+        walkHorusAnimation.SetBool("isWalk", true);
+        RayoWalk.SetActive(true);
+        CetroWalk.SetActive(true);
+        RayoShoot.SetActive(false);
+        CetroShoot.SetActive(false);
+
 
     }
 
@@ -143,6 +157,11 @@ public class PlayerController : MonoBehaviour {
         } else {
             Debug.Log("no instantiate"); // no disparar quan estigui moventse. 
         }
+        walkHorusAnimation.SetBool("isWalk", false);
+        RayoWalk.SetActive(false);
+        CetroWalk.SetActive(false);
+        RayoShoot.SetActive(true);
+        CetroShoot.SetActive(true);
     }
     void BirdMovement() {// función ocn la lógica de hacer daño al player
         Vector3 direction = new Vector3(joystick.Horizontal, 0, joystick.Vertical);

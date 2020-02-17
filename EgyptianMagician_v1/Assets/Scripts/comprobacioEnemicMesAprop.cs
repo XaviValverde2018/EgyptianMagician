@@ -6,6 +6,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
 {
     // This code is in elJugador
     [Header("List Enemys room")]
+    public PlayerController _playercontroller;
     public List<GameObject> llistaEnemics = new List<GameObject>();
     public bool NoEnemicsOnRoom; //funció per saber si queden o no enemics. si no queden = true. 
     [Header("Distance Enemy Values")]
@@ -78,7 +79,10 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
                 if (distanciaMesAprop == Vector3.Distance(transform.position, llistaEnemics[i].transform.position)) {
                     // MODIFICAR EL LOOKAT perque nomes s'activi quan BIRDACTIVATED = FALSE
                     targetposition = new Vector3(llistaEnemics[i].transform.position.x, transform.position.y, llistaEnemics[i].transform.position.z);
-                    transform.LookAt(targetposition);
+                    if(_playercontroller.isWalking == false) {
+                        transform.LookAt(targetposition);
+                    } 
+                    //transform.LookAt(targetposition);
                     Debug.Log("l'enemic mes aprop es: " + llistaEnemics[i].name);
                     enemicMesAprop = llistaEnemics[i];
                     indexEnemicMesAprop = i;
