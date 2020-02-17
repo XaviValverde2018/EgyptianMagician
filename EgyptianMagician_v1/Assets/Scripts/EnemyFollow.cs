@@ -9,6 +9,7 @@ public class EnemyFollow : MonoBehaviour
     [Header("Values EnemyFollow")]
     public float speed=3.0f;
     public Transform target;
+    public MummyFollowAttack _mummyFollowAttack;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +19,11 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x,transform.position.y,target.position.z), speed * Time.deltaTime);
-        transform.LookAt(target);
+        if (_mummyFollowAttack.attack == false) {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, transform.position.y, target.position.z), speed * Time.deltaTime);
+            transform.LookAt(target);
+        } else {
+            Debug.Log("STOP");
+        }
     }
 }

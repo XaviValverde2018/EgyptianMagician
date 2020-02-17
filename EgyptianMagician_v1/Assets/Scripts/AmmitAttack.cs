@@ -71,7 +71,7 @@ public class AmmitAttack : MonoBehaviour
         yield return new WaitForSeconds(2);
         STUNimage.SetActive(false);
         birdButtonSTUN.interactable = true;
-        _playerController.moveSpeed = 4.0f;
+        _playerController.moveSpeed = 10.0f;
         randomvalue = 31;
         Debug.Log("EndCorutine, value moveSpeedPlayer:" + _playerController.moveSpeed);
     }

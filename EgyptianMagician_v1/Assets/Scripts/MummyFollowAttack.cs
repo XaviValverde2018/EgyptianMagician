@@ -16,6 +16,8 @@ public class MummyFollowAttack : MonoBehaviour
     public float FireRateSlow = 10.0f;
     public float resetElapsedTimeSlow;
     public float MummyFollowAttackValue = 4.0f;
+    public Animator AttackMummyFollow;
+    public bool attack;
 
     [Header("Values SLOW")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
@@ -34,15 +36,21 @@ public class MummyFollowAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (attack) {
+            AttackMummyFollow.SetBool("isAttack", true);
+        } else {
+            AttackMummyFollow.SetBool("isAttack", false);
+        }
     }
     private void OnTriggerStay(Collider other) {
         elapsedTime += Time.deltaTime;
         if (other.CompareTag("Player")) {
+            attack = true;
             resetElapsedTimeSlow += Time.deltaTime;
             if (elapsedTime > FireRate) {
                 // SLOW ----------------------------------
                 _playerController.lifePlayer -= MummyFollowAttackValue;
+                
                 elapsedTime = 0f;
                 if (randomvalue < valueRandomSLOW) {
                     StartCoroutine(CountDown());
@@ -58,6 +66,12 @@ public class MummyFollowAttack : MonoBehaviour
             }
         }
     }
+    private void OnTriggerExit(Collider other) {
+        if (other.CompareTag("Player")) {
+            attack = false;
+            
+        }
+    }
 
     void SlowRandomValue() {
         randomvalue = Random.Range(1, 30);
@@ -67,7 +81,7 @@ public class MummyFollowAttack : MonoBehaviour
         yield return new WaitForSeconds(1);
         SLOWImage.SetActive(false);
         birdButtonSTUN.interactable = true;
-        _playerController.moveSpeed = 4.0f;
+        _playerController.moveSpeed = 10.0f;
         randomvalue = 31;
         Debug.Log("CountDown");
         }
