@@ -9909,7 +9909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _comprobacioEnemicMesAprop: {fileID: 509024962}
   countEnemicsLlista: 0
-  ps: {fileID: 1307964144}
+  ps: {fileID: 1307964141}
 --- !u!1 &1213719294
 GameObject:
   m_ObjectHideFlags: 0
@@ -10738,15 +10738,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1024662341}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1307964142 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 753010192169496389, guid: d7ba32adc52fef04faca7b9d7bcfe3ea,
+--- !u!1 &1307964141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 753010192169496384, guid: d7ba32adc52fef04faca7b9d7bcfe3ea,
     type: 3}
   m_PrefabInstance: {fileID: 1748301431}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &1307964144 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 753010192169496386, guid: d7ba32adc52fef04faca7b9d7bcfe3ea,
+--- !u!4 &1307964142 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 753010192169496389, guid: d7ba32adc52fef04faca7b9d7bcfe3ea,
     type: 3}
   m_PrefabInstance: {fileID: 1748301431}
   m_PrefabAsset: {fileID: 0}
@@ -22031,11 +22031,6 @@ PrefabInstance:
       propertyPath: _pyramidGenerateShells
       value: 
       objectReference: {fileID: 1376541995}
-    - target: {fileID: 7288875509485146175, guid: b07b1cefd4c822b49a6b02c1ef9f4f06,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 509024960}
     - target: {fileID: 7288875509485146174, guid: b07b1cefd4c822b49a6b02c1ef9f4f06,
         type: 3}
       propertyPath: t1

@@ -661,10 +661,10 @@ GameObject:
   - component: {fileID: 7288875509485146160}
   - component: {fileID: 7288875509485146161}
   - component: {fileID: 7288875509485146172}
-  - component: {fileID: 7288875509485146175}
   - component: {fileID: 7288875509485146174}
   - component: {fileID: 673665476}
   - component: {fileID: 2497526046066677473}
+  - component: {fileID: 4732676951900746582}
   m_Layer: 0
   m_Name: Ammit_Prefab
   m_TagString: Enemy
@@ -783,20 +783,6 @@ MonoBehaviour:
   _pyramidGenerateShells: {fileID: 0}
   lifeShield: 500
   vidaEnemicActual: 0
---- !u!114 &7288875509485146175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7288875509485146166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0009ee2cf1b8714ebd21c71352027df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.06
-  target: {fileID: 0}
 --- !u!114 &7288875509485146174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,6 +831,20 @@ MonoBehaviour:
   meteoritoDamage: 0
   enemyIsInsideMeteoritoArea: 0
   meteor_iconActiveDamaga: {fileID: 724164131630364648}
+--- !u!114 &4732676951900746582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288875509485146166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa8e853643e3f8418b585f0aab3949f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.06
+  target: {fileID: 0}
 --- !u!1001 &7288875509352900952
 PrefabInstance:
   m_ObjectHideFlags: 0
