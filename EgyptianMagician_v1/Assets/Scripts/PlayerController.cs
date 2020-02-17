@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour {
     // This code is in elJugador
 
@@ -105,7 +106,9 @@ public class PlayerController : MonoBehaviour {
             IsPlayerInMovement();
  
         }
-        
+        DieHorus();
+
+
 
 
     }
@@ -194,6 +197,19 @@ public class PlayerController : MonoBehaviour {
             }
         }
     }
+    void DieHorus() {
+      if(lifePlayer <= 0) {
+            Debug.Log("Die");
+            walkHorusAnimation.SetBool("isDie", true);
+            RayoWalk.SetActive(false);
+            CetroWalk.SetActive(false);
+            RayoShoot.SetActive(false);
+            CetroShoot.SetActive(false);
+            joystick.enabled = false;
+            StartCoroutine(CountDown());
+
+        }
+    }
     private void OnTriggerStay(Collider other) {
         elapsedTimeHealth += Time.deltaTime;
         if (other.CompareTag("health")) {
@@ -203,6 +219,10 @@ public class PlayerController : MonoBehaviour {
     private void OnTriggerExit(Collider other) {
         if(other.CompareTag("health"))
         elapsedTimeHealth = 0f;
+    }
+    IEnumerator CountDown() {  
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("SALA1_BETA");
     }
 
 
