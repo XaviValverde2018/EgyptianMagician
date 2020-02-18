@@ -82,14 +82,14 @@ public class BulletGenerate : MonoBehaviour
     IEnumerator CountDown() {
         _rbBullet.velocity = new Vector3(0, 0, 0);
         _thisRayVFX.SetActive(false);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
         anim.SetBool("boolrayhit", true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
     IEnumerator ExitCountDown() {
         anim.SetBool("boolrayhit", true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
     IEnumerator KillbulletAfterFIFEseconds() {

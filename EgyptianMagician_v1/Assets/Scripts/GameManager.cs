@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public bool healthBoolPlayerPrefs;
     public int healthBoolPlayerPrefsValue;
 
-
+    
     // Start is called before the first frame update
 
     void Start()

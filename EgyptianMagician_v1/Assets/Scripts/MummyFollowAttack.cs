@@ -18,6 +18,7 @@ public class MummyFollowAttack : MonoBehaviour
     public float MummyFollowAttackValue = 4.0f;
     public Animator AttackMummyFollow;
     public bool attack;
+    public EnemyManager _em;
 
     [Header("Values SLOW")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
@@ -40,6 +41,13 @@ public class MummyFollowAttack : MonoBehaviour
             AttackMummyFollow.SetBool("isAttack", true);
         } else {
             AttackMummyFollow.SetBool("isAttack", false);
+        }
+        if(_em.vidaEnemics <= 0) {
+            this.transform.parent = null;
+            AttackMummyFollow = null;
+            _em = null;
+            StartCoroutine(CountDownDie());
+
         }
     }
     private void OnTriggerStay(Collider other) {
@@ -85,6 +93,10 @@ public class MummyFollowAttack : MonoBehaviour
         randomvalue = 31;
         Debug.Log("CountDown");
         }
+    IEnumerator CountDownDie() {
+        yield return new WaitForSeconds(2);
+        Destroy(this.gameObject);
+    }
 
     
 

@@ -44,7 +44,8 @@ public class PyramidGenerateShells : MonoBehaviour
         if (child_Shell_Element != null) {
             _enemyManager = child_Shell_Element.GetComponentInChildren<EnemyManager>();
             Debug.Log("_enemyManager.vidaEnemics:" + _enemyManager.vidaEnemics);
-            _enemyManager.vidaEnemics += 20;
+            _enemyManager.vidaEnemics += 1;
+
             lifeEnemyShield = _enemyManager.vidaEnemics;
         }
 

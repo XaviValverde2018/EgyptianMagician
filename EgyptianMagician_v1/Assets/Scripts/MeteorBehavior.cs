@@ -10,6 +10,7 @@ public class MeteorBehavior : MonoBehaviour
     public bool meteorActivated;
     public GameObject meteoritoPointGenerate;
     public Animator animationMeteorito;
+    public Animator animationShakeCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +36,10 @@ public class MeteorBehavior : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         animationMeteorito.SetBool("isWalk", true);
         animationMeteorito.SetBool("isMeteorito", false);
+        animationShakeCamera.SetBool("isShake", true);
         yield return new WaitForSeconds(1.5f);
         meteorActivated = true;
+        animationShakeCamera.SetBool("isShake", false);
         yield return new WaitForSeconds(10);
         meteorButton.interactable = true;
     }
