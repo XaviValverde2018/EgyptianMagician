@@ -8,7 +8,7 @@ public class AmmitFollow : MonoBehaviour {
     [Header("Values EnemyFollow")]
     public float speed = 3.0f;
     public Transform target;
-
+    public PlayerController playerController;
     // Start is called before the first frame update
     void Start() {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -17,6 +17,8 @@ public class AmmitFollow : MonoBehaviour {
     // Update is called once per frame
     void Update() {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, transform.position.y, target.position.z), speed * Time.deltaTime);
+        if (playerController.PC_GM_BirdActivated == false) {
             transform.LookAt(target);
+        }
     }
 }

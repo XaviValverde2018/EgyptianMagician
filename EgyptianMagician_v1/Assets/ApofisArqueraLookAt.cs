@@ -2,31 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollow : MonoBehaviour
-{
+public class ApofisArqueraLookAt : MonoBehaviour {
     //This code is in every Enemy
 
     [Header("Values EnemyFollow")]
-    public float speed=3.0f;
+
     public Transform target;
-    public MummyFollowAttack _mummyFollowAttack;
     public PlayerController playerController;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (_mummyFollowAttack.attack == false) {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, transform.position.y, target.position.z), speed * Time.deltaTime);
+    void Update() {
             if (playerController.PC_GM_BirdActivated == false) {
                 transform.LookAt(target);
             }
-        } else {
-            Debug.Log("STOP");
-        }
+        
     }
 }

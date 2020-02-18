@@ -79,7 +79,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
                 if (distanciaMesAprop == Vector3.Distance(transform.position, llistaEnemics[i].transform.position)) {
                     // MODIFICAR EL LOOKAT perque nomes s'activi quan BIRDACTIVATED = FALSE
                     targetposition = new Vector3(llistaEnemics[i].transform.position.x, transform.position.y, llistaEnemics[i].transform.position.z);
-                    if(_playercontroller.isWalking == false) {
+                    if(_playercontroller.isWalking == false && (_playercontroller.PC_GM_BirdActivated == false)) {
                         transform.LookAt(targetposition);
                     } 
                     //transform.LookAt(targetposition);

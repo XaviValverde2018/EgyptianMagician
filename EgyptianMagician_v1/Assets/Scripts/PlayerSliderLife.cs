@@ -25,12 +25,16 @@ public class PlayerSliderLife : MonoBehaviour {
         if (_playerController.lifePlayer < maxLife) {
             SliderCanvas.SetActive(true);
         }
-        if ((_playerController.lifePlayer / maxLife) < 0.5f) {
+        if ((_playerController.lifePlayer / maxLife) < 0.5f && (_playerController.lifePlayer / maxLife) >= 0.25f) {//groc
             _colorImageFillSlider.color = new Color(1, 0.92f, 0.016f, 1);
         }
         if ((_playerController.lifePlayer / maxLife) < 0.25f) {
             _colorImageFillSlider.color = new Color(1, 0, 0, 1);
         }
+        if ((_playerController.lifePlayer / maxLife) >= 0.5f) {
+            _colorImageFillSlider.color = new Color(0, 1, 0, 1);
+        }
+        
     }
     float CalculateLife() {
         return _playerController.lifePlayer / maxLife;

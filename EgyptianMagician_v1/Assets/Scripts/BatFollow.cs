@@ -15,8 +15,13 @@ public class BatFollow : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, transform.position.y, target.position.z), speed * Time.deltaTime);
+        StartCoroutine(BatMove());
         transform.LookAt(target);
+    }
+
+    IEnumerator BatMove() {
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, transform.position.y, target.position.z), speed * Time.deltaTime);
+        yield return new WaitForSeconds(1);
+
     }
 }

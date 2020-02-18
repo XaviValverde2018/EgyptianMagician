@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour {
     public float birdHeight = 2.5f;
     public GameObject horusPrefab;
     public GameObject birdPrefab;
+    public BoxCollider _boxcolliderBird;
 
     [Header("Boost Status")]
     public ActiveBoostPrefab _chooseBoost;
@@ -49,6 +50,9 @@ public class PlayerController : MonoBehaviour {
     public float elapsedTimeHealth;
     public float FireRateHealth = 0.5f;
     public float healthvalue = 20.0f;
+    public Text healthText;
+    public Animator healthanimation;
+    public GameObject healthGO;
 
     [Header("Animations")]
     public Animator walkHorusAnimation;
@@ -94,10 +98,12 @@ public class PlayerController : MonoBehaviour {
             BirdPrefabActive();
             BirdMovement();
             _comprobacioEnemicMesAprop.distanciaMesAprop = 999.0f;
+            _boxcolliderBird.enabled = false;
         } else {// logica normal, sense el modo BIRD
             ShootBullet();
             HorusPrefabActive();
             this.transform.position = new Vector3(transform.position.x, playerHeight, transform.position.z);
+            _boxcolliderBird.enabled = true;
 
             //ClosestEnemyBullet(); DESCLICAR
             if (Input.anyKey) {
@@ -192,7 +198,11 @@ public class PlayerController : MonoBehaviour {
     void AddLifePlayer() {
         if (lifePlayer < maxlifeplayer) {
             if (elapsedTimeHealth > FireRateHealth) {
+                healthGO.SetActive(true);
+                healthanimation.SetBool("isDamage", true);
+                healthText.text = "+" + healthvalue;
                 lifePlayer += healthvalue;
+                StartCoroutine(HealthCountDown());
                 elapsedTimeHealth = 0f;
             }
         }
@@ -223,6 +233,11 @@ public class PlayerController : MonoBehaviour {
     IEnumerator CountDown() {  
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("SALA1_BETA");
+    }
+    IEnumerator HealthCountDown() {
+        yield return new WaitForSeconds(0.8f);
+        healthanimation.SetBool("isDamage", false);
+        healthGO.SetActive(false);
     }
 
 

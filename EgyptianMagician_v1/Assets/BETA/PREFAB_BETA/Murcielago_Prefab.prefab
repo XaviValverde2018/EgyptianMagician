@@ -319,7 +319,6 @@ GameObject:
   - component: {fileID: 772551675384216495}
   - component: {fileID: 5173403722094223825}
   - component: {fileID: 1002447245161006296}
-  - component: {fileID: 883078102}
   m_Layer: 0
   m_Name: Murcielago_Prefab
   m_TagString: Enemy
@@ -436,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856526944930f4419fe905d6bed02f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemics: 5
+  vidaEnemics: 1
   enemicMort: 0
   ShieldActive: 0
   _pyramidGenerateShells: {fileID: 0}
@@ -503,29 +502,9 @@ MonoBehaviour:
   FireRate: 20
   meteoritoDamage: 0
   enemyIsInsideMeteoritoArea: 0
-  meteor_iconActiveDamaga: {fileID: 6645165397379761867}
---- !u!114 &883078102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772551675384216492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 262426fe0c5e64c43b0981b908ba7f82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _goldPrefab: []
-  _goldvalue: 0
-  _enemymanager: {fileID: 772551675384216481}
-  randomvalue: 0
-  _spawnsTransform: []
-  _expPrefab:
-  - {fileID: 4479217292339487029, guid: b04ff493e5fdeb940b4db35c8dd154fd, type: 3}
-  _expvalue: 1
-  _spawnsExpTransform:
-  - {fileID: 342398279780776913}
+  meteor_iconActiveDamaga: {fileID: 5823267064717685410}
+  DamageMeteoritoText: {fileID: 441441080163934133}
+  animationDamageMeteoritoText: {fileID: 7731310847029104197}
 --- !u!1 &772551676044422697
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,6 +750,107 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &5823267064717685410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2268810863346375281}
+  - component: {fileID: 8608943243131592619}
+  - component: {fileID: 441441080163934133}
+  - component: {fileID: 7731310847029104197}
+  m_Layer: 0
+  m_Name: DamageMeteoritoText (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2268810863346375281
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823267064717685410}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 2.912}
+  m_LocalScale: {x: 0.10000079, y: 0.1, z: 0.050000396}
+  m_Children: []
+  m_Father: {fileID: 8405066537650126487}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.869, y: 0.661}
+  m_SizeDelta: {x: 32.34, y: 17.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8608943243131592619
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823267064717685410}
+  m_CullTransparentMesh: 0
+--- !u!114 &441441080163934133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823267064717685410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.018452195, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '-5
+
+
+
+'
+--- !u!95 &7731310847029104197
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823267064717685410}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cbb50ad56885efd4caa7697b6a2e02f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6119697285583587154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,6 +1178,7 @@ RectTransform:
   m_Children:
   - {fileID: 1546038130844590317}
   - {fileID: 7954968205894001343}
+  - {fileID: 2268810863346375281}
   m_Father: {fileID: 772551675384216484}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
