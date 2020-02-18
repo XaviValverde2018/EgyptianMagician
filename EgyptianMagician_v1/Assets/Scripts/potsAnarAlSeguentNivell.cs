@@ -9,6 +9,7 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
     public int countEnemicsLlista;
     BoxCollider bc;
     public GameObject ps;
+    public string seguentnivell;
         // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,7 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
-            SceneManager.LoadScene("SALATUTORIAL");//6 = SALA 1
+            SceneManager.LoadScene(seguentnivell);//6 = SALA 1
         }
     }
 }

@@ -29,7 +29,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SALATUTORIAL.unity
     guid: 017fcf7dca994c74d98a224d2adbfa56
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SALA1_BETA.unity
     guid: 9ee528ccd3ea90342889ca194804b63e
+  - enabled: 1
+    path: Assets/Scenes/SALA2_BETA_MF.unity
+    guid: 20b51a5661e2543489d60b4e5544848e
+  - enabled: 1
+    path: Assets/Scenes/SALA3_BETA_MFA.unity
+    guid: 696f057cd1790dc4fb4fa2fc230826b9
+  - enabled: 1
+    path: Assets/Scenes/SALA4_BETA_MFA.unity
+    guid: a82322d1f51db74478cf57a88ef6912f
+  - enabled: 1
+    path: Assets/Scenes/SALA5_BETA_MF.unity
+    guid: a2c2dea17e3de5448bdd0d2b39adcddc
   m_configObjects: {}
