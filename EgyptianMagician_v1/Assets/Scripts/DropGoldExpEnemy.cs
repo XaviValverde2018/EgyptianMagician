@@ -26,7 +26,8 @@ public class DropGoldExpEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DropDie();
+        //DropDie();
+
 
     }
     void DropDie() {

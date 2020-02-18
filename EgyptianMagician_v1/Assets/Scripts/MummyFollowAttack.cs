@@ -60,7 +60,7 @@ public class MummyFollowAttack : MonoBehaviour
                 _playerController.lifePlayer -= MummyFollowAttackValue;
                 
                 elapsedTime = 0f;
-                if (randomvalue < valueRandomSLOW) {
+                if (33 < valueRandomSLOW) {
                     StartCoroutine(CountDown());
                     _playerController.moveSpeed = 1.0f;
                     SLOWImage.SetActive(true);

@@ -48,7 +48,7 @@ public class AmmitAttack : MonoBehaviour
                 elapsedTime = 0f;
             
             }
-            if (randomvalue < valueRandomSTUN) {
+            if (33 < valueRandomSTUN) {
                 Debug.Log("StartCorutine, value moveSpeedPlayer:" + _playerController.moveSpeed);
                 StartCoroutine(CountDown());
                 _playerController.moveSpeed = 0.0001f;

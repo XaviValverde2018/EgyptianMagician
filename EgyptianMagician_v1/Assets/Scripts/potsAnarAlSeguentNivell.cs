@@ -10,6 +10,9 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
     BoxCollider bc;
     public GameObject ps;
     public string seguentnivell;
+    public GameObject doorright;
+    public GameObject doorleft;
+       
         // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,8 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
         if(countEnemicsLlista <= 0) {
             bc.isTrigger = true;
             ps.SetActive(true);
+            doorleft.SetActive(false);
+            doorleft.SetActive(true);
         } else {
             bc.isTrigger = false;
             ps.SetActive(false);

@@ -1687,6 +1687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0136570ef83f44e875a563a47f6689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playercontroller: {fileID: 0}
   llistaEnemics:
   - {fileID: 1328357166}
   NoEnemicsOnRoom: 0
@@ -1897,7 +1898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &646608145
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3362,6 +3363,8 @@ MonoBehaviour:
   meteorButton: {fileID: 1118323987}
   meteorActivated: 0
   meteoritoPointGenerate: {fileID: 0}
+  animationMeteorito: {fileID: 0}
+  animationShakeCamera: {fileID: 0}
 --- !u!114 &1118323987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3727,6 +3730,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _comprobacioEnemicMesAprop: {fileID: 0}
   countEnemicsLlista: 0
+  ps: {fileID: 0}
+  seguentnivell: 
+  doorright: {fileID: 0}
+  doorleft: {fileID: 0}
 --- !u!199 &1184403391
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -19862,8 +19869,9 @@ MonoBehaviour:
   healthPREFAB: {fileID: 48469161}
   healthButton: {fileID: 1806122563}
   healthActivated: 0
-  _targetPlayer: {fileID: 0}
+  healtPointGenerate: {fileID: 0}
   positionJugador: {fileID: 0}
+  animationHealth: {fileID: 0}
 --- !u!114 &1806122563
 MonoBehaviour:
   m_ObjectHideFlags: 0
