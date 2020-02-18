@@ -9,6 +9,7 @@ public class MeteorBehavior : MonoBehaviour
     public Button meteorButton;
     public bool meteorActivated;
     public GameObject meteoritoPointGenerate;
+    public Animator animationMeteorito;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +25,16 @@ public class MeteorBehavior : MonoBehaviour
         StartCoroutine(CountDown());
     }
     IEnumerator CountDown() {
+        animationMeteorito.SetBool("isWalk", false);
+        animationMeteorito.SetBool("isMeteorito", true);
         Instantiate(meteoritoPREFAB, meteoritoPointGenerate.transform);
         meteorButton.interactable = true;
         meteorActivated = true;
         yield return new WaitForSeconds(0.1f);
         meteorButton.interactable = false;
+        yield return new WaitForSeconds(1.0f);
+        animationMeteorito.SetBool("isWalk", true);
+        animationMeteorito.SetBool("isMeteorito", false);
         yield return new WaitForSeconds(1.5f);
         meteorActivated = true;
         yield return new WaitForSeconds(10);

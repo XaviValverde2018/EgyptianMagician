@@ -2239,6 +2239,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ray_Cetro_vfx_Walk
       objectReference: {fileID: 0}
+    - target: {fileID: 4788453182891373245, guid: 71945378485b85c4db9da7bda58dcebc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4788453182891373240, guid: 71945378485b85c4db9da7bda58dcebc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2348,6 +2353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ray_Cetro_vfx_shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4788453182891373245, guid: 71945378485b85c4db9da7bda58dcebc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4788453182891373240, guid: 71945378485b85c4db9da7bda58dcebc,
         type: 3}
@@ -2459,6 +2469,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cetro_Horus_elJugador_Shoot
       objectReference: {fileID: 0}
+    - target: {fileID: 6196877867266544775, guid: 2a5d4a15b2ef12844b6ae0811bde6353,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7180112533078009492, guid: 2a5d4a15b2ef12844b6ae0811bde6353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2548,6 +2563,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cetro_Horus_elJugador_Walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196877867266544775, guid: 2a5d4a15b2ef12844b6ae0811bde6353,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7180112533078009492, guid: 2a5d4a15b2ef12844b6ae0811bde6353,
         type: 3}

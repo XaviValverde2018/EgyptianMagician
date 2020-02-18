@@ -8,8 +8,9 @@ public class HealthBehavior : MonoBehaviour {
     public GameObject healthPREFAB;
     public Button healthButton;
     public bool healthActivated;
-    public PlayerController _targetPlayer;
+    public GameObject healtPointGenerate;
     public Transform positionJugador;
+    public Animator animationHealth;
     // Start is called before the first frame update
     void Start() {
 
@@ -23,15 +24,20 @@ public class HealthBehavior : MonoBehaviour {
         StartCoroutine(CountDown());
     }
     IEnumerator CountDown() {
-        positionJugador = _targetPlayer.transform;
+        animationHealth.SetBool("isWalk", false);
+        animationHealth.SetBool("isHealth", true);
+        positionJugador = healtPointGenerate.transform;
         Instantiate(healthPREFAB, positionJugador);
         healthPREFAB.transform.parent = null;
 
         healthButton.interactable = true;
         healthActivated = true;
-        yield return new WaitForSeconds(0.1f);
 
+        yield return new WaitForSeconds(0.1f);
         healthButton.interactable = false;
+        yield return new WaitForSeconds(1.0f);
+        animationHealth.SetBool("isWalk", true);
+        animationHealth.SetBool("isHealth", false);
         yield return new WaitForSeconds(5);   
         healthActivated = false;
         yield return new WaitForSeconds(10);
