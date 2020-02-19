@@ -12,7 +12,7 @@ public class LoadPlay : MonoBehaviour
         SceneManager.LoadScene("menu_principal");
         //SceneManager.LoadScene(7);
     }
-    /*public void Settings() {
+    public void Settings() {
         SceneManager.LoadScene("settings");
-    }*/
+    }
 }

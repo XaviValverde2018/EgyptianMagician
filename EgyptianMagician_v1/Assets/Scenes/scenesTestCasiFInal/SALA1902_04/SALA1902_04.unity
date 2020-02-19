@@ -12277,7 +12277,7 @@ MonoBehaviour:
   _comprobacioEnemicMesAprop: {fileID: 509024962}
   countEnemicsLlista: 0
   ps: {fileID: 1307964141}
-  seguentnivell: menu_principal
+  seguentnivell: SALA1902_05
   doorright: {fileID: 1326263500}
   doorleft: {fileID: 2141896113}
 --- !u!95 &1184403391

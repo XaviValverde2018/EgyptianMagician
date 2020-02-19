@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BatForBETA : MonoBehaviour
+public class MummyForBbbeta : MonoBehaviour
 {
     public PlayerController _pc;
     public GameObject POISON;
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+
     }
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
@@ -24,16 +22,10 @@ public class BatForBETA : MonoBehaviour
     }
     IEnumerator Posion() {
         POISON.SetActive(true);
-        _pc.lifePlayer--;
-        yield return new WaitForSeconds(0.5f);
+        _pc.moveSpeed = 4.0f;
+        yield return new WaitForSeconds(3);
         POISON.SetActive(false);
-        _pc.lifePlayer--;
-        yield return new WaitForSeconds(0.5f);
-        POISON.SetActive(true);
-        _pc.lifePlayer--;
-        yield return new WaitForSeconds(0.2f);
-        POISON.SetActive(false);
-        _pc.lifePlayer--;
+        _pc.moveSpeed = 13;
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }

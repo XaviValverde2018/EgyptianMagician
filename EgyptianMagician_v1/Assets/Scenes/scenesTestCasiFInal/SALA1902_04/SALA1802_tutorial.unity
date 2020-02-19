@@ -2977,10 +2977,10 @@ RectTransform:
   m_Father: {fileID: 1093922098}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 746.89, y: 1220}
-  m_SizeDelta: {x: 482.23, y: 809.66}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 482.22998, y: 809.6599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &304015087 stripped
 Transform:
@@ -11655,7 +11655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc0f802900413843b4c09bea046e500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seguentnivell: SALA1902_04
+  seguentnivell: SALA1902_02
 --- !u!95 &1184403391
 Animator:
   serializedVersion: 3
