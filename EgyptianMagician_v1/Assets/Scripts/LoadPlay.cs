@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class LoadPlay : MonoBehaviour
 {
    public void Play() {
-        SceneManager.LoadScene("lvl1");
+        SceneManager.LoadScene("SALA1802_tutorial");
     }
     public void Menu() {
-        //SceneManager.LoadScene("menu_principal");
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene("menu_principal");
+        //SceneManager.LoadScene(7);
     }
-    public void Settings() {
+    /*public void Settings() {
         SceneManager.LoadScene("settings");
-    }
+    }*/
 }

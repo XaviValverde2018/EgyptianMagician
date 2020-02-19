@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 30079bfdc266e9144af52f645258e581
+guid: 86cdbde012abb51429e55e62da358a29
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1748287295390032637
-    second: Textos_0
+      213: 1712802514665587956
+    second: Botones 1_0
   - first:
-      213: 6994498766354317436
-    second: Textos_1
+      213: 5021219168656165894
+    second: Botones 1_1
   - first:
-      213: 803731643027083740
-    second: Textos_2
-  - first:
-      213: -5433009803928599215
-    second: Textos_3
+      213: -5309554675235388109
+    second: Botones 1_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -134,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Textos_0
+      name: Botones 1_0
       rect:
         serializedVersion: 2
-        x: 298
-        y: 1342
-        width: 1404
-        height: 253
+        x: 673
+        y: 900
+        width: 625
+        height: 555
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66e0eab6e94868643b07688d1de74a8d
-      internalID: -1748287295390032637
+      spriteID: a16d731d16673064f8491a2c6580a189
+      internalID: 1712802514665587956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Textos_1
+      name: Botones 1_1
       rect:
         serializedVersion: 2
-        x: 173
-        y: 840
-        width: 697
-        height: 185
+        x: 153
+        y: 176
+        width: 587
+        height: 455
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 871d594027477c44395d91ebc6c8f1a8
-      internalID: 6994498766354317436
+      spriteID: 9e5269c7a1a66ab4f91d256278a20974
+      internalID: 5021219168656165894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Textos_2
+      name: Botones 1_2
       rect:
         serializedVersion: 2
-        x: 1210
-        y: 830
-        width: 577
-        height: 208
+        x: 1332
+        y: 208
+        width: 465
+        height: 430
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,29 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 142ab2b0a8a329d46a5370080f8f7848
-      internalID: 803731643027083740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Textos_3
-      rect:
-        serializedVersion: 2
-        x: 648
-        y: 21
-        width: 807
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 085ebb5bd7d8ce84b8a0fb4d9cfd96f9
-      internalID: -5433009803928599215
+      spriteID: 64f74dd5587abb843bcf332fd89a7d4b
+      internalID: -5309554675235388109
       vertices: []
       indices: 
       edges: []
@@ -220,7 +196,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9cdddf2c738286f408076858b8bccade
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
