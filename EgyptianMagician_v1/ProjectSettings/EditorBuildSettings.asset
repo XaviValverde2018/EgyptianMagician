@@ -42,7 +42,7 @@ EditorBuildSettings:
     path: Assets/Scenes/scenesTestCasiFInal/SALA4_BETA_MFA.unity
     guid: a82322d1f51db74478cf57a88ef6912f
   - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1802_02.unity
+    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_02.unity
     guid: a2c2dea17e3de5448bdd0d2b39adcddc
   - enabled: 0
     path: Assets/Scenes/scenesTestCasiFInal/SALA1802_01.unity
@@ -50,13 +50,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/scenesTestCasiFInal/SALA1802_03.unity
     guid: f3c5a04a02e023340bf4d93aaa83f17d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/scenesTestCasiFInal/SALA1802_04.unity
     guid: ad22e22326a757a489f3d0bf57dfd5f5
   - enabled: 0
     path: Assets/Scenes/scenesTestCasiFInal/SALA1802_05.unity
     guid: bb6edde548943c9458f3c1fac6b83be7
   - enabled: 1
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1802_tutorial.unity
+    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1802_tutorial.unity
     guid: 2cea063286eeef245ac46a914be0cd50
+  - enabled: 0
+    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_03.unity
+    guid: 9222f8635d466cb448420e8715881a7c
+  - enabled: 1
+    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_04.unity
+    guid: 39f89997f7085214dbd8eaa52224d27e
   m_configObjects: {}

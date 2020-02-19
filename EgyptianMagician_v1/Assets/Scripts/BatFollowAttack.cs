@@ -41,7 +41,7 @@ public class BatFollowAttack : MonoBehaviour {
                 // POISON ----------------------------------
                 _playerController.lifePlayer -= BatFollowAttackValue;
                 elapsedTime = 0f;
-                if (33 < valueRandomPOISON) {
+                if (randomvalue < valueRandomPOISON) {
                     StartCoroutine(CountDown());
                     POISONImage.SetActive(true);
                 } 
@@ -60,7 +60,7 @@ public class BatFollowAttack : MonoBehaviour {
 
     IEnumerator CountDown() {
         _playerController.lifePlayer -= 1f;
-        yield return new WaitForSeconds(0.5f);      
+        yield return new WaitForSeconds(2f);      
         _playerController.lifePlayer -= 1f;
         POISONImage.SetActive(false);
         randomvalue = 31;
@@ -68,7 +68,7 @@ public class BatFollowAttack : MonoBehaviour {
     }
 
 
-
+    
 
 
 }
