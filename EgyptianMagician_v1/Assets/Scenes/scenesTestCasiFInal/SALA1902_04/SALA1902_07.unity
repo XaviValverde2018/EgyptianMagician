@@ -2500,6 +2500,11 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 509024961}
+    - target: {fileID: 8451005055182961353, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2625841539533351268, guid: e01b5a1441f4a5d40bc07082fd92e1e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e01b5a1441f4a5d40bc07082fd92e1e7, type: 3}
@@ -2825,6 +2830,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _gameManager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 772551675384216480, guid: c64d1600cd39bc5458e0a344a1a87e9e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c64d1600cd39bc5458e0a344a1a87e9e, type: 3}
@@ -3646,6 +3656,11 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 509024961}
+    - target: {fileID: 8451005055182961353, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2625841539533351268, guid: e01b5a1441f4a5d40bc07082fd92e1e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e01b5a1441f4a5d40bc07082fd92e1e7, type: 3}
@@ -4343,6 +4358,11 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 745894988}
+    - target: {fileID: 1292004117784308909, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1292004117784308897, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
@@ -4879,6 +4899,11 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 509024961}
+    - target: {fileID: 7427057340338083785, guid: ac5d9cf94a9b14646bac76c64aaf0380,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7427057340338083783, guid: ac5d9cf94a9b14646bac76c64aaf0380, type: 3}
     - {fileID: 40108259, guid: ac5d9cf94a9b14646bac76c64aaf0380, type: 3}
@@ -5659,8 +5684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 741360169}
-  moveSpeed: 13
-  lifePlayer: 40
+  moveSpeed: 14
+  lifePlayer: 50
   maxlifeplayer: 35
   rigidbodyHorusVelocity: {fileID: 0}
   isWalking: 0
@@ -5673,7 +5698,7 @@ MonoBehaviour:
     type: 3}
   posicioGenerarBulletBala: {fileID: 488058854}
   elapsedTime: 0
-  FireRate: 0.11
+  FireRate: 0.2
   _comprobacioEnemicMesAprop: {fileID: 509024962}
   _gmActiveBird: {fileID: 745894988}
   PC_GM_BirdActivated: 0
@@ -7772,6 +7797,11 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 745894988}
+    - target: {fileID: 1292004117784308909, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1292004117784308897, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
@@ -9785,6 +9815,11 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 772551675384216480, guid: c64d1600cd39bc5458e0a344a1a87e9e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c64d1600cd39bc5458e0a344a1a87e9e, type: 3}
 --- !u!1 &966399840 stripped
@@ -10771,6 +10806,11 @@ PrefabInstance:
       propertyPath: _spawnsExpTransform
       value: 
       objectReference: {fileID: 1048465495}
+    - target: {fileID: 7288875509485146161, guid: b07b1cefd4c822b49a6b02c1ef9f4f06,
+        type: 3}
+      propertyPath: m_Mass
+      value: 900
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1084890531042990739, guid: b07b1cefd4c822b49a6b02c1ef9f4f06, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b07b1cefd4c822b49a6b02c1ef9f4f06, type: 3}
@@ -12322,6 +12362,11 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 509024961}
+    - target: {fileID: 7427057340338083785, guid: ac5d9cf94a9b14646bac76c64aaf0380,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7427057340338083783, guid: ac5d9cf94a9b14646bac76c64aaf0380, type: 3}
     - {fileID: 40108259, guid: ac5d9cf94a9b14646bac76c64aaf0380, type: 3}
@@ -13053,6 +13098,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _gameManager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 772551675384216480, guid: c64d1600cd39bc5458e0a344a1a87e9e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c64d1600cd39bc5458e0a344a1a87e9e, type: 3}
@@ -14156,6 +14206,11 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 509024961}
+    - target: {fileID: 8451005055182961353, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2625841539533351268, guid: e01b5a1441f4a5d40bc07082fd92e1e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e01b5a1441f4a5d40bc07082fd92e1e7, type: 3}
@@ -14312,6 +14367,11 @@ PrefabInstance:
       propertyPath: _spawnsExpTransform
       value: 
       objectReference: {fileID: 1358756906}
+    - target: {fileID: 7288875509485146161, guid: b07b1cefd4c822b49a6b02c1ef9f4f06,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1084890531042990739, guid: b07b1cefd4c822b49a6b02c1ef9f4f06, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b07b1cefd4c822b49a6b02c1ef9f4f06, type: 3}
@@ -15272,6 +15332,11 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 509024961}
+    - target: {fileID: 7427057340338083785, guid: ac5d9cf94a9b14646bac76c64aaf0380,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7427057340338083783, guid: ac5d9cf94a9b14646bac76c64aaf0380, type: 3}
     - {fileID: 40108259, guid: ac5d9cf94a9b14646bac76c64aaf0380, type: 3}
@@ -16002,6 +16067,11 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 745894988}
+    - target: {fileID: 1292004117784308909, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1292004117784308897, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
@@ -21208,6 +21278,11 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 745894988}
+    - target: {fileID: 1292004117784308909, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1292004117784308897, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
@@ -21613,7 +21688,7 @@ PrefabInstance:
     - target: {fileID: 7288875509485146172, guid: b07b1cefd4c822b49a6b02c1ef9f4f06,
         type: 3}
       propertyPath: vidaEnemics
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7288875509485146173, guid: b07b1cefd4c822b49a6b02c1ef9f4f06,
         type: 3}
@@ -21746,6 +21821,11 @@ PrefabInstance:
       propertyPath: _spawnsExpTransform
       value: 
       objectReference: {fileID: 1615282546}
+    - target: {fileID: 7288875509485146161, guid: b07b1cefd4c822b49a6b02c1ef9f4f06,
+        type: 3}
+      propertyPath: m_Mass
+      value: 900
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1084890531042990739, guid: b07b1cefd4c822b49a6b02c1ef9f4f06, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b07b1cefd4c822b49a6b02c1ef9f4f06, type: 3}
@@ -22418,6 +22498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _gameManager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 772551675384216480, guid: c64d1600cd39bc5458e0a344a1a87e9e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c64d1600cd39bc5458e0a344a1a87e9e, type: 3}
@@ -23927,6 +24012,11 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 745894988}
+    - target: {fileID: 1292004117784308909, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1292004117784308897, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
@@ -24989,6 +25079,11 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 509024961}
+    - target: {fileID: 7427057340338083785, guid: ac5d9cf94a9b14646bac76c64aaf0380,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7427057340338083783, guid: ac5d9cf94a9b14646bac76c64aaf0380, type: 3}
     - {fileID: 40108259, guid: ac5d9cf94a9b14646bac76c64aaf0380, type: 3}
@@ -25603,6 +25698,11 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 745894988}
+    - target: {fileID: 1292004117784308909, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1292004117784308897, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
@@ -25911,6 +26011,11 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 509024961}
+    - target: {fileID: 8451005055182961353, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2625841539533351268, guid: e01b5a1441f4a5d40bc07082fd92e1e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e01b5a1441f4a5d40bc07082fd92e1e7, type: 3}
@@ -27283,6 +27388,11 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 745894988}
+    - target: {fileID: 1292004117784308909, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1292004117784308897, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}

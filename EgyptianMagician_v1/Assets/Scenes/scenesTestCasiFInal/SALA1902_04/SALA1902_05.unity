@@ -1887,7 +1887,7 @@ PrefabInstance:
     - target: {fileID: 772551675384216481, guid: c64d1600cd39bc5458e0a344a1a87e9e,
         type: 3}
       propertyPath: vidaEnemics
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 772551675384216494, guid: c64d1600cd39bc5458e0a344a1a87e9e,
         type: 3}

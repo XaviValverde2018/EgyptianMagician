@@ -5901,7 +5901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 741360169}
   moveSpeed: 13
-  lifePlayer: 20
+  lifePlayer: 90
   maxlifeplayer: 35
   rigidbodyHorusVelocity: {fileID: 0}
   isWalking: 0
@@ -6348,7 +6348,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 12
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -8290,7 +8290,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -12671,7 +12671,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -12843,7 +12843,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -16322,7 +16322,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -22069,7 +22069,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -22446,7 +22446,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 12
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -22909,7 +22909,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -26067,7 +26067,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 12
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -26780,7 +26780,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}

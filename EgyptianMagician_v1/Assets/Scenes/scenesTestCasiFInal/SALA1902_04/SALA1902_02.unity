@@ -5031,7 +5031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 741360169}
   moveSpeed: 10
-  lifePlayer: 5
+  lifePlayer: 20
   maxlifeplayer: 35
   rigidbodyHorusVelocity: {fileID: 0}
   isWalking: 0
@@ -23804,7 +23804,7 @@ PrefabInstance:
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: vidaEnemics
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -24060,13 +24060,13 @@ PrefabInstance:
     - target: {fileID: 7665115134699821387, guid: 5258b4a6af6e9324590cad891251671a,
         type: 3}
       propertyPath: llistaEnemics.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7665115134699821387, guid: 5258b4a6af6e9324590cad891251671a,
         type: 3}
       propertyPath: llistaEnemics.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 748179091}
     - target: {fileID: 7665115134699821387, guid: 5258b4a6af6e9324590cad891251671a,
         type: 3}
       propertyPath: llistaEnemics.Array.data[1]
