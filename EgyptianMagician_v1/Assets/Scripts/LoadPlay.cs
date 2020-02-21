@@ -15,4 +15,9 @@ public class LoadPlay : MonoBehaviour
     public void Settings() {
         SceneManager.LoadScene("settings");
     }
+    public void GameOverPlay() {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+        Time.timeScale = 1;
+    }
 }

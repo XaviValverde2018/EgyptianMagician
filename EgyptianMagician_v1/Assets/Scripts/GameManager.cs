@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     [Header("Bird Activated")]
     public ActiveBird _activeBird;
     public bool GM_BirdActivated;
+    public PlayerController _PC;
+    public GameObject gameOverScreen;
 
     [Header("PlayerPrefs")]
     public bool meteorBoolPlayerPrefs;
@@ -60,6 +62,8 @@ public class GameManager : MonoBehaviour
         //Eliminar aquesta linea de codi
         //PlayerPrefs.DeleteKey("expValue");
 
+        totalvalueexp = PlayerPrefs.GetInt("expValue");
+        totalGold = PlayerPrefs.GetInt("goldValue");
     }
 
     // Update is called once per frame
@@ -73,9 +77,12 @@ public class GameManager : MonoBehaviour
         Debug.Log(PlayerPrefs.GetInt("meteorBool"));
 
         PlayerPrefs.SetInt("expValue", totalExp);
-        
-        totalvalueexp = totalExp / 30.0f;
+        PlayerPrefs.SetInt("goldValue", totalGold);
+        totalvalueexp = totalExp / 60.0f;
         sliderExp.value = totalvalueexp;
+
+        if (_PC.lifePlayer <= 0)
+            StartCoroutine(GameOver());
 
     }
 
@@ -95,5 +102,11 @@ public class GameManager : MonoBehaviour
         }
     }// Serveix per buscar a un array d'enemics i si es 0 activar pasar a nivell seguent. 
 
+    IEnumerator GameOver() {
+        yield return new WaitForSeconds(2);
+        gameOverScreen.SetActive(true);
+        Time.timeScale = 0;
+      
+    }
      
 }

@@ -232,8 +232,8 @@ public class PlayerController : MonoBehaviour {
     }
     IEnumerator CountDown() {  
         yield return new WaitForSeconds(2);
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        //Scene scene = SceneManager.GetActiveScene();
+        //SceneManager.LoadScene(scene.name);
     }
     IEnumerator HealthCountDown() {
         yield return new WaitForSeconds(0.8f);
