@@ -9,7 +9,7 @@ public class LoadPlay : MonoBehaviour
         SceneManager.LoadScene("SALA1802_tutorial");
     }
     public void Menu() {
-        SceneManager.LoadScene("menu_principal");
+        SceneManager.LoadScene("menu_principal_GOOD");
         //SceneManager.LoadScene(7);
     }
     public void Settings() {
@@ -19,5 +19,12 @@ public class LoadPlay : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
         Time.timeScale = 1;
+    }
+    public void SelectLevels() {
+        SceneManager.LoadScene("sala_mapas");
+    }
+    public void Reload() {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }

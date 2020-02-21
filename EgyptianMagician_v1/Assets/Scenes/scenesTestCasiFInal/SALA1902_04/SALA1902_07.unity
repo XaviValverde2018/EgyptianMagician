@@ -5660,7 +5660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 741360169}
   moveSpeed: 13
-  lifePlayer: 1
+  lifePlayer: 40
   maxlifeplayer: 35
   rigidbodyHorusVelocity: {fileID: 0}
   isWalking: 0

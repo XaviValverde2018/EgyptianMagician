@@ -30,7 +30,7 @@ public class ActiveBird : MonoBehaviour
         birdButton.interactable = false;
         add++;
         birdActivated = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         add++;
         birdActivated = false;
         yield return new WaitForSeconds(8);

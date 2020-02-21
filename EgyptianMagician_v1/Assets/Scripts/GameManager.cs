@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
 
         meteorBoolPlayerPrefsValue = PlayerPrefs.GetInt("meteorBool");
         if(meteorBoolPlayerPrefsValue == 1) {
