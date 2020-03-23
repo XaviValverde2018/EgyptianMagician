@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     public float moveSpeed = 4f;
     public float lifePlayer;
     public float maxlifeplayer;
+    public int LifePPGetInt;
 
     [Header("Movement")]
     public Rigidbody rigidbodyHorusVelocity;
@@ -83,13 +84,18 @@ public class PlayerController : MonoBehaviour {
         currentPos = playerpos.transform.position;
         oldPos = currentPos;
         isWalking = false;
-
+        LifePPGetInt = PlayerPrefs.GetInt("LifePPBuy");
+        maxlifeplayer += LifePPGetInt;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        /* arreglar 
+        LifePPGetInt = PlayerPrefs.GetInt("LifePPBuy");
+        maxlifeplayer += LifePPGetInt;
+        */
         healthBoostActivated = _chooseBoost.Time_boost.healthBool;
         // logica per activar el modo BIRD
         PC_GM_BirdActivated = _gmActiveBird.GM_BirdActivated;

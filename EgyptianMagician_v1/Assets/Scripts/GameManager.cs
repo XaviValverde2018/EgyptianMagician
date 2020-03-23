@@ -64,6 +64,8 @@ public class GameManager : MonoBehaviour
         //PlayerPrefs.DeleteKey("expValue");
 
         totalvalueexp = PlayerPrefs.GetInt("expValue");
+
+        PlayerPrefs.SetInt("goldValue", 200);
         totalGold = PlayerPrefs.GetInt("goldValue");
     }
 
@@ -72,13 +74,14 @@ public class GameManager : MonoBehaviour
     {
         BuscarEnemicsPerPasarAlSeguentNivell();
         GM_BirdActivated = _activeBird.birdActivated;
+        totalGold = PlayerPrefs.GetInt("goldValue");
         textGold.text = totalGold.ToString();
 
         Debug.Log(PlayerPrefs.GetInt("healthBool"));
         Debug.Log(PlayerPrefs.GetInt("meteorBool"));
 
         PlayerPrefs.SetInt("expValue", totalExp);
-        PlayerPrefs.SetInt("goldValue", totalGold);
+        //PlayerPrefs.SetInt("goldValue", totalGold); // 23 de Març 2020
         totalvalueexp = totalExp / 60.0f;
         sliderExp.value = totalvalueexp;
 

@@ -18,7 +18,7 @@ public class MummyFollowAttack : MonoBehaviour
     public float MummyFollowAttackValue = 4.0f;
     public Animator AttackMummyFollow;
     public bool attack;
-    public EnemyManager _em;
+    public EnemyManager _em;//Hola
 
     [Header("Values SLOW")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
