@@ -33,7 +33,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject bulletBala;
     public GameObject posicioGenerarBulletBala;
     public float elapsedTime;
-    public float FireRate = 0.5f;
+    public float FireRate;
+    public float SpeedPPGetFloat;
     public comprobacioEnemicMesAprop _comprobacioEnemicMesAprop;
 
     [Header("Bird Activated")]
@@ -86,7 +87,7 @@ public class PlayerController : MonoBehaviour {
         isWalking = false;
         LifePPGetInt = PlayerPrefs.GetInt("LifePPBuy");
         maxlifeplayer += LifePPGetInt;
-
+        FireRate -= SpeedPPGetFloat;// 24 Març cambiar!!!!!!!!!!!!!!!
     }
 
     // Update is called once per frame
@@ -164,6 +165,9 @@ public class PlayerController : MonoBehaviour {
 
     void ShootBullet() {
         elapsedTime += Time.deltaTime;
+        SpeedPPGetFloat = PlayerPrefs.GetFloat("SpeedPPBuy");
+        Debug.Log("SpeedPPGetFloat:" + SpeedPPGetFloat);
+        
         if ((isWalking==false)&&(elapsedTime > FireRate)) {// disparar quan estigui quiet
             if (_comprobacioEnemicMesAprop.NoEnemicsOnRoom == false) {
                 Instantiate(bulletBala, posicioGenerarBulletBala.transform.position, posicioGenerarBulletBala.transform.rotation);
