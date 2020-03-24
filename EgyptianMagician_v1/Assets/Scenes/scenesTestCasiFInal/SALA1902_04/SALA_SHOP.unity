@@ -3734,6 +3734,7 @@ GameObject:
   - component: {fileID: 422190371}
   - component: {fileID: 422190370}
   - component: {fileID: 422190369}
+  - component: {fileID: 422190372}
   m_Layer: 5
   m_Name: DamageShopButton
   m_TagString: Untagged
@@ -3787,10 +3788,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.6509804}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.627451}
     m_HighlightedColor: {r: 0.6462264, g: 1, b: 0.65316314, a: 1}
     m_PressedColor: {r: 0.14320946, g: 1, b: 0, a: 1}
-    m_SelectedColor: {r: 0, g: 1, b: 0.038576365, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.627451}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3846,6 +3847,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422190367}
   m_CullTransparentMesh: 0
+--- !u!114 &422190372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422190367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453a2ce694934ec43aaecfe7cce0bf36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &422587052
 GameObject:
   m_ObjectHideFlags: 0
@@ -7523,10 +7536,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.6509804}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.627451}
     m_HighlightedColor: {r: 0.6462264, g: 1, b: 0.65316314, a: 1}
     m_PressedColor: {r: 0.14320946, g: 1, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.627451}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -7639,6 +7652,7 @@ MonoBehaviour:
   LifePPBuyIncrement: 0
   priceText: {fileID: 1988433711}
   priceTextInt: 0
+  preuESTABLERT: 0
 --- !u!1 &736675495 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8580669366981036587, guid: 869b91b15bd7b1143b56928e8271bd94,
@@ -21731,6 +21745,7 @@ GameObject:
   - component: {fileID: 1831914164}
   - component: {fileID: 1831914163}
   - component: {fileID: 1831914162}
+  - component: {fileID: 1831914165}
   m_Layer: 5
   m_Name: 'SpeedShopButton '
   m_TagString: Untagged
@@ -21784,10 +21799,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.6509804}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.627451}
     m_HighlightedColor: {r: 0.6462264, g: 1, b: 0.65316314, a: 1}
     m_PressedColor: {r: 0.14320946, g: 1, b: 0, a: 1}
-    m_SelectedColor: {r: 0, g: 1, b: 0.038576365, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.627451}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -21806,7 +21821,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1831914163}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1831914165}
+        m_MethodName: SpeedShopButtonFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1831914163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21843,6 +21869,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831914160}
   m_CullTransparentMesh: 0
+--- !u!114 &1831914165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831914160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e69f8f620c10e04bbe7c55ff42b5a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldPlayer: 0
+  preuESTABLERT: 0
+  priceTextInt: 0
+  priceText: {fileID: 198548069}
+  SpeedButton: {fileID: 1831914162}
+  numberbuyint: 0
+  numberbuy: {fileID: 591181848}
+  SpeedPPBuyIncrement: 0
 --- !u!1001 &1836435750
 PrefabInstance:
   m_ObjectHideFlags: 0
