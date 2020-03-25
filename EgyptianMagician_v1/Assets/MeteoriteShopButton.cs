@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-
-public class SpeedShopButton : MonoBehaviour
+public class MeteoriteShopButton : MonoBehaviour
 {
-    //this code is in Speed shop Button
+    //this code is in Meteorite shop Button
     /*
-     1. Clicar al botó augmentem +5 al playerpref: "SpeedPP". valor el Jugador: firerate 
+     1. Clicar al botó augmentem +5 al playerpref: "MeteoritoPPBuy". valor el Jugador: firerate 
      2. Tancar el set active
      3. restar els diners. Comprovar si tenim diners per a poder comprar.  
     */
@@ -19,61 +17,61 @@ public class SpeedShopButton : MonoBehaviour
     [Header("ValueCanvas")]
     public int priceTextInt; //el valor del preu del que val el producte
     public Text priceText; //el valor del preu del que val el producte TEXT. 
-    public Button SpeedButton; // Botón para comprar
+    public Button MeteoriteButton; // Botón para comprar
 
     [Header("ValuePurchases")]
     public int numberbuyint; //el numero de vegades que hem comprat
     public Text numberbuy; // el numero de vegades que hem comprat TEXT.
 
-    [Header("PlayerPrefSpeed")]
-    public float SpeedPPBuyIncrement;
+
+    [Header("PlayerPrefMeteorito")]
+    public float MeteoritoPPBuyIncrement;
 
     // Start is called before the first frame update
     void Start()
     {
         goldPlayer = PlayerPrefs.GetInt("goldValue");
 
-        preuESTABLERT = 80;
+        preuESTABLERT = 100;
         numberbuyint = 0;
-        SpeedPPBuyIncrement = 0;
+        MeteoritoPPBuyIncrement = 0;
 
-        PlayerPrefs.SetFloat("SpeedPPBuy", SpeedPPBuyIncrement);
+        //PlayerPrefs.SetFloat("MeteoritoPPBuy", MeteoritoPPBuyIncrement);
 
-        if(numberbuyint == 0) {
+        if (numberbuyint == 0) {
             priceTextInt = preuESTABLERT;
             priceText.text = priceTextInt.ToString();
         }
-
     }
 
     // Update is called once per frame
     void Update()
     {
         goldPlayer = PlayerPrefs.GetInt("goldValue");
-        if(goldPlayer >= priceTextInt) {
-            SpeedButton.interactable = true;
+        if (goldPlayer >= priceTextInt) {
+            MeteoriteButton.interactable = true;
         } else {
-            SpeedButton.interactable = false;
+            MeteoriteButton.interactable = false;
         }
     }
-
-    public void SpeedShopButtonFunction() {
-        StartCoroutine(timerSpeedGUI());
+    public void MeteoritoShopButtonFunction() {
+        StartCoroutine(timerMeteoritoGUI());
     }
-
-    IEnumerator timerSpeedGUI() {
+    IEnumerator timerMeteoritoGUI() {
         goldPlayer = PlayerPrefs.GetInt("goldValue");
         goldPlayer -= priceTextInt;
         numberbuyint++;
-        SpeedPPBuyIncrement += 0.05f;
-
+        MeteoritoPPBuyIncrement += 1.0f;
         PlayerPrefs.SetInt("goldValue", goldPlayer);
         priceTextInt *= numberbuyint;
         numberbuy.text = numberbuyint.ToString();
         priceText.text = priceTextInt.ToString();
 
-        PlayerPrefs.SetFloat("SpeedPPBuy", SpeedPPBuyIncrement);
-        yield return new WaitForSeconds(0.5f);
+        PlayerPrefs.SetFloat("MeteoritoPPBuy", MeteoritoPPBuyIncrement);
+        Debug.Log(" APlayerPrefs.GetFloat(MeteoritoPPBuy)" + PlayerPrefs.GetFloat("MeteoritoPPBuy"));
+        yield return new WaitForSeconds(0.1f);
         //_canvasShop.SetActive(false);
     }
+
 }
+

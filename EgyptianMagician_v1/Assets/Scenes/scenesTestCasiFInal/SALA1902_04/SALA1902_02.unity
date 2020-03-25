@@ -5033,6 +5033,7 @@ MonoBehaviour:
   moveSpeed: 10
   lifePlayer: 20
   maxlifeplayer: 35
+  LifePPGetInt: 0
   rigidbodyHorusVelocity: {fileID: 0}
   isWalking: 0
   currentPos: {x: 0, y: 0, z: 0}
@@ -5045,6 +5046,7 @@ MonoBehaviour:
   posicioGenerarBulletBala: {fileID: 488058854}
   elapsedTime: 0
   FireRate: 0.4
+  SpeedPPGetFloat: 0
   _comprobacioEnemicMesAprop: {fileID: 509024962}
   _gmActiveBird: {fileID: 745894988}
   PC_GM_BirdActivated: 0
@@ -11667,7 +11669,7 @@ MonoBehaviour:
   _comprobacioEnemicMesAprop: {fileID: 509024962}
   countEnemicsLlista: 0
   ps: {fileID: 1307964141}
-  seguentnivell: SALA1902_03
+  seguentnivell: SALA_SHOP
   doorright: {fileID: 1326263500}
   doorleft: {fileID: 2141896113}
 --- !u!95 &1184403391

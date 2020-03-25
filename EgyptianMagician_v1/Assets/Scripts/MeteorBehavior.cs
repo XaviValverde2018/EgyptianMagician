@@ -11,16 +11,17 @@ public class MeteorBehavior : MonoBehaviour
     public GameObject meteoritoPointGenerate;
     public Animator animationMeteorito;
     public Animator animationShakeCamera;
+    public float timeActiveMeteorito;
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeActiveMeteorito = 1.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        timeActiveMeteorito = PlayerPrefs.GetFloat("MeteoritoPPBuy");
     }
     public void ActivarMeteorito() {
         StartCoroutine(CountDown());
@@ -32,12 +33,12 @@ public class MeteorBehavior : MonoBehaviour
         meteorButton.interactable = true;
         meteorActivated = true;
         yield return new WaitForSeconds(0.1f);
-        meteorButton.interactable = false;
-        yield return new WaitForSeconds(1.0f);
+        meteorButton.interactable = false; 
+        yield return new WaitForSeconds(0.1f);
         animationMeteorito.SetBool("isWalk", true);
         animationMeteorito.SetBool("isMeteorito", false);
         animationShakeCamera.SetBool("isShake", true);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(timeActiveMeteorito);
         meteorActivated = true;
         animationShakeCamera.SetBool("isShake", false);
         yield return new WaitForSeconds(10);

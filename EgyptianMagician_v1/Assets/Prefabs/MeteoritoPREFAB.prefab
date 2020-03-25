@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ac7dd465b3f82428878296bd3392f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerMeteoritoUpgrade: 1
 --- !u!1 &3832843019821846396
 GameObject:
   m_ObjectHideFlags: 0

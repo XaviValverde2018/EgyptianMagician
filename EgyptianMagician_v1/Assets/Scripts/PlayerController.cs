@@ -87,7 +87,10 @@ public class PlayerController : MonoBehaviour {
         isWalking = false;
         LifePPGetInt = PlayerPrefs.GetInt("LifePPBuy");
         maxlifeplayer += LifePPGetInt;
-        FireRate -= SpeedPPGetFloat;// 24 Març cambiar!!!!!!!!!!!!!!!
+
+        SpeedPPGetFloat = PlayerPrefs.GetFloat("SpeedPPBuy");
+        Debug.Log("SpeedPPGetFloat:" + SpeedPPGetFloat);
+        FireRate -= SpeedPPGetFloat;
     }
 
     // Update is called once per frame
@@ -165,8 +168,7 @@ public class PlayerController : MonoBehaviour {
 
     void ShootBullet() {
         elapsedTime += Time.deltaTime;
-        SpeedPPGetFloat = PlayerPrefs.GetFloat("SpeedPPBuy");
-        Debug.Log("SpeedPPGetFloat:" + SpeedPPGetFloat);
+
         
         if ((isWalking==false)&&(elapsedTime > FireRate)) {// disparar quan estigui quiet
             if (_comprobacioEnemicMesAprop.NoEnemicsOnRoom == false) {
