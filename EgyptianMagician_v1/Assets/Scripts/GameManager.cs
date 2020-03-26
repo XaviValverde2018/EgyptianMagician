@@ -17,9 +17,13 @@ public class GameManager : MonoBehaviour
 
     [Header("Exp Status")]
     public int totalExp;
+    public int currentExpToChangeLevel;
     public Text textExp;
     public Slider sliderExp;
     public float totalvalueexp;
+    public int LevelsValueExp; // PlayerPrefs.GetInt("LevelExpPP")
+    public GameObject[] LevelExpImage;
+    public int expValuePP;
 
     [Header("Bird Activated")]
     public ActiveBird _activeBird;
@@ -32,12 +36,22 @@ public class GameManager : MonoBehaviour
     public int meteorBoolPlayerPrefsValue;
     public bool healthBoolPlayerPrefs;
     public int healthBoolPlayerPrefsValue;
+    public float MeteoritoPPBuy;
+    public float HealthPPBuy;
 
-    
     // Start is called before the first frame update
 
     void Start()
     {
+        currentExpToChangeLevel = 0;
+        LevelsValueExp = 0;
+      
+        PlayerPrefs.SetInt("expValue", totalExp);
+        PlayerPrefs.SetInt("LevelExpPP",LevelsValueExp);
+
+
+        MeteoritoPPBuy = PlayerPrefs.GetFloat("MeteoritoPPBuy");
+        HealthPPBuy = PlayerPrefs.GetFloat("HealthPPBuy");
         Time.timeScale = 1;
 
         meteorBoolPlayerPrefsValue = PlayerPrefs.GetInt("meteorBool");
@@ -63,9 +77,9 @@ public class GameManager : MonoBehaviour
         //Eliminar aquesta linea de codi
         //PlayerPrefs.DeleteKey("expValue");
 
-        totalvalueexp = PlayerPrefs.GetInt("expValue");
+        //totalvalueexp = PlayerPrefs.GetInt("expValue");
 
-        PlayerPrefs.SetInt("goldValue", 2200);
+        PlayerPrefs.SetInt("goldValue", 99999);
         totalGold = PlayerPrefs.GetInt("goldValue");
         Debug.Log(" GMSPlayerPrefs.GetFloat(MeteoritoPPBuy)" + PlayerPrefs.GetFloat("MeteoritoPPBuy"));
 
@@ -74,6 +88,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MeteoritoPPBuy = PlayerPrefs.GetFloat("MeteoritoPPBuy");
+        HealthPPBuy = PlayerPrefs.GetFloat("HealthPPBuy");
         Debug.Log(" GMUPlayerPrefs.GetFloat(MeteoritoPPBuy)" + PlayerPrefs.GetFloat("MeteoritoPPBuy"));
 
         BuscarEnemicsPerPasarAlSeguentNivell();
@@ -84,10 +100,13 @@ public class GameManager : MonoBehaviour
         Debug.Log(PlayerPrefs.GetInt("healthBool"));
         Debug.Log(PlayerPrefs.GetInt("meteorBool"));
 
-        PlayerPrefs.SetInt("expValue", totalExp);
+        // currentExpToChangeLevel = totalExp;
+        //PlayerPrefs.SetInt("expValue", (expValuePP+=totalExp));
+        //expValuePP = PlayerPrefs.GetInt("expValue");
         //PlayerPrefs.SetInt("goldValue", totalGold); // 23 de Març 2020
-        totalvalueexp = totalExp / 60.0f;
-        sliderExp.value = totalvalueexp;
+
+
+        LevelExpBehavior();
 
         if (_PC.lifePlayer <= 0)
             StartCoroutine(GameOver());
@@ -115,6 +134,23 @@ public class GameManager : MonoBehaviour
         gameOverScreen.SetActive(true);
         Time.timeScale = 0;
       
+    }
+    public void LevelExpBehavior() {
+
+        if (sliderExp.value == 1) {
+            sliderExp.value = 0;
+            currentExpToChangeLevel = 0;
+            totalExp = 0;
+            LevelsValueExp += 1;
+            PlayerPrefs.SetInt("LevelExpPP", LevelsValueExp);
+            LevelExpImage[LevelsValueExp - 1].SetActive(false);
+            LevelExpImage[LevelsValueExp].SetActive(true);
+        } else {
+            currentExpToChangeLevel = totalExp;
+            sliderExp.value = (currentExpToChangeLevel / 60.0f);
+        }
+
+ 
     }
      
 }
