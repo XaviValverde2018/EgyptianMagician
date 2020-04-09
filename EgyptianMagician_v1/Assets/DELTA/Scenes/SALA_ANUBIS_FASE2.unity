@@ -2919,7 +2919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5c6b1a5acfb004490642a43975640c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnubisLife: 100
+  AnubisLife: 50
   AnubisMort: 0
   _anubisfase1: {fileID: 233133542}
   LifeFase1: 0
@@ -33081,7 +33081,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1294673540}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: _gm
@@ -33091,7 +33091,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1294673539}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: speed

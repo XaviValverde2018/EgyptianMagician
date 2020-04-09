@@ -21,17 +21,20 @@ public class AnubisManager : MonoBehaviour
         LifeFase1 = AnubisLife;
         LifeFase2 = (AnubisLife * 0.50f);
         LifeFase3 = (AnubisLife * 0.25f);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if(AnubisLife >= LifeFase2) {
             MeteoriteAnubisTrue();
         }
         if(AnubisLife >= LifeFase3 && AnubisLife < LifeFase2) {
             MeteoriteAnubisFalse();
             //_anubisfase2.enabled = true;
+            // Escriure codi de la FASE 2. Fase 2: Invocacio d'enemics. 
         }
         if(AnubisLife < LifeFase3) {
             MeteoriteAnubisFalse();
