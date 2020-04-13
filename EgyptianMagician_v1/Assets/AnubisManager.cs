@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class AnubisManager : MonoBehaviour
 {
     public float AnubisLife;
@@ -21,7 +21,16 @@ public class AnubisManager : MonoBehaviour
         LifeFase1 = AnubisLife;
         LifeFase2 = (AnubisLife * 0.50f);
         LifeFase3 = (AnubisLife * 0.25f);
-        
+
+        if (SceneManager.GetActiveScene().name == "SALA_ANUBIS") {
+            AnubisLife = LifeFase1;
+        }
+        if (SceneManager.GetActiveScene().name == "SALA_ANUBIS_FASE2") {
+            AnubisLife = LifeFase2;
+        }
+        if (SceneManager.GetActiveScene().name == "SALA_ANUBIS_FASE3") {
+            AnubisLife = LifeFase3;
+        }
     }
 
     // Update is called once per frame

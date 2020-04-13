@@ -2968,6 +2968,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc0438e68309c54aa20934a0b41ade0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _anubisLifeManager: {fileID: 233133539}
+  _anubisLifeNextFase: 25
+  seguentFase: SALA_ANUBIS_FASE3
 --- !u!1 &233326747
 GameObject:
   m_ObjectHideFlags: 0
@@ -17193,6 +17196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playercontroller: {fileID: 1294673539}
   llistaEnemics:
+  - {fileID: 2140102206}
   - {fileID: 257708132}
   NoEnemicsOnRoom: 0
   distanciaEntrePlayerIEnemicActual: 0
@@ -25698,7 +25702,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2140102205}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2140102206}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7856526944930f4419fe905d6bed02f4, type: 3}
@@ -33155,6 +33159,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1292004117784308897, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
+--- !u!1 &2140102206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1292004117784308903, guid: 21d8238283601ab4b9af80e289ac65bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2140102205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2140825466
 GameObject:
   m_ObjectHideFlags: 0

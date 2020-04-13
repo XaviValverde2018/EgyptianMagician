@@ -89,4 +89,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_10.unity
     guid: 4707b6e5fc16e0446aec634596f0e498
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA3103_02.unity
+    guid: aed6d6cfd8773a34a908aba7549176a1
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_ANUBIS.unity
+    guid: 7a8d90defdc077940bb1b7935327f362
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_ANUBIS_BACKUP.unity
+    guid: ee095d5df5ac6a747bbf9b9f43cac439
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_ANUBIS_FASE2.unity
+    guid: 1573ee6334aa7bc41881263f2205ad37
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_ANUBIS_FASE3.unity
+    guid: be0f799fad63af14b90fadc9ef2bfcd4
   m_configObjects: {}
