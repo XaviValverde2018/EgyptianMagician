@@ -11,8 +11,8 @@ public class AnubisManager : MonoBehaviour
     public float LifeFase2;
     public float LifeFase3;
 
-    [Header("FASE1")]
-    public GameObject _meteoriteAnubisPREFAB;
+    //[Header("FASE1")]
+    //public GameObject _meteoriteAnubisPREFAB;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,15 +38,15 @@ public class AnubisManager : MonoBehaviour
     {
 
         if(AnubisLife >= LifeFase2) {
-            MeteoriteAnubisTrue();
+           // MeteoriteAnubisTrue();
         }
         if(AnubisLife >= LifeFase3 && AnubisLife < LifeFase2) {
-            MeteoriteAnubisFalse();
+            //MeteoriteAnubisFalse();
             //_anubisfase2.enabled = true;
             // Escriure codi de la FASE 2. Fase 2: Invocacio d'enemics. 
         }
         if(AnubisLife < LifeFase3) {
-            MeteoriteAnubisFalse();
+          //  MeteoriteAnubisFalse();
             //_anubisfase2.enabled = false;
             //_anubisfase3.enabled = true;
         }       
@@ -67,10 +67,10 @@ public class AnubisManager : MonoBehaviour
     void DamagePlayerToAnubis() {
         AnubisLife--;
     }
-    void MeteoriteAnubisTrue() {
+    /*void MeteoriteAnubisTrue() {
         _meteoriteAnubisPREFAB.SetActive(true);
     }
     void MeteoriteAnubisFalse() {
         _meteoriteAnubisPREFAB.SetActive(false);
-    }
+    }*/
 }

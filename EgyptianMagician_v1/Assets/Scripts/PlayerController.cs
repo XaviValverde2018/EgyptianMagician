@@ -232,6 +232,11 @@ public class PlayerController : MonoBehaviour {
 
         }
     }
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("meteoritoAnubis")) {
+            lifePlayer -= 5.0f;
+        }
+    }
     private void OnTriggerStay(Collider other) {
         elapsedTimeHealth += Time.deltaTime;
         if (other.CompareTag("health")) {

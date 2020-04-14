@@ -15,6 +15,7 @@ TagManager:
   - meteorito
   - ray
   - health
+  - meteoritoAnubis
   layers:
   - Default
   - TransparentFX

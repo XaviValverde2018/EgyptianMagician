@@ -3728,7 +3728,7 @@ PrefabInstance:
     - target: {fileID: 3985973658976031801, guid: a6ee88b3b7cbcaa49a6706410802edb6,
         type: 3}
       propertyPath: m_Name
-      value: TeleportAnubis (2)
+      value: TeleportAnubis2On
       objectReference: {fileID: 0}
     - target: {fileID: 3985973658976031801, guid: a6ee88b3b7cbcaa49a6706410802edb6,
         type: 3}
@@ -17608,7 +17608,7 @@ MonoBehaviour:
     type: 3}
   posicioGenerarBulletBala: {fileID: 1434296155}
   elapsedTime: 0
-  FireRate: 4
+  FireRate: 0.25
   SpeedPPGetFloat: 0
   _comprobacioEnemicMesAprop: {fileID: 1294673542}
   _gmActiveBird: {fileID: 745894988}
@@ -20223,7 +20223,7 @@ PrefabInstance:
     - target: {fileID: 3985973658976031801, guid: a6ee88b3b7cbcaa49a6706410802edb6,
         type: 3}
       propertyPath: m_Name
-      value: TeleportAnubis (3)
+      value: TeleportAnubis2Off
       objectReference: {fileID: 0}
     - target: {fileID: 3985973658976031801, guid: a6ee88b3b7cbcaa49a6706410802edb6,
         type: 3}
@@ -32787,7 +32787,7 @@ PrefabInstance:
     - target: {fileID: 3985973658976031801, guid: a6ee88b3b7cbcaa49a6706410802edb6,
         type: 3}
       propertyPath: m_Name
-      value: TeleportAnubis (1)
+      value: TeleportAnubis1Off
       objectReference: {fileID: 0}
     - target: {fileID: 3985973658976031801, guid: a6ee88b3b7cbcaa49a6706410802edb6,
         type: 3}
@@ -34092,7 +34092,7 @@ PrefabInstance:
     - target: {fileID: 3985973658976031801, guid: a6ee88b3b7cbcaa49a6706410802edb6,
         type: 3}
       propertyPath: m_Name
-      value: TeleportAnubis
+      value: TeleportAnubis1On
       objectReference: {fileID: 0}
     - target: {fileID: 3985973658976031801, guid: a6ee88b3b7cbcaa49a6706410802edb6,
         type: 3}
