@@ -3912,6 +3912,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7ec30e20b9d825f4d82a8b231de730f0, type: 2}
+    - target: {fileID: 2212389778370554072, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
 --- !u!1 &479951534
@@ -24541,6 +24546,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8451005055182961358, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
+        type: 3}
+      propertyPath: m_Name
+      value: MummyArquera_Prefab
+      objectReference: {fileID: 0}
     - target: {fileID: 723572520016995612, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
         type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
@@ -24594,12 +24604,12 @@ PrefabInstance:
     - target: {fileID: 723572520016995612, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
         type: 3}
       propertyPath: m_Parameters.colorGradient.key1.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 723572520016995612, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
         type: 3}
       propertyPath: m_Parameters.colorGradient.key1.b
-      value: 1
+      value: 0.8008418
       objectReference: {fileID: 0}
     - target: {fileID: 723572520016995612, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
         type: 3}
@@ -24611,10 +24621,15 @@ PrefabInstance:
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8451005055182961358, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
+    - target: {fileID: 723572520016995612, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
         type: 3}
-      propertyPath: m_Name
-      value: MummyArquera_Prefab
+      propertyPath: m_Parameters.colorGradient.key0.a
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 723572520016995612, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.a
+      value: 0.16078432
       objectReference: {fileID: 0}
     - target: {fileID: 8451005055182961349, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
         type: 3}
