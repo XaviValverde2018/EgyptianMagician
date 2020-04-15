@@ -14,6 +14,7 @@ public class BulletEnemyGenerate : MonoBehaviour
     public Vector3 moveBulletToPlayer;
     public Vector3 lastpositionPlayer;
     // Start is called before the first frame update
+
     void Start()
     {
         _playerController = GameObject.FindObjectOfType<PlayerController>();

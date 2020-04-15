@@ -11,6 +11,7 @@ public class EnemyManager : MonoBehaviour
     [Header("Enemy Status")]
     public int vidaEnemics;
     public bool enemicMort;
+    public Animator _animBlood;
 
     [Header("Shield Status")]
     public bool ShieldActive;
@@ -21,7 +22,7 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        _animBlood.SetBool("BloodEnemyBool", false);
         // FUNCIONS DEL SHIELD PER A DESENVOLUPAR
         //vidaEnemicActual = _pyramidGenerateShells.lifeEnemyShield;
         //vidaEnemicActual += lifeShield;
@@ -52,7 +53,13 @@ public class EnemyManager : MonoBehaviour
     }
     void DamagePlayerToEnemy() {
         vidaEnemics--;
+        StartCoroutine(ActiveBlood());
 
+    }
+    IEnumerator ActiveBlood() {
+        _animBlood.SetBool("BloodEnemyBool", true);
+        yield return new WaitForSeconds(.036f);
+        _animBlood.SetBool("BloodEnemyBool", false);
     }
 
     

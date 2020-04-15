@@ -10,10 +10,19 @@ public class EnemyShoot : MonoBehaviour
     public GameObject posicioGenerarBulletEnemy;
     public float elapsedTime;
     public float FireRate = 0.5f;
+    public GameObject _playerTarget;
 
     [Header("Bird Activated")]
     public GameManager _gmBirdActivated;
     public bool ES_GM_BirdActivated;
+
+    private void OnDrawGizmos() {
+        RaycastHit hit;
+        bool isHit = Physics.Raycast(posicioGenerarBulletEnemy.transform.position, _playerTarget.transform.position - posicioGenerarBulletEnemy.transform.position, out hit);
+        Gizmos.color = Color.red;
+        Debug.DrawRay(posicioGenerarBulletEnemy.transform.position, _playerTarget.transform.position - posicioGenerarBulletEnemy.transform.position, Color.red);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

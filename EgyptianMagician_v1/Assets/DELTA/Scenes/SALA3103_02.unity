@@ -783,6 +783,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 74277347}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &78617041 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2212389778370554073, guid: 21d8238283601ab4b9af80e289ac65bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1292004117423745508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &83229645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,6 +2475,11 @@ PrefabInstance:
       propertyPath: vidaEnemics
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: _animBlood
+      value: 
+      objectReference: {fileID: 1615524331}
     - target: {fileID: 1292004117784308905, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3764,18 +3775,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1292004117423745508}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &461522250 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1292004117423745508}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461522243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7856526944930f4419fe905d6bed02f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &478901843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3793,6 +3792,11 @@ PrefabInstance:
       propertyPath: _pyramidGenerateShells
       value: 
       objectReference: {fileID: 1376541995}
+    - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: _animBlood
+      value: 
+      objectReference: {fileID: 920229599}
     - target: {fileID: 1292004117784308905, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4766,7 +4770,7 @@ MonoBehaviour:
     type: 3}
   posicioGenerarBulletBala: {fileID: 488058854}
   elapsedTime: 0
-  FireRate: 0.4
+  FireRate: 0.2
   SpeedPPGetFloat: 0
   _comprobacioEnemicMesAprop: {fileID: 509024962}
   _gmActiveBird: {fileID: 745894988}
@@ -7636,6 +7640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaEnemics: 20
   enemicMort: 0
+  _animBlood: {fileID: 0}
   ShieldActive: 0
   _pyramidGenerateShells: {fileID: 0}
   lifeShield: 500
@@ -8654,6 +8659,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2494690a123871b4987e1f889356c031, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148e467bbe4283048adc9366973ab1ca, type: 3}
+--- !u!95 &920229599 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2212389778370554073, guid: 21d8238283601ab4b9af80e289ac65bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 478901843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &924692230 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1717981606247809437, guid: 77898ac6554cc8c47ae3be5bc3e9a037,
@@ -19523,6 +19534,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1615524331 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2212389778370554073, guid: 21d8238283601ab4b9af80e289ac65bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 310069874}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1618144326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1240949586582039149, guid: 869b91b15bd7b1143b56928e8271bd94,
@@ -24140,8 +24157,13 @@ PrefabInstance:
       objectReference: {fileID: 1376541995}
     - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
+      propertyPath: _animBlood
+      value: 
+      objectReference: {fileID: 78617041}
+    - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
       propertyPath: vidaEnemics
-      value: 15
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308905, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
@@ -24205,11 +24227,6 @@ PrefabInstance:
       objectReference: {fileID: 509024960}
     - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
-      propertyPath: _gm
-      value: 
-      objectReference: {fileID: 745894988}
-    - target: {fileID: 1292004117784308899, guid: 21d8238283601ab4b9af80e289ac65bb,
-        type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 509024961}
@@ -24228,21 +24245,6 @@ PrefabInstance:
       propertyPath: birdButtonSTUN
       value: 
       objectReference: {fileID: 1911571132}
-    - target: {fileID: 1292004117476234189, guid: 21d8238283601ab4b9af80e289ac65bb,
-        type: 3}
-      propertyPath: _em
-      value: 
-      objectReference: {fileID: 461522250}
-    - target: {fileID: 1292004117476234189, guid: 21d8238283601ab4b9af80e289ac65bb,
-        type: 3}
-      propertyPath: FireRateSlow
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1292004117476234189, guid: 21d8238283601ab4b9af80e289ac65bb,
-        type: 3}
-      propertyPath: randomvalue
-      value: 33
-      objectReference: {fileID: 0}
     - target: {fileID: 437244605033828573, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: _comprobacioEnemicMesAprop
@@ -24263,13 +24265,7 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 745894988}
-    - target: {fileID: 1958072144390574643, guid: 21d8238283601ab4b9af80e289ac65bb,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7ec30e20b9d825f4d82a8b231de730f0, type: 2}
-    m_RemovedComponents:
-    - {fileID: 1292004117784308897, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
 --- !u!1001 &1998425934566055473
 PrefabInstance:
@@ -24640,11 +24636,21 @@ PrefabInstance:
       propertyPath: lifeShield
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 8451005055182961348, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
+        type: 3}
+      propertyPath: _animBlood
+      value: 
+      objectReference: {fileID: 8451005055794787422}
     - target: {fileID: 8451005055182961351, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
         type: 3}
       propertyPath: _gmBirdActivated
       value: 
       objectReference: {fileID: 745894988}
+    - target: {fileID: 8451005055182961351, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
+        type: 3}
+      propertyPath: _playerTarget
+      value: 
+      objectReference: {fileID: 509024955}
     - target: {fileID: 8451005055182961350, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
         type: 3}
       propertyPath: t1
@@ -24681,3 +24687,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2625841539533351268, guid: e01b5a1441f4a5d40bc07082fd92e1e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e01b5a1441f4a5d40bc07082fd92e1e7, type: 3}
+--- !u!95 &8451005055794787422 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2955856434017380321, guid: e01b5a1441f4a5d40bc07082fd92e1e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 8451005055794787421}
+  m_PrefabAsset: {fileID: 0}
