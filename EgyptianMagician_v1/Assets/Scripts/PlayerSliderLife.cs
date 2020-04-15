@@ -11,16 +11,21 @@ public class PlayerSliderLife : MonoBehaviour {
     public PlayerController _playerController;
     public Slider slider;
     public Image _colorImageFillSlider;
-     
+    public float oldPlayerLife;
+    public Animator _animBloodHorus;
     // Start is called before the first frame update
     void Start() {
+        _animBloodHorus.SetBool("BloodHorusBool", false);
+        oldPlayerLife = _playerController.lifePlayer;
         //_enemySliderLife = _enemyManager.vidaEnemics;
         maxLife = _playerController.lifePlayer;
         slider.value = CalculateLife();
+
     }
 
     // Update is called once per frame
     void Update() {
+        StartCoroutine(ChangePlayerLife());
         slider.value = CalculateLife();
         if (_playerController.lifePlayer < maxLife) {
             SliderCanvas.SetActive(true);
@@ -38,6 +43,16 @@ public class PlayerSliderLife : MonoBehaviour {
     }
     float CalculateLife() {
         return _playerController.lifePlayer / maxLife;
+    }
+    IEnumerator ChangePlayerLife() {
+        if(_playerController.lifePlayer != oldPlayerLife) {
+            Debug.Log("dolor");
+            _animBloodHorus.SetBool("BloodHorusBool", true);
+            yield return new WaitForSeconds(0.36f);
+            oldPlayerLife = _playerController.lifePlayer;
+            _animBloodHorus.SetBool("BloodHorusBool", false);
+
+        }
     }
 
 }

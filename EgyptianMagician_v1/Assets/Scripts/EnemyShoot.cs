@@ -16,6 +16,10 @@ public class EnemyShoot : MonoBehaviour
     public GameManager _gmBirdActivated;
     public bool ES_GM_BirdActivated;
 
+    [Header("Line Renderer")]
+    public LineRenderer lineRenderer;
+
+
     private void OnDrawGizmos() {
         RaycastHit hit;
         bool isHit = Physics.Raycast(posicioGenerarBulletEnemy.transform.position, _playerTarget.transform.position - posicioGenerarBulletEnemy.transform.position, out hit);
@@ -26,14 +30,15 @@ public class EnemyShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       lineRenderer.enabled = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         ShootBullet();
-
+        DrawLineRenderer();
 
     }
     void ShootBullet() {
@@ -41,6 +46,7 @@ public class EnemyShoot : MonoBehaviour
         BirdActivated();
         if (elapsedTime > FireRate) {
             if (ES_GM_BirdActivated == false) {
+                StartCoroutine(DrawLineRenderer());
                 Instantiate(bulletEnemy, posicioGenerarBulletEnemy.transform.position, posicioGenerarBulletEnemy.transform.rotation);
                 elapsedTime = 0f;
             } else {
@@ -57,5 +63,13 @@ public class EnemyShoot : MonoBehaviour
     void DestroyBulletsBirdActivated() {
         Destroy(GameObject.Find("bullet_EnemyApofis(Clone)"));
         Destroy(GameObject.Find("bullet_Enemy(Clone)"));
+    }
+    IEnumerator DrawLineRenderer() {
+        lineRenderer.enabled = true;
+        lineRenderer.useWorldSpace = true;
+        lineRenderer.SetPosition(0, posicioGenerarBulletEnemy.transform.position);
+        lineRenderer.SetPosition(1, _playerTarget.transform.position);
+        yield return new WaitForSeconds(0.4f);
+        lineRenderer.enabled = false;
     }
 }
