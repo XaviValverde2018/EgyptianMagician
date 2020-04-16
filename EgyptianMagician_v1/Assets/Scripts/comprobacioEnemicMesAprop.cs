@@ -113,7 +113,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
     void MatarEnemics() {
         if (vidaEnemicComprobacio <= 0) {
             llistaEnemics.Remove(llistaEnemics[indexEnemicMesAprop]);
-            Destroy(enemicMesAprop);
+            Destroy(enemicMesAprop,1);
             enemicMesAprop = enemicTemplateMesLLuny;
             distanciaMesAprop = 999.0f;
             

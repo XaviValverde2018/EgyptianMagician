@@ -2609,7 +2609,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1a004ef06f8681b47bbf37d6a9e86dc2, type: 2}
+      objectReference: {fileID: 2100000, guid: 7ec30e20b9d825f4d82a8b231de730f0, type: 2}
     m_RemovedComponents:
     - {fileID: 1292004117784308897, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
@@ -3775,18 +3775,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1292004117423745508}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &461522250 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1292004117423745508}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461522243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7856526944930f4419fe905d6bed02f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &478901843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3923,7 +3911,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1a004ef06f8681b47bbf37d6a9e86dc2, type: 2}
+      objectReference: {fileID: 2100000, guid: 7ec30e20b9d825f4d82a8b231de730f0, type: 2}
     - target: {fileID: 2212389778370554072, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -6624,35 +6612,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687702215}
   m_CullTransparentMesh: 0
---- !u!1 &699053359 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7757355664462521906, guid: 21d8238283601ab4b9af80e289ac65bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1292004117423745508}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &699053361 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1958072144390574643, guid: 21d8238283601ab4b9af80e289ac65bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1292004117423745508}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &699053362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699053359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 011459be5cea3df4bb36576e6f1b16dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dissolveShaderMaterial: {fileID: 699053361}
-  alo: 0
-  _enemyManagerDissolve: {fileID: 461522250}
-  papa: 0
-  vidaenemic: 0
 --- !u!1001 &699552034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8619,35 +8578,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 371378299}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &901521831 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7757355664462521906, guid: 21d8238283601ab4b9af80e289ac65bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 310069874}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &901521833 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1958072144390574643, guid: 21d8238283601ab4b9af80e289ac65bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 310069874}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &901521834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901521831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 011459be5cea3df4bb36576e6f1b16dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dissolveShaderMaterial: {fileID: 901521833}
-  alo: 0
-  _enemyManagerDissolve: {fileID: 1844374771}
-  papa: 0
-  vidaenemic: 0
 --- !u!1001 &911794311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24320,16 +24250,6 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 745894988}
-    - target: {fileID: 1958072144390574643, guid: 21d8238283601ab4b9af80e289ac65bb,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1a004ef06f8681b47bbf37d6a9e86dc2, type: 2}
-    - target: {fileID: 7757355664462521906, guid: 21d8238283601ab4b9af80e289ac65bb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21d8238283601ab4b9af80e289ac65bb, type: 3}
 --- !u!1001 &1998425934566055473
