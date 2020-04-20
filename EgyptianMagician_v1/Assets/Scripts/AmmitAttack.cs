@@ -17,6 +17,7 @@ public class AmmitAttack : MonoBehaviour
     public float FireRateSlow = 10.0f;
     public float resetElapsedTimeSlow;
     public float AmmitAttackValue = 10.0f;
+    public Animator _animAmmitAttack; 
 
     [Header("Values STUN")]
     public float randomvalue; // I LA VARIABLE --> _playerController.moveSpeed
@@ -30,11 +31,17 @@ public class AmmitAttack : MonoBehaviour
         _playerController = FindObjectOfType<PlayerController>();
         SlowRandomValue();
         resetElapsedTimeSlow = 0f;
+        _animAmmitAttack.SetBool("AmmitAttackBool", false);
     }
 
     // Update is called once per frame
     void Update() {
 
+    }
+    private void OnTriggerExit(Collider other) {
+        if (other.CompareTag("Player")) {
+            _animAmmitAttack.SetBool("AmmitAttackBool", false);
+        }
     }
     private void OnTriggerStay(Collider other) {
         elapsedTime += Time.deltaTime;
@@ -42,6 +49,7 @@ public class AmmitAttack : MonoBehaviour
             resetElapsedTimeSlow += Time.deltaTime;
             if (elapsedTime > FireRate) {
                 // STUN ----------------------------------
+                _animAmmitAttack.SetBool("AmmitAttackBool", true);
                 _playerController.lifePlayer -= AmmitAttackValue;
                 Debug.Log("Ammit Attack -10");
                // _playerController.lifePlayer -= 10 * Time.deltaTime;
@@ -58,6 +66,7 @@ public class AmmitAttack : MonoBehaviour
 
             } else {
                 STUNimage.SetActive(false);
+                _animAmmitAttack.SetBool("AmmitAttackBool", false);
             }
             // STUN --------------------------------------
         }
@@ -75,7 +84,6 @@ public class AmmitAttack : MonoBehaviour
         randomvalue = 31;
         Debug.Log("EndCorutine, value moveSpeedPlayer:" + _playerController.moveSpeed);
     }
-
 
 
 
