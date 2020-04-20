@@ -3397,7 +3397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &303358168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5702,6 +5702,8 @@ MonoBehaviour:
   _playerController: {fileID: 509024961}
   slider: {fileID: 1459703068}
   _colorImageFillSlider: {fileID: 824186880}
+  oldPlayerLife: 0
+  _animBloodHorus: {fileID: 0}
 --- !u!4 &513081541 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: c10213a6f34ff8548b5e3bb2037bdb84,
@@ -8237,9 +8239,13 @@ MonoBehaviour:
   totalGold: 0
   textGold: {fileID: 1977517482}
   totalExp: 0
+  currentExpToChangeLevel: 0
   textExp: {fileID: 0}
   sliderExp: {fileID: 255862966}
   totalvalueexp: 0
+  LevelsValueExp: 0
+  LevelExpImage: []
+  expValuePP: 0
   _activeBird: {fileID: 1911571135}
   GM_BirdActivated: 0
   _PC: {fileID: 509024961}
@@ -8250,6 +8256,8 @@ MonoBehaviour:
   healthBoolPlayerPrefsValue: 0
   MeteoritoPPBuy: 0
   HealthPPBuy: 0
+  animStartCount: {fileID: 0}
+  StartCountCanvas: {fileID: 0}
 --- !u!4 &745894989
 Transform:
   m_ObjectHideFlags: 0
@@ -8892,6 +8900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaEnemics: 20
   enemicMort: 0
+  _animBlood: {fileID: 0}
   ShieldActive: 0
   _pyramidGenerateShells: {fileID: 0}
   lifeShield: 500
@@ -23728,11 +23737,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8170153791668043271, guid: 0d230cc8be529a542a08cb878ab14b18,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -23742,6 +23746,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 280
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153791668043271, guid: 0d230cc8be529a542a08cb878ab14b18,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263252, guid: 0d230cc8be529a542a08cb878ab14b18,
         type: 3}

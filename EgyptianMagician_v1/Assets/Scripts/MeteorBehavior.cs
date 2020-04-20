@@ -33,11 +33,11 @@ public class MeteorBehavior : MonoBehaviour
         meteorButton.interactable = true;
         meteorActivated = true;
         yield return new WaitForSeconds(0.1f);
-        meteorButton.interactable = false; 
-        yield return new WaitForSeconds(0.1f);
-        animationMeteorito.SetBool("isWalk", true);
-        animationMeteorito.SetBool("isMeteorito", false);
+        meteorButton.interactable = false;
         animationShakeCamera.SetBool("isShake", true);
+        yield return new WaitForSeconds(2.0f);
+        animationMeteorito.SetBool("isWalk", true);
+        animationMeteorito.SetBool("isMeteorito", false);    
         yield return new WaitForSeconds(timeActiveMeteorito);
         meteorActivated = true;
         animationShakeCamera.SetBool("isShake", false);
