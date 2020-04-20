@@ -12,6 +12,7 @@ public class ApofisBullet : MonoBehaviour
     public PlayerController _playerController;
     public bool hitPlayer = false;
     public Vector3 moveBulletToPlayer;
+
     // Start is called before the first frame update
     void Start() {
         _playerController = GameObject.FindObjectOfType<PlayerController>();
@@ -20,6 +21,7 @@ public class ApofisBullet : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+
         _rbBulletEnemy.AddForce(moveBulletToPlayer, ForceMode.Acceleration);
         //Debug.Log("veneno");
     }

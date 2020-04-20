@@ -609,12 +609,9 @@ GameObject:
   - component: {fileID: 7427057340338083785}
   - component: {fileID: 7427057340338083784}
   - component: {fileID: 7427057340338083791}
-  - component: {fileID: 7427057340338083782}
-  - component: {fileID: 7427057340338083783}
   - component: {fileID: 7427057340338083776}
   - component: {fileID: 8857350669655705787}
   - component: {fileID: 1665438030150824213}
-  - component: {fileID: 40108259}
   - component: {fileID: 3052273925453269420}
   m_Layer: 0
   m_Name: Apofis_Prefab
@@ -730,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856526944930f4419fe905d6bed02f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemics: 8
+  vidaEnemics: 2
   enemicMort: 0
   _animBlood: {fileID: 0}
   ShieldActive: 0
@@ -753,47 +750,11 @@ MonoBehaviour:
     type: 3}
   posicioGenerarBulletEnemy: {fileID: 7427057340872322790}
   elapsedTime: 0
-  FireRate: 2
+  FireRate: 0.3
   _playerTarget: {fileID: 0}
   _gmBirdActivated: {fileID: 0}
   ES_GM_BirdActivated: 0
   lineRenderer: {fileID: 0}
---- !u!114 &7427057340338083782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7427057340338083790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 511c202866c691143bc803936ee4b85b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _em: {fileID: 7427057340338083784}
-  t1: {fileID: 0}
---- !u!114 &7427057340338083783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7427057340338083790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 262426fe0c5e64c43b0981b908ba7f82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _goldPrefab: {fileID: 1729234101540568024, guid: 1eddd2c4b79fcb641bb5f79b32e20f95,
-    type: 3}
-  _goldvalue: 0
-  _enemymanager: {fileID: 7427057340338083784}
-  randomvalue: 0
-  _spawnsTransform: {fileID: 5932775754532451862}
-  _expPrefab: {fileID: 4479217292339487029, guid: b04ff493e5fdeb940b4db35c8dd154fd,
-    type: 3}
-  _expvalue: 0
-  _spawnsExpTransform: {fileID: 5932775754532451862}
 --- !u!114 &7427057340338083776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,26 +804,6 @@ MonoBehaviour:
   meteor_iconActiveDamaga: {fileID: 1590879495224903295}
   DamageMeteoritoText: {fileID: 3936003886515077666}
   animationDamageMeteoritoText: {fileID: 8251122843678354462}
---- !u!114 &40108259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7427057340338083790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 262426fe0c5e64c43b0981b908ba7f82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _goldPrefab: {fileID: 0}
-  _goldvalue: 0
-  _enemymanager: {fileID: 0}
-  randomvalue: 0
-  _spawnsTransform: {fileID: 0}
-  _expPrefab: {fileID: 0}
-  _expvalue: 0
-  _spawnsExpTransform: {fileID: 0}
 --- !u!114 &3052273925453269420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,11 +1027,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apofis_atack
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: e1e41cdc877c543408f552163c82a865,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: d07d4ab61fc610d44b2286dacd854654, type: 2}
     - target: {fileID: -4216859302048453862, guid: e1e41cdc877c543408f552163c82a865,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1161,6 +1097,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.19691892
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: e1e41cdc877c543408f552163c82a865,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d07d4ab61fc610d44b2286dacd854654, type: 2}
     - target: {fileID: -3276458397845658166, guid: e1e41cdc877c543408f552163c82a865,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
