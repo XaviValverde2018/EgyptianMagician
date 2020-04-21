@@ -1011,21 +1011,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6142019767661346091, guid: ba1dfa0efcc77bb4fa099e08f25eb77a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9103527548445480991, guid: ba1dfa0efcc77bb4fa099e08f25eb77a,
-        type: 3}
-      propertyPath: ShapeModule.angle
-      value: 16.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 9103527548445480991, guid: ba1dfa0efcc77bb4fa099e08f25eb77a,
-        type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 4.93
-      objectReference: {fileID: 0}
     - target: {fileID: 9103527548445480989, guid: ba1dfa0efcc77bb4fa099e08f25eb77a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1080,6 +1065,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103527548445480991, guid: ba1dfa0efcc77bb4fa099e08f25eb77a,
+        type: 3}
+      propertyPath: ShapeModule.angle
+      value: 16.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103527548445480991, guid: ba1dfa0efcc77bb4fa099e08f25eb77a,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 4.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142019767661346091, guid: ba1dfa0efcc77bb4fa099e08f25eb77a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba1dfa0efcc77bb4fa099e08f25eb77a, type: 3}
@@ -9874,6 +9874,8 @@ MonoBehaviour:
   healthBoolPlayerPrefsValue: 0
   MeteoritoPPBuy: 0
   HealthPPBuy: 0
+  animStartCount: {fileID: 0}
+  StartCountCanvas: {fileID: 0}
 --- !u!4 &745894989
 Transform:
   m_ObjectHideFlags: 0
@@ -15994,8 +15996,8 @@ MonoBehaviour:
   countEnemicsLlista: 0
   ps: {fileID: 1307964141}
   seguentnivell: SALA_SHOP
-  doorright: {fileID: 0}
-  doorleft: {fileID: 0}
+  _animOpenDoorRight: {fileID: 0}
+  _animOpenDoorLeft: {fileID: 0}
 --- !u!95 &1184403391
 Animator:
   serializedVersion: 3
@@ -16381,7 +16383,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3.4
+  m_Intensity: 1.6
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -31217,6 +31219,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anubis_IdleRework
       objectReference: {fileID: 0}
+    - target: {fileID: 1382521831886111426, guid: f9c31cf70f1f4b54e95137162bdd146d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 519f3cfa5cf9faf4b8d9374450017b07, type: 2}
+    - target: {fileID: 1382521831886111426, guid: f9c31cf70f1f4b54e95137162bdd146d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 46f319f0e14c330439a5897a56dcca48, type: 2}
     - target: {fileID: -4216859302048453862, guid: f9c31cf70f1f4b54e95137162bdd146d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31292,16 +31304,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f17c1eabcf48fe043a193ad7dd42a8d5, type: 2}
-    - target: {fileID: 1382521831886111426, guid: f9c31cf70f1f4b54e95137162bdd146d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 519f3cfa5cf9faf4b8d9374450017b07, type: 2}
-    - target: {fileID: 1382521831886111426, guid: f9c31cf70f1f4b54e95137162bdd146d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 46f319f0e14c330439a5897a56dcca48, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9c31cf70f1f4b54e95137162bdd146d, type: 3}
 --- !u!1001 &1917342371

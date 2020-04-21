@@ -22,7 +22,7 @@ public class LifeShopButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        preuESTABLERT = 30;
+        preuESTABLERT = 3;
         numberbuyint = 0;
         LifePPBuyIncrement = 0;// per testejar
         PlayerPrefs.SetInt("LifePPBuy", LifePPBuyIncrement);//per testejar        

@@ -32,10 +32,12 @@ public class MeteoriteShopButton : MonoBehaviour
     {
         goldPlayer = PlayerPrefs.GetInt("goldValue");
 
-        preuESTABLERT = 100;
-        numberbuyint = 0;
-        MeteoritoPPBuyIncrement = 0;
-
+        preuESTABLERT = 10;
+        numberbuyint = PlayerPrefs.GetInt("numberbuyMeteorPP");//numberbuyint = 0; TUTORIAL
+        priceTextInt = PlayerPrefs.GetInt("priceTextIntMeteorPP"); //priceTextInt = preu establert; TUTORIAL
+        MeteoritoPPBuyIncrement = PlayerPrefs.GetFloat("MeteoritoBuyIncrementPP"); // MeteoritoPPBuyIncrement = 0; TUTORIAL
+        numberbuy.text = numberbuyint.ToString();
+        priceText.text = priceTextInt.ToString();
         //PlayerPrefs.SetFloat("MeteoritoPPBuy", MeteoritoPPBuyIncrement);
 
         if (numberbuyint == 0) {
@@ -64,7 +66,9 @@ public class MeteoriteShopButton : MonoBehaviour
         numberbuy.text = numberbuyint.ToString();
         priceText.text = priceTextInt.ToString();
 
-        PlayerPrefs.SetFloat("MeteoritoPPBuy", MeteoritoPPBuyIncrement);
+        PlayerPrefs.SetInt("numberbuyMeteorPP", numberbuyint);
+        PlayerPrefs.SetInt("priceTextIntMeteorPP", priceTextInt); 
+        PlayerPrefs.SetFloat("MeteoritoBuyIncrementPP", MeteoritoPPBuyIncrement); 
         Debug.Log(" APlayerPrefs.GetFloat(MeteoritoPPBuy)" + PlayerPrefs.GetFloat("MeteoritoPPBuy"));
        
     }

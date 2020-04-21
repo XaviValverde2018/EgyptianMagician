@@ -84,18 +84,16 @@ public class GameManager : MonoBehaviour
 
         //totalvalueexp = PlayerPrefs.GetInt("expValue");
 
-        PlayerPrefs.SetInt("goldValue", 99999);
+        //PlayerPrefs.SetInt("goldValue", 999); // Hauria de ser 0 al principi del joc. 
         totalGold = PlayerPrefs.GetInt("goldValue");
-        Debug.Log(" GMSPlayerPrefs.GetFloat(MeteoritoPPBuy)" + PlayerPrefs.GetFloat("MeteoritoPPBuy"));
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        MeteoritoPPBuy = PlayerPrefs.GetFloat("MeteoritoPPBuy");
+        MeteoritoPPBuy = PlayerPrefs.GetFloat("MeteoritoBuyIncrementPP");
         HealthPPBuy = PlayerPrefs.GetFloat("HealthPPBuy");
-        Debug.Log(" GMUPlayerPrefs.GetFloat(MeteoritoPPBuy)" + PlayerPrefs.GetFloat("MeteoritoPPBuy"));
 
         BuscarEnemicsPerPasarAlSeguentNivell();
         GM_BirdActivated = _activeBird.birdActivated;

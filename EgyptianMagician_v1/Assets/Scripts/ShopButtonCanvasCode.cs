@@ -7,6 +7,7 @@ public class ShopButtonCanvasCode : MonoBehaviour
 
     public int goldPlayer;
     public Text goldPlayerText;
+    public GameObject _ShopPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,6 @@ public class ShopButtonCanvasCode : MonoBehaviour
     }
     public void BackButton() {
         this.gameObject.SetActive(false);
+        _ShopPrefab.SetActive(false);
     }
 }

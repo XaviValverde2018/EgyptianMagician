@@ -104,4 +104,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DELTA/Scenes/SALA_ANUBIS_FASE3.unity
     guid: be0f799fad63af14b90fadc9ef2bfcd4
+  - enabled: 1
+    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA_SHOP.unity
+    guid: 7eaae0d209819d0408c4b148b4345597
   m_configObjects: {}

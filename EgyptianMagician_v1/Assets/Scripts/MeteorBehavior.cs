@@ -21,7 +21,7 @@ public class MeteorBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeActiveMeteorito = PlayerPrefs.GetFloat("MeteoritoPPBuy");
+        timeActiveMeteorito = PlayerPrefs.GetFloat("MeteoritoBuyIncrementPP");
     }
     public void ActivarMeteorito() {
         StartCoroutine(CountDown());

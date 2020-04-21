@@ -40,7 +40,7 @@ public class activeGold : MonoBehaviour
         if (other.transform.CompareTag("Player")) {
             Debug.Log("Gold hits Player");
             goldHitsPlayer = true;
-            _gameManager.totalGold++;
+            PlayerPrefs.SetInt("goldValue", _gameManager.totalGold += 10);
             Destroy(gameObject);
         } else {
             goldHitsPlayer = false;
