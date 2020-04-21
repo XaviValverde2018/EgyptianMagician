@@ -39,14 +39,11 @@ public class GameManager : MonoBehaviour
     public float MeteoritoPPBuy;
     public float HealthPPBuy;
 
-    [Header("StartCount")]
-    public Animator animStartCount;
-    public GameObject StartCountCanvas;
     // Start is called before the first frame update
 
     void Start()
     {
-        StartCoroutine(StartCount());
+    
 
         currentExpToChangeLevel = 0;
         LevelsValueExp = 0;
@@ -155,14 +152,6 @@ public class GameManager : MonoBehaviour
 
  
     }
-    IEnumerator StartCount() {
-        StartCountCanvas.SetActive(true);
-        animStartCount.SetBool("StartCount", true);
-        Time.timeScale = 0;
-        yield return new WaitForSecondsRealtime(2);
-        Time.timeScale = 1;
-        StartCountCanvas.SetActive(false);
 
-    }
 
 }

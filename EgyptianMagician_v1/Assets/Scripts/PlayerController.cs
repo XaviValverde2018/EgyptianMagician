@@ -86,15 +86,16 @@ public class PlayerController : MonoBehaviour {
         currentPos = playerpos.transform.position;
         oldPos = currentPos;
         isWalking = false;
+
         currentLifePlayer = PlayerPrefs.GetFloat("CurrentLifePlayer");
 
         LifePPGetInt = PlayerPrefs.GetInt("LifeBuyIncrementPP");
 
-       // lifePlayer = currentLifePlayer;
-        maxlifeplayer = currentLifePlayer;
+        lifePlayer = currentLifePlayer+LifePPGetInt;
+        //maxlifeplayer = currentLifePlayer;
 
         maxlifeplayer += LifePPGetInt;
-        lifePlayer = maxlifeplayer;
+        //lifePlayer = maxlifeplayer;
 
         SpeedPPGetFloat = PlayerPrefs.GetFloat("SpeedBuyIncrementPP");
         

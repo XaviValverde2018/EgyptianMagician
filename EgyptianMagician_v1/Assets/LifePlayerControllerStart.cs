@@ -15,18 +15,7 @@ public class LifePlayerControllerStart : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (CounterStartLife) {
-            PlayerPrefs.SetFloat("CurrentLifePlayer", StartLifePlayer);
-        } else {
-            StartCoroutine(Counter());
-
-        }
-    }
-    IEnumerator Counter() {
-        yield return new WaitForSeconds(3);
-        CounterStartLife = true;
-    }
+    void Update() { }
+ 
 
 }
