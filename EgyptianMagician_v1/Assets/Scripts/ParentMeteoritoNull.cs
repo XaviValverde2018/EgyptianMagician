@@ -12,7 +12,7 @@ public class ParentMeteoritoNull : MonoBehaviour
        // _gm = GameObject.FindObjectOfType<GameManager>();
         timerMeteoritoUpgrade = PlayerPrefs.GetFloat("MeteoritoBuyIncrementPP");
         if (timerMeteoritoUpgrade <= 0) {
-            timerMeteoritoUpgrade = 1.0f;
+            timerMeteoritoUpgrade = 3.0f;
         }
         this.transform.parent = null;
         //timerMeteoritoUpgrade = PlayerPrefs.GetFloat("MeteoritoPPBuy");

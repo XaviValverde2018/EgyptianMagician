@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
     public float lifePlayer;
     public float maxlifeplayer;
     public int LifePPGetInt;
+    public float currentLifePlayer;
 
     [Header("Movement")]
     public Rigidbody rigidbodyHorusVelocity;
@@ -85,7 +86,13 @@ public class PlayerController : MonoBehaviour {
         currentPos = playerpos.transform.position;
         oldPos = currentPos;
         isWalking = false;
+        currentLifePlayer = PlayerPrefs.GetFloat("CurrentLifePlayer");
+
         LifePPGetInt = PlayerPrefs.GetInt("LifeBuyIncrementPP");
+
+       // lifePlayer = currentLifePlayer;
+        maxlifeplayer = currentLifePlayer;
+
         maxlifeplayer += LifePPGetInt;
         lifePlayer = maxlifeplayer;
 
@@ -125,6 +132,7 @@ public class PlayerController : MonoBehaviour {
         }
         DieHorus();
 
+        PlayerPrefs.SetFloat("CurrentLifePlayer", lifePlayer);
 
 
 

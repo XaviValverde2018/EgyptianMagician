@@ -3294,6 +3294,7 @@ MonoBehaviour:
   lifePlayer: 2
   maxlifeplayer: 35
   LifePPGetInt: 0
+  currentLifePlayer: 0
   rigidbodyHorusVelocity: {fileID: 0}
   isWalking: 0
   currentPos: {x: 0, y: 0, z: 0}
@@ -6716,6 +6717,51 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 62ce55e9b12ee8241a041030b160ce54, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 762b4fb237dad9a48bd3f45d42f257b8, type: 3}
+--- !u!1 &1019629993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019629994}
+  - component: {fileID: 1019629995}
+  m_Layer: 0
+  m_Name: LifePlayerControllerStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1019629994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019629993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.4635205, y: 3.2518036, z: -29.291454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1019629995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019629993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849d02723539d9044b00afbd50201d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartLifePlayer: 30
+  CounterStartLife: 0
 --- !u!1001 &1024662341
 PrefabInstance:
   m_ObjectHideFlags: 0
