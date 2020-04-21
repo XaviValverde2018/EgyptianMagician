@@ -85,11 +85,12 @@ public class PlayerController : MonoBehaviour {
         currentPos = playerpos.transform.position;
         oldPos = currentPos;
         isWalking = false;
-        LifePPGetInt = PlayerPrefs.GetInt("LifePPBuy");
+        LifePPGetInt = PlayerPrefs.GetInt("LifeBuyIncrementPP");
         maxlifeplayer += LifePPGetInt;
+        lifePlayer = maxlifeplayer;
 
-        SpeedPPGetFloat = PlayerPrefs.GetFloat("SpeedPPBuy");
-        Debug.Log("SpeedPPGetFloat:" + SpeedPPGetFloat);
+        SpeedPPGetFloat = PlayerPrefs.GetFloat("SpeedBuyIncrementPP");
+        
         FireRate -= SpeedPPGetFloat;
     }
 

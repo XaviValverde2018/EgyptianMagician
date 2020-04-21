@@ -22,18 +22,20 @@ public class LifeShopButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        preuESTABLERT = 3;
-        numberbuyint = 0;
-        LifePPBuyIncrement = 0;// per testejar
-        PlayerPrefs.SetInt("LifePPBuy", LifePPBuyIncrement);//per testejar        
+        goldPlayer = PlayerPrefs.GetInt("goldValue");
 
-        
-        PlayerPrefs.SetInt("LifePPBuy", 0);
+        preuESTABLERT = 3;
+        numberbuyint = PlayerPrefs.GetInt("numberbuyLifePP");
+        priceTextInt = PlayerPrefs.GetInt("priceTextIntLifePP");
+        LifePPBuyIncrement = PlayerPrefs.GetInt("LifeBuyIncrementPP");
+        numberbuy.text = numberbuyint.ToString();
+        priceText.text = priceTextInt.ToString();
+
         if (numberbuyint == 0) {
             priceTextInt = preuESTABLERT;
             priceText.text = priceTextInt.ToString();
         }
-        goldPlayer = PlayerPrefs.GetInt("goldValue");
+       
     }
 
     // Update is called once per frame
@@ -66,10 +68,12 @@ public class LifeShopButton : MonoBehaviour
         numberbuy.text = numberbuyint.ToString(); //3
         priceText.text = priceTextInt.ToString(); //180
 
-        PlayerPrefs.SetInt("LifePPBuy", LifePPBuyIncrement);
+        PlayerPrefs.SetInt("numberbuyLifePP", numberbuyint);
+        PlayerPrefs.SetInt("priceTextIntLifePP", priceTextInt);
+        PlayerPrefs.SetInt("LifeBuyIncrementPP", LifePPBuyIncrement);
 
         yield return new WaitForSeconds(0.5f);
         //_canvasShop.SetActive(false);
-        Debug.Log("LifePPBuy: " + PlayerPrefs.GetInt("LifePPBuy"));
+        
     }
 }

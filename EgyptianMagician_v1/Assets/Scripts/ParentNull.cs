@@ -5,12 +5,12 @@ using UnityEngine;
 public class ParentNull : MonoBehaviour {
     // Start is called before the first frame update
     public float timerHealthUpgrade;
-    public GameManager _gm;
+   //public GameManager _gm;
 
     void Start() {
-        _gm = GameObject.FindObjectOfType<GameManager>();
-        timerHealthUpgrade = _gm.HealthPPBuy;
-        if(timerHealthUpgrade <= 2) {
+        //_gm = GameObject.FindObjectOfType<GameManager>();
+        timerHealthUpgrade = PlayerPrefs.GetFloat("HealthBuyIncrementPP");
+        if (timerHealthUpgrade <= 0) {
             timerHealthUpgrade = 3.0f;
         }
         this.transform.parent = null;

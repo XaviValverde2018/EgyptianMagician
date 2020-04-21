@@ -4479,6 +4479,7 @@ MonoBehaviour:
   healtPointGenerate: {fileID: 1054095628}
   positionJugador: {fileID: 0}
   animationHealth: {fileID: 3166231815024248617}
+  timeActiveHealth: 0
 --- !u!114 &670119258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8057,10 +8058,10 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Strength: 0.321
+    m_Bias: 0
+    m_NormalBias: 0
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0

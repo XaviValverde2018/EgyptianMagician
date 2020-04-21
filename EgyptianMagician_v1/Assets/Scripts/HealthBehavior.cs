@@ -11,14 +11,15 @@ public class HealthBehavior : MonoBehaviour {
     public GameObject healtPointGenerate;
     public Transform positionJugador;
     public Animator animationHealth;
+    public float timeActiveHealth;
     // Start is called before the first frame update
     void Start() {
-
+        timeActiveHealth = 1.0f;
     }
 
     // Update is called once per frame
     void Update() {
-
+        timeActiveHealth = PlayerPrefs.GetFloat("HealthBuyIncrementPP");
     }
     public void ActivarHealth() {       
         StartCoroutine(CountDown());
@@ -38,7 +39,7 @@ public class HealthBehavior : MonoBehaviour {
         yield return new WaitForSeconds(1.0f);
         animationHealth.SetBool("isWalk", true);
         animationHealth.SetBool("isHealth", false);
-        yield return new WaitForSeconds(5);   
+        yield return new WaitForSeconds(timeActiveHealth);   
         healthActivated = false;
         yield return new WaitForSeconds(10);
         healthButton.interactable = true;

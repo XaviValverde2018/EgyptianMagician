@@ -34,10 +34,12 @@ public class SpeedShopButton : MonoBehaviour
         goldPlayer = PlayerPrefs.GetInt("goldValue");
 
         preuESTABLERT = 80;
-        numberbuyint = 0;
-        SpeedPPBuyIncrement = 0;
+        numberbuyint = PlayerPrefs.GetInt("numberbuySpeedPP");
+        priceTextInt = PlayerPrefs.GetInt("priceTextIntSpeedPP"); //priceTextInt = preu establert; TUTORIAL
+        SpeedPPBuyIncrement = PlayerPrefs.GetFloat("SpeedBuyIncrementPP");
+        numberbuy.text = numberbuyint.ToString();
+        priceText.text = priceTextInt.ToString();
 
-        PlayerPrefs.SetFloat("SpeedPPBuy", SpeedPPBuyIncrement);
 
         if(numberbuyint == 0) {
             priceTextInt = preuESTABLERT;
@@ -65,14 +67,18 @@ public class SpeedShopButton : MonoBehaviour
         goldPlayer = PlayerPrefs.GetInt("goldValue");
         goldPlayer -= priceTextInt;
         numberbuyint++;
-        SpeedPPBuyIncrement += 0.05f;
+        SpeedPPBuyIncrement += 0.02f;
 
         PlayerPrefs.SetInt("goldValue", goldPlayer);
+
         priceTextInt *= numberbuyint;
         numberbuy.text = numberbuyint.ToString();
         priceText.text = priceTextInt.ToString();
 
-        PlayerPrefs.SetFloat("SpeedPPBuy", SpeedPPBuyIncrement);
+        PlayerPrefs.SetInt("numberbuySpeedPP", numberbuyint);
+        PlayerPrefs.SetInt("priceTextIntSpeedPP", priceTextInt);
+        PlayerPrefs.SetFloat("SpeedBuyIncrementPP", SpeedPPBuyIncrement);
+
         yield return new WaitForSeconds(0.5f);
         //_canvasShop.SetActive(false);
     }

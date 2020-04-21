@@ -6,12 +6,12 @@ public class ParentMeteoritoNull : MonoBehaviour
 {
     // Start is called before the first frame update
     public float timerMeteoritoUpgrade;
-    public GameManager _gm;
+    //public GameManager _gm;
     void Start()
     {
-        _gm = GameObject.FindObjectOfType<GameManager>();
-        timerMeteoritoUpgrade = _gm.MeteoritoPPBuy;
-        if(timerMeteoritoUpgrade <= 0) {
+       // _gm = GameObject.FindObjectOfType<GameManager>();
+        timerMeteoritoUpgrade = PlayerPrefs.GetFloat("MeteoritoBuyIncrementPP");
+        if (timerMeteoritoUpgrade <= 0) {
             timerMeteoritoUpgrade = 1.0f;
         }
         this.transform.parent = null;
@@ -27,8 +27,6 @@ public class ParentMeteoritoNull : MonoBehaviour
     {
 
         //timerMeteoritoUpgrade = PlayerPrefs.GetFloat("MeteoritoPPBuy");
-        Debug.Log("timerMeteoritoUpgrade" + timerMeteoritoUpgrade);
-        Debug.Log(" PlayerPrefs.GetFloat(MeteoritoPPBuy)" + PlayerPrefs.GetFloat("MeteoritoPPBuy"));
     }
     IEnumerator CountDown() {
         yield return new WaitForSeconds(timerMeteoritoUpgrade);

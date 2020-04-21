@@ -34,8 +34,11 @@ public class HealthShopButton : MonoBehaviour
         goldPlayer = PlayerPrefs.GetInt("goldValue");
 
         preuESTABLERT = 10;
-        numberbuyint = 0;
-        HealthPPBuyIncrement = 0;
+        numberbuyint = PlayerPrefs.GetInt("numberbuyHealthPP");//numberbuyint = 0; TUTORIAL
+        priceTextInt = PlayerPrefs.GetInt("priceTextIntHealthPP"); //priceTextInt = preu establert; TUTORIAL
+        HealthPPBuyIncrement = PlayerPrefs.GetFloat("HealthBuyIncrementPP");
+        numberbuy.text = numberbuyint.ToString();
+        priceText.text = priceTextInt.ToString();
 
         //PlayerPrefs.SetFloat("MeteoritoPPBuy", MeteoritoPPBuyIncrement);
 
@@ -64,7 +67,10 @@ public class HealthShopButton : MonoBehaviour
         priceTextInt *= numberbuyint;
         numberbuy.text = numberbuyint.ToString();
         priceText.text = priceTextInt.ToString();
-        PlayerPrefs.SetFloat("HealthPPBuy", HealthPPBuyIncrement);
+
+        PlayerPrefs.SetInt("numberbuyHealthPP", numberbuyint);
+        PlayerPrefs.SetInt("priceTextIntHealthPP", priceTextInt);
+        PlayerPrefs.SetFloat("HealthBuyIncrementPP", HealthPPBuyIncrement);
 
     }
 }

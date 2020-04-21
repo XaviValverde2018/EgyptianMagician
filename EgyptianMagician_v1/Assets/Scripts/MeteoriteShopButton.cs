@@ -69,7 +69,6 @@ public class MeteoriteShopButton : MonoBehaviour
         PlayerPrefs.SetInt("numberbuyMeteorPP", numberbuyint);
         PlayerPrefs.SetInt("priceTextIntMeteorPP", priceTextInt); 
         PlayerPrefs.SetFloat("MeteoritoBuyIncrementPP", MeteoritoPPBuyIncrement); 
-        Debug.Log(" APlayerPrefs.GetFloat(MeteoritoPPBuy)" + PlayerPrefs.GetFloat("MeteoritoPPBuy"));
        
     }
     IEnumerator timerMeteoritoGUI() {
