@@ -9046,6 +9046,7 @@ MonoBehaviour:
   healtPointGenerate: {fileID: 0}
   positionJugador: {fileID: 0}
   animationHealth: {fileID: 0}
+  timeActiveHealth: 0
 --- !u!114 &670119258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9874,8 +9875,6 @@ MonoBehaviour:
   healthBoolPlayerPrefsValue: 0
   MeteoritoPPBuy: 0
   HealthPPBuy: 0
-  animStartCount: {fileID: 0}
-  StartCountCanvas: {fileID: 0}
 --- !u!4 &745894989
 Transform:
   m_ObjectHideFlags: 0
@@ -16382,8 +16381,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.3
+  m_Color: {r: 0.7028302, g: 0.7846201, b: 1, a: 1}
+  m_Intensity: 1.6
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -17629,6 +17628,8 @@ MonoBehaviour:
   lifePlayer: 20
   maxlifeplayer: 35
   LifePPGetInt: 0
+  currentLifePlayer: 0
+  ChangeValueLife: 0
   rigidbodyHorusVelocity: {fileID: 0}
   isWalking: 0
   currentPos: {x: 0, y: 0, z: 0}
@@ -19795,7 +19796,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 96621a30fb2c21f4b938434db19f137e, type: 2}
+  - {fileID: 2100000, guid: 282a37e101734ed45b378842fa17ca63, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
