@@ -15,17 +15,17 @@ public class AnubisSliderLife : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anubisMaxLife = _anubisManager.AnubisLife;
-        slider.value = CalculateAnubisLife();
+        anubisMaxLife = 100;
+        slider.value = _anubisManager.AnubisLife / anubisMaxLife;
     }
 
     // Update is called once per frame
     void Update()
     {
-        slider.value = CalculateAnubisLife();
+        slider.value = _anubisManager.AnubisLife / anubisMaxLife;
 
         // si te menys del 50% color GROC
-        if((_anubisManager.AnubisLife/anubisMaxLife)<0.5f && (_anubisManager.AnubisLife / anubisMaxLife) >= 0.25f) {
+        if ((_anubisManager.AnubisLife/anubisMaxLife)<0.5f && (_anubisManager.AnubisLife / anubisMaxLife) >= 0.25f) {
             _colorImageFillSlider.color = new Color(1, 0.92f, 0.016f, 1);
             //invocacio de enemics cada firerate
         }
@@ -44,7 +44,5 @@ public class AnubisSliderLife : MonoBehaviour
 
 
     }
-    float CalculateAnubisLife() {
-        return _anubisManager.AnubisLife / anubisMaxLife;
-    }
+
 }

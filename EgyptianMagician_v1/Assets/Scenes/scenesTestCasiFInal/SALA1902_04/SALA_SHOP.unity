@@ -1839,7 +1839,7 @@ PrefabInstance:
     - target: {fileID: 6463457028568885564, guid: 8d072159f77b9474aa3a03f436cc3694,
         type: 3}
       propertyPath: seguentnivell
-      value: SALA3103_02
+      value: SALA_ANUBIS
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d072159f77b9474aa3a03f436cc3694, type: 3}

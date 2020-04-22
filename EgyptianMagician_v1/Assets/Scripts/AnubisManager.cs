@@ -10,6 +10,8 @@ public class AnubisManager : MonoBehaviour
     public float LifeFase1;
     public float LifeFase2;
     public float LifeFase3;
+    public Animator _animBlood;
+
 
     //[Header("FASE1")]
     //public GameObject _meteoriteAnubisPREFAB;
@@ -25,10 +27,10 @@ public class AnubisManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "SALA_ANUBIS") {
             AnubisLife = LifeFase1;
         }
-        if (SceneManager.GetActiveScene().name == "SALA_ANUBIS_FASE2") {
+        if (SceneManager.GetActiveScene().name == "SALA_ANUBIS_2") {
             AnubisLife = LifeFase2;
         }
-        if (SceneManager.GetActiveScene().name == "SALA_ANUBIS_FASE3") {
+        if (SceneManager.GetActiveScene().name == "SALA_ANUBIS_3") {
             AnubisLife = LifeFase3;
         }
     }
@@ -65,7 +67,13 @@ public class AnubisManager : MonoBehaviour
         }
     }
     void DamagePlayerToAnubis() {
+        StartCoroutine(ActiveBlood());
         AnubisLife--;
+    }
+    IEnumerator ActiveBlood() {
+        _animBlood.SetBool("BloodEnemyBool", true);
+        yield return new WaitForSeconds(0.33f);
+        _animBlood.SetBool("BloodEnemyBool", false);
     }
     /*void MeteoriteAnubisTrue() {
         _meteoriteAnubisPREFAB.SetActive(true);
