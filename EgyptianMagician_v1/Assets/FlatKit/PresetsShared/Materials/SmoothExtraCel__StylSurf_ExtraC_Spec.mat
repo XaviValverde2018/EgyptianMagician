@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: SmoothExtraCel__StylSurf_ExtraC_Spec
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
-  m_ShaderKeywords: DR_CEL_EXTRA_ON DR_SPECULAR_ON _CELPRIMARYMODE_SINGLE _FLAT_SHADOWS_ENABLED
-    _FLAT_SPECULAR_ENABLED _UNITYSHADOWMODE_NONE
+  m_ShaderKeywords: DR_CEL_EXTRA_ON DR_SPECULAR_ON ETC1_EXTERNAL_ALPHA _CELPRIMARYMODE_SINGLE
+    _FLAT_SHADOWS_ENABLED _FLAT_SPECULAR_ENABLED _UNITYSHADOWMODE_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -117,11 +117,13 @@ Material:
     - _SpecularEnabled: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _TextureBlendingMode: 0
     - _TextureImpact: 1
     - _UVSec: 0
     - _UnityShadowMode: 0
     - _UnityShadowPower: 0
     - _UnityShadowSharpness: 1
+    - _VertexColorsEnabled: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.6901961, g: 0.2009635, b: 0.09411764, a: 1}

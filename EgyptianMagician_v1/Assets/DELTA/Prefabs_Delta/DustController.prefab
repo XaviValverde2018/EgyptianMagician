@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &301935299520269282
 Transform:
   m_ObjectHideFlags: 0
@@ -236,7 +236,7 @@ PrefabInstance:
     - target: {fileID: 2885236574371716557, guid: 44eb86749ffe6f145bb4ae0919fc56ab,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 21.75
+      value: 9.96
       objectReference: {fileID: 0}
     - target: {fileID: 2885236574371716557, guid: 44eb86749ffe6f145bb4ae0919fc56ab,
         type: 3}
