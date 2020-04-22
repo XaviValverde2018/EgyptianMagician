@@ -3291,7 +3291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 741360169}
   moveSpeed: 7
-  lifePlayer: 2
+  lifePlayer: 30
   maxlifeplayer: 35
   LifePPGetInt: 0
   currentLifePlayer: 0
@@ -5136,8 +5136,6 @@ MonoBehaviour:
   healthBoolPlayerPrefsValue: 0
   MeteoritoPPBuy: 0
   HealthPPBuy: 0
-  animStartCount: {fileID: 0}
-  StartCountCanvas: {fileID: 0}
 --- !u!4 &745894989
 Transform:
   m_ObjectHideFlags: 0
@@ -6760,8 +6758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849d02723539d9044b00afbd50201d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartLifePlayer: 30
-  CounterStartLife: 0
+  StartLifePlayer: 35
+  _pl: {fileID: 509024961}
 --- !u!1001 &1024662341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15262,21 +15260,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6463457028568885566, guid: 8d072159f77b9474aa3a03f436cc3694,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 3.7623844
-      objectReference: {fileID: 0}
-    - target: {fileID: 6463457028568885566, guid: 8d072159f77b9474aa3a03f436cc3694,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.11665578
-      objectReference: {fileID: 0}
-    - target: {fileID: 6463457028568885566, guid: 8d072159f77b9474aa3a03f436cc3694,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.6465889
-      objectReference: {fileID: 0}
     - target: {fileID: 6463457028568885564, guid: 8d072159f77b9474aa3a03f436cc3694,
         type: 3}
       propertyPath: _comprobacioEnemicMesAprop
@@ -15306,6 +15289,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.353
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463457028568885566, guid: 8d072159f77b9474aa3a03f436cc3694,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 3.7623844
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463457028568885566, guid: 8d072159f77b9474aa3a03f436cc3694,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.11665578
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463457028568885566, guid: 8d072159f77b9474aa3a03f436cc3694,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.6465889
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d072159f77b9474aa3a03f436cc3694, type: 3}

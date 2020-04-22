@@ -5,13 +5,14 @@ using UnityEngine;
 public class LifePlayerControllerStart : MonoBehaviour
 {
     public float StartLifePlayer;
-    public bool CounterStartLife;
+    public PlayerController _pl;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        CounterStartLife = false;
-        StartLifePlayer = 30;
-        PlayerPrefs.SetFloat("CurrentLifePlayer", StartLifePlayer);
+        _pl.lifePlayer = StartLifePlayer;
+        _pl.maxlifeplayer = 35;
+        PlayerPrefs.SetFloat("CurrentLifePlayerPP", StartLifePlayer);
+        PlayerPrefs.SetInt("ChangeValueLifePP", 1);
     }
 
     // Update is called once per frame

@@ -71,7 +71,7 @@ public class LifeShopButton : MonoBehaviour
         PlayerPrefs.SetInt("numberbuyLifePP", numberbuyint);
         PlayerPrefs.SetInt("priceTextIntLifePP", priceTextInt);
         PlayerPrefs.SetInt("LifeBuyIncrementPP", LifePPBuyIncrement);
-
+        PlayerPrefs.SetInt("ChangeValueLifePP", 1);
         yield return new WaitForSeconds(0.5f);
         //_canvasShop.SetActive(false);
         

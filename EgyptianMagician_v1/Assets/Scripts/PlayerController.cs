@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     public float maxlifeplayer;
     public int LifePPGetInt;
     public float currentLifePlayer;
+    public int ChangeValueLife;
 
     [Header("Movement")]
     public Rigidbody rigidbodyHorusVelocity;
@@ -87,16 +88,29 @@ public class PlayerController : MonoBehaviour {
         oldPos = currentPos;
         isWalking = false;
 
+       
+         
+
+        currentLifePlayer = PlayerPrefs.GetFloat("CurrentLifePlayerPP");
+        LifePPGetInt = PlayerPrefs.GetInt("numberbuyLifePP");
+        ChangeValueLife = PlayerPrefs.GetInt("ChangeValueLifePP");
+        if (ChangeValueLife==1) {
+            lifePlayer = currentLifePlayer + (LifePPGetInt * 5);
+            maxlifeplayer += (LifePPGetInt * 5);
+            PlayerPrefs.SetInt("ChangeValueLifePP",0);
+        } 
+        else {
+            lifePlayer = currentLifePlayer;
+        }
+   
+        /*
         currentLifePlayer = PlayerPrefs.GetFloat("CurrentLifePlayer");
-
         LifePPGetInt = PlayerPrefs.GetInt("LifeBuyIncrementPP");
-
         lifePlayer = currentLifePlayer+LifePPGetInt;
         //maxlifeplayer = currentLifePlayer;
-
         maxlifeplayer += LifePPGetInt;
         //lifePlayer = maxlifeplayer;
-
+        */
         SpeedPPGetFloat = PlayerPrefs.GetFloat("SpeedBuyIncrementPP");
         
         FireRate -= SpeedPPGetFloat;
@@ -105,6 +119,7 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        
         /* arreglar 
         LifePPGetInt = PlayerPrefs.GetInt("LifePPBuy");
         maxlifeplayer += LifePPGetInt;
@@ -132,8 +147,8 @@ public class PlayerController : MonoBehaviour {
  
         }
         DieHorus();
-
-        PlayerPrefs.SetFloat("CurrentLifePlayer", lifePlayer);
+        PlayerPrefs.SetFloat("CurrentLifePlayerPP", lifePlayer);
+        // PlayerPrefs.SetFloat("CurrentLifePlayer", lifePlayer);
 
 
 

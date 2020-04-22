@@ -19,15 +19,18 @@ public class PlayerSliderLife : MonoBehaviour {
         _animBloodHorus.SetBool("BloodHorusBool", false);
         oldPlayerLife = _playerController.lifePlayer;
         //_enemySliderLife = _enemyManager.vidaEnemics;
-        maxLife = _playerController.lifePlayer;
-        slider.value = CalculateLife();
+        maxLife = _playerController.maxlifeplayer;
+        slider.value = _playerController.lifePlayer / maxLife;
 
     }
 
     // Update is called once per frame
     void Update() {
         StartCoroutine(ChangePlayerLife());
-        slider.value = CalculateLife();
+        oldPlayerLife = _playerController.lifePlayer;
+        //_enemySliderLife = _enemyManager.vidaEnemics;
+        maxLife = _playerController.maxlifeplayer;
+        slider.value = _playerController.lifePlayer / maxLife;
         /*if (_playerController.lifePlayer < maxLife) {
             SliderCanvas.SetActive(true);
         }*/
@@ -42,9 +45,9 @@ public class PlayerSliderLife : MonoBehaviour {
         }
         
     }
-    float CalculateLife() {
+    /*float CalculateLife() {
         return _playerController.lifePlayer / maxLife;
-    }
+    }*/
     IEnumerator ChangePlayerLife() {
        if(_playerController.lifePlayer < oldPlayerLife) {
             Debug.Log("dolor");
