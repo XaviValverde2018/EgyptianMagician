@@ -17889,7 +17889,6 @@ MonoBehaviour:
   Elapsedtime: 0
   _anubisLookAt: {fileID: 8296172667373044241}
   _animatorAnubis: {fileID: 3166231814227434872}
-  _animatorCetroAttack: {fileID: 0}
 --- !u!65 &1570537294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23123,6 +23122,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1953984010834475461, guid: 47fa48dd3c117704fb12f50251ca85b5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227082975592005460, guid: 47fa48dd3c117704fb12f50251ca85b5,
+        type: 3}
+      propertyPath: _am
+      value: 
+      objectReference: {fileID: 233133539}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47fa48dd3c117704fb12f50251ca85b5, type: 3}
 --- !u!1 &8296172667373044241 stripped

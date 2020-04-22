@@ -1460,6 +1460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3419498721400635306}
   - component: {fileID: 6990655514720102027}
+  - component: {fileID: 8227082975592005460}
   m_Layer: 0
   m_Name: AnubisChetado
   m_TagString: Untagged
@@ -1575,6 +1576,21 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.030514091, y: -0.015337735, z: -0.00008819997}
     m_Extent: {x: 0.54435515, y: 0.17764656, z: 0.3177235}
   m_DirtyAABB: 0
+--- !u!114 &8227082975592005460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158162247588078434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53f8b1ee736fdad4a8cc51d3b155e3fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveShaderMaterial: {fileID: 6990655514720102027}
+  alo: 0
+  _am: {fileID: 0}
 --- !u!1 &9185487871910901237
 GameObject:
   m_ObjectHideFlags: 0

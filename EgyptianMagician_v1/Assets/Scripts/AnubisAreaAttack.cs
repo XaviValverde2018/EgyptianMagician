@@ -13,7 +13,6 @@ public class AnubisAreaAttack : MonoBehaviour
 
     [Header("Animations")]
     public Animator _animatorAnubis;
-    public Animator _animatorCetroAttack;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,20 +29,23 @@ public class AnubisAreaAttack : MonoBehaviour
             Elapsedtime += Time.deltaTime;
             if(Elapsedtime > FireRate) {
                 _anubisLookAt.transform.LookAt(_playerController.transform);
-                StartCoroutine(AnubisAttacK());
-                
+                StartCoroutine(AnubisAttacK());              
                 Debug.Log("playerplayer");
                 Elapsedtime = 0;
             }
 
         }
     }
+   /* private void OnTriggerExit(Collider other) {
+        if (other.CompareTag("Player")) {
+            _animatorAnubis.SetBool("AnubisAttackBool", false);
+            _animatorAnubis.SetBool("AnubisIdleBool", true);
+        }
+    }*/
     IEnumerator AnubisAttacK() {
         _animatorAnubis.SetBool("AnubisAttackBool", true);
-        _animatorCetroAttack.SetBool("AnubisCetroAttack", true);
         yield return new WaitForSeconds(2f);
         _playerController.lifePlayer -= anubisAttack;
         _animatorAnubis.SetBool("AnubisAttackBool", false);
-        _animatorCetroAttack.SetBool("AnubisCetroAttack", false);
     }
 }
