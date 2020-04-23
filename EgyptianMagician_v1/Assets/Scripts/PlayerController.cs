@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour {
     public Text healthText;
     public Animator healthanimation;
     public GameObject healthGO;
+    public AudioSource shootHorusAudio;
 
     [Header("Animations")]
     public Animator walkHorusAnimation;
@@ -198,6 +199,10 @@ public class PlayerController : MonoBehaviour {
         if ((isWalking==false)&&(elapsedTime > FireRate)) {// disparar quan estigui quiet
             if (_comprobacioEnemicMesAprop.NoEnemicsOnRoom == false) {
                 Instantiate(bulletBala, posicioGenerarBulletBala.transform.position, posicioGenerarBulletBala.transform.rotation);
+
+                if (!shootHorusAudio.isPlaying) {
+                    shootHorusAudio.Play();
+                }
                 elapsedTime = 0f;
             }
         } else {
