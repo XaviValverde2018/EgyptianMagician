@@ -6,6 +6,7 @@ public class ParentMeteoritoNull : MonoBehaviour
 {
     // Start is called before the first frame update
     public float timerMeteoritoUpgrade;
+    public AudioSource audioMeteorarea;
     //public GameManager _gm;
     void Start()
     {
@@ -29,7 +30,9 @@ public class ParentMeteoritoNull : MonoBehaviour
         //timerMeteoritoUpgrade = PlayerPrefs.GetFloat("MeteoritoPPBuy");
     }
     IEnumerator CountDown() {
+        if (!audioMeteorarea.isPlaying) { audioMeteorarea.Play(); }
         yield return new WaitForSeconds(timerMeteoritoUpgrade);
+        audioMeteorarea.Stop();
         Destroy(this.gameObject);
     }
 }

@@ -8,6 +8,7 @@ public class ActiveBird : MonoBehaviour
     public Button birdButton;
     public int add;
     public bool birdActivated;
+    public AudioSource audioBird;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +31,11 @@ public class ActiveBird : MonoBehaviour
         birdButton.interactable = false;
         add++;
         birdActivated = true;
+        if (!audioBird.isPlaying) { audioBird.Play(); }
         yield return new WaitForSeconds(2);
         add++;
         birdActivated = false;
+        audioBird.Stop();
         yield return new WaitForSeconds(8);
         birdButton.interactable = true;
     }

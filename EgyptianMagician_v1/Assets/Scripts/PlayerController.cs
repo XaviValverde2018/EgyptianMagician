@@ -67,6 +67,9 @@ public class PlayerController : MonoBehaviour {
     public GameObject CetroShoot;
     public GameObject RayoWalk;
     public GameObject RayoShoot;
+
+    [Header("Sounds")]
+    public AudioSource audioWalk;
     // variables de find all enemies
     /*public GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
     public int closestIndex = 0;
@@ -171,6 +174,7 @@ public class PlayerController : MonoBehaviour {
         //transform.LookAt(_comprobacioEnemicMesAprop.targetposition);
         _comprobacioEnemicMesAprop.distanciaMesAprop = 999.0f;
         walkHorusAnimation.SetBool("isWalk", true);
+        if (!audioWalk.isPlaying) { audioWalk.Play(); }
         RayoWalk.SetActive(true);
         CetroWalk.SetActive(true);
         RayoShoot.SetActive(false);
@@ -200,15 +204,17 @@ public class PlayerController : MonoBehaviour {
             if (_comprobacioEnemicMesAprop.NoEnemicsOnRoom == false) {
                 Instantiate(bulletBala, posicioGenerarBulletBala.transform.position, posicioGenerarBulletBala.transform.rotation);
 
-                if (!shootHorusAudio.isPlaying) {
-                    shootHorusAudio.Play();
-                }
+                
+                shootHorusAudio.Play();
+                
                 elapsedTime = 0f;
             }
         } else {
+            shootHorusAudio.Pause();
             Debug.Log("no instantiate"); // no disparar quan estigui moventse. 
         }
         walkHorusAnimation.SetBool("isWalk", false);
+        audioWalk.Stop();
         RayoWalk.SetActive(false);
         CetroWalk.SetActive(false);
         RayoShoot.SetActive(true);

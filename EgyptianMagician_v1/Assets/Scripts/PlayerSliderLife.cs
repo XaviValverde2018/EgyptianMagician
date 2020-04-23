@@ -13,6 +13,7 @@ public class PlayerSliderLife : MonoBehaviour {
     public Image _colorImageFillSlider;
     public float oldPlayerLife;
     public Animator _animBloodHorus;
+    public AudioSource _audioDamageHorus;
     // Start is called before the first frame update
     void Start() {
         Debug.Log("PlayerSliderLife"+ _playerController.lifePlayer);
@@ -51,9 +52,11 @@ public class PlayerSliderLife : MonoBehaviour {
     IEnumerator ChangePlayerLife() {
        if(_playerController.lifePlayer < oldPlayerLife) {
             Debug.Log("dolor");
+            if (!_audioDamageHorus.isPlaying) { _audioDamageHorus.Play(); }         
             _animBloodHorus.SetBool("BloodHorusBool", true);
             yield return new WaitForSeconds(0.36f);
             oldPlayerLife = _playerController.lifePlayer;
+            _audioDamageHorus.Stop();
             _animBloodHorus.SetBool("BloodHorusBool", false);
 
         }

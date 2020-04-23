@@ -5,6 +5,8 @@ using UnityEngine;
 public class ParentNull : MonoBehaviour {
     // Start is called before the first frame update
     public float timerHealthUpgrade;
+    public AudioSource audioHealtharea;
+
    //public GameManager _gm;
 
     void Start() {
@@ -22,7 +24,9 @@ public class ParentNull : MonoBehaviour {
 
     }
     IEnumerator CountDown() {
+        if (!audioHealtharea.isPlaying) { audioHealtharea.Play(); }
         yield return new WaitForSeconds(timerHealthUpgrade);
+        audioHealtharea.Stop();
         Destroy(this.gameObject);
     }
 }
