@@ -11,7 +11,8 @@ public class AnubisManager : MonoBehaviour
     public float LifeFase2;
     public float LifeFase3;
     public Animator _animBlood;
-
+    public PlayerController _playerController;
+    public GameObject _anubisLookAt;
 
     //[Header("FASE1")]
     //public GameObject _meteoriteAnubisPREFAB;
@@ -38,8 +39,7 @@ public class AnubisManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if(AnubisLife >= LifeFase2) {
+        if (AnubisLife >= LifeFase2) {
            // MeteoriteAnubisTrue();
         }
         if(AnubisLife >= LifeFase3 && AnubisLife < LifeFase2) {
@@ -75,6 +75,7 @@ public class AnubisManager : MonoBehaviour
         yield return new WaitForSeconds(0.33f);
         _animBlood.SetBool("BloodEnemyBool", false);
     }
+
     /*void MeteoriteAnubisTrue() {
         _meteoriteAnubisPREFAB.SetActive(true);
     }

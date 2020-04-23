@@ -2022,6 +2022,8 @@ MonoBehaviour:
   LifeFase2: 0
   LifeFase3: 0
   _animBlood: {fileID: 1490209910}
+  _playerController: {fileID: 1294673539}
+  _anubisLookAt: {fileID: 8296172667373044241}
 --- !u!114 &233133540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6372,9 +6374,9 @@ MonoBehaviour:
     type: 3}
   healthButton: {fileID: 670119258}
   healthActivated: 0
-  healtPointGenerate: {fileID: 0}
+  healtPointGenerate: {fileID: 782922429}
   positionJugador: {fileID: 0}
-  animationHealth: {fileID: 0}
+  animationHealth: {fileID: 329899269}
   timeActiveHealth: 0
 --- !u!114 &670119258
 MonoBehaviour:
@@ -13240,8 +13242,8 @@ MonoBehaviour:
     type: 3}
   meteorButton: {fileID: 1406604860}
   meteorActivated: 0
-  meteoritoPointGenerate: {fileID: 0}
-  animationMeteorito: {fileID: 0}
+  meteoritoPointGenerate: {fileID: 267576539}
+  animationMeteorito: {fileID: 329899269}
   animationShakeCamera: {fileID: 1538695480}
   timeActiveMeteorito: 0
 --- !u!114 &1406604860
@@ -25090,7 +25092,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3987599569731358547, guid: 47fa48dd3c117704fb12f50251ca85b5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8.182031
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987599569731358547, guid: 47fa48dd3c117704fb12f50251ca85b5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.182028
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987599569731358547, guid: 47fa48dd3c117704fb12f50251ca85b5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 8.182028
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812842950908588293, guid: 47fa48dd3c117704fb12f50251ca85b5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8227082975592005460, guid: 47fa48dd3c117704fb12f50251ca85b5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 47fa48dd3c117704fb12f50251ca85b5, type: 3}
 --- !u!1 &8296172667373044241 stripped
 GameObject:
