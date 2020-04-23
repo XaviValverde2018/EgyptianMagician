@@ -24,6 +24,6 @@ public class AnubisDie : MonoBehaviour
     }
     IEnumerator CountWin() {
         yield return new WaitForSeconds(6.0f);
-        SceneManager.LoadScene("menu_principal");
+        SceneManager.LoadScene("menu_principal_GOOD");
     }
 }
