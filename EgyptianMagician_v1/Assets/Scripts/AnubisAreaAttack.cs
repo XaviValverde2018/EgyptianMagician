@@ -32,19 +32,33 @@ public class AnubisAreaAttack : MonoBehaviour
                 StartCoroutine(AnubisAttacK());              
                 Debug.Log("playerplayer");
                 Elapsedtime = 0;
+            } else {
+
             }
 
         }
     }
-   /* private void OnTriggerExit(Collider other) {
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Player")) {
+            _animatorAnubis.SetBool("AnubisAttackBool", true);
+            _animatorAnubis.SetBool("ActivarMeteoritoBool", false);
+        }
+    }
+    private void OnTriggerExit(Collider other) {
         if (other.CompareTag("Player")) {
             _animatorAnubis.SetBool("AnubisAttackBool", false);
-            _animatorAnubis.SetBool("AnubisIdleBool", true);
         }
-    }*/
+    }
+    /* private void OnTriggerExit(Collider other) {
+         if (other.CompareTag("Player")) {
+             _animatorAnubis.SetBool("AnubisAttackBool", false);
+             _animatorAnubis.SetBool("AnubisIdleBool", true);
+         }
+     }*/
     IEnumerator AnubisAttacK() {
         _animatorAnubis.SetBool("AnubisAttackBool", true);
-        yield return new WaitForSeconds(2f);
+        _animatorAnubis.SetBool("ActivarMeteoritoBool", false);
+        yield return new WaitForSeconds(0.2f);
         _playerController.lifePlayer -= anubisAttack;
         _animatorAnubis.SetBool("AnubisAttackBool", false);
     }

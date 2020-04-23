@@ -10,7 +10,7 @@ public class LifePlayerControllerStart : MonoBehaviour
     void Awake()
     {
         _pl.lifePlayer = StartLifePlayer;
-        _pl.maxlifeplayer = 35;
+        _pl.maxlifeplayer = 200;
         PlayerPrefs.SetFloat("CurrentLifePlayerPP", StartLifePlayer);
         PlayerPrefs.SetInt("ChangeValueLifePP", 1);
     }

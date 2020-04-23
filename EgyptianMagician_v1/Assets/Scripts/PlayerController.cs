@@ -259,7 +259,7 @@ public class PlayerController : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("meteoritoAnubis")) {
-            lifePlayer -= 5.0f;
+            lifePlayer -= 1.0f;
         }
     }
     private void OnTriggerStay(Collider other) {
@@ -275,7 +275,7 @@ public class PlayerController : MonoBehaviour {
     IEnumerator CountDown() {  
         yield return new WaitForSeconds(2);
         //Scene scene = SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene("menu_principal_GOOD");
     }
     IEnumerator HealthCountDown() {
         yield return new WaitForSeconds(0.8f);

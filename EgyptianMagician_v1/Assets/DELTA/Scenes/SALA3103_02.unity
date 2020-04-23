@@ -573,7 +573,7 @@ PrefabInstance:
     - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
@@ -694,6 +694,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 74277347}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &74277349 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+    type: 3}
+  m_PrefabInstance: {fileID: 74277347}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &82495192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 869826272863055099, guid: c1c11195032538043bad36ae4b255765,
@@ -3651,10 +3663,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84afd691896b23f419106a2635e0e6a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 741360169}
+  joystick: {fileID: 74277349}
   moveSpeed: 10
-  lifePlayer: 35
-  maxlifeplayer: 35
+  lifePlayer: 200
+  maxlifeplayer: 200
   LifePPGetInt: 0
   currentLifePlayer: 0
   ChangeValueLife: 0
@@ -5387,18 +5399,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1911761035}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &741360169 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8170153791668043265, guid: 0d230cc8be529a542a08cb878ab14b18,
-    type: 3}
-  m_PrefabInstance: {fileID: 1911761035}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &745329372
 GameObject:
   m_ObjectHideFlags: 0
@@ -5909,7 +5909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &788451279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16843,51 +16843,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1800438121}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1804972975
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1804972977}
-  - component: {fileID: 1804972976}
-  m_Layer: 0
-  m_Name: StartCountController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1804972976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804972975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4e9d8332c92e064ba81d5ec8f179808, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animStartCount: {fileID: 736528308}
-  StartCountCanvas: {fileID: 736528306}
---- !u!4 &1804972977
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804972975}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.895996, y: 15.6953125, z: -23.941406}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 41
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1806755447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 23f704199515a3a4fa01248434b7f831,
@@ -17215,6 +17170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Floating Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153791668043269, guid: 0d230cc8be529a542a08cb878ab14b18,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18,
         type: 3}
@@ -18769,6 +18729,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93b8b5e2a0763fe4d88767adf8c72ec9, type: 3}
+--- !u!1001 &901714858936019296
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 901714857131711183, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_Name
+      value: StartCountController
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.895996
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.6953125
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.941406
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711185, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901714857131711184, guid: a0869846f1894ec4e898e1cfb2daeba3,
+        type: 3}
+      propertyPath: StartCountCanvas
+      value: 
+      objectReference: {fileID: 736528306}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0869846f1894ec4e898e1cfb2daeba3, type: 3}
 --- !u!1001 &1232349981330345756
 PrefabInstance:
   m_ObjectHideFlags: 0

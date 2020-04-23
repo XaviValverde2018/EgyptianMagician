@@ -6,7 +6,7 @@ public class StartCountCountroller : MonoBehaviour
 {
 
     [Header("StartCount")]
-    public Animator animStartCount;
+    //public Animator animStartCount;
     public GameObject StartCountCanvas;
     // Start is called before the first frame update
     void Start()
@@ -20,12 +20,12 @@ public class StartCountCountroller : MonoBehaviour
         
     }
     IEnumerator StartCount() {
-        StartCountCanvas.SetActive(true);
-        animStartCount.SetBool("StartCount", true);
-        Time.timeScale = 0;
+        //StartCountCanvas.SetActive(true);
+        //animStartCount.SetBool("StartCount", true);
+        Time.timeScale = 0.05f;
         yield return new WaitForSecondsRealtime(2);
         Time.timeScale = 1;
-        StartCountCanvas.SetActive(false);
+        //StartCountCanvas.SetActive(false);
 
     }
 }

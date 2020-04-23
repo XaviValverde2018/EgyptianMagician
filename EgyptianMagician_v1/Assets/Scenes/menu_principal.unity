@@ -1722,6 +1722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldExpPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 781848267487066095, guid: 77898ac6554cc8c47ae3be5bc3e9a037,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3546229600770232073, guid: 77898ac6554cc8c47ae3be5bc3e9a037,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1830,12 +1835,12 @@ PrefabInstance:
     - target: {fileID: 1717981605963520476, guid: 77898ac6554cc8c47ae3be5bc3e9a037,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.181
       objectReference: {fileID: 0}
     - target: {fileID: 1717981605963520476, guid: 77898ac6554cc8c47ae3be5bc3e9a037,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1717981606987433921, guid: 77898ac6554cc8c47ae3be5bc3e9a037,
         type: 3}

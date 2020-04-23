@@ -23,7 +23,7 @@ public class AnubisDie : MonoBehaviour
         }
     }
     IEnumerator CountWin() {
-        yield return new WaitForSeconds(8.0f);
-        SceneManager.LoadScene("SALA1802_tutorial");
+        yield return new WaitForSeconds(6.0f);
+        SceneManager.LoadScene("menu_principal");
     }
 }

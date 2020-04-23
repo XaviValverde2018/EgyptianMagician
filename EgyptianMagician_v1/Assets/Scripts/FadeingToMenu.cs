@@ -21,7 +21,7 @@ public class FadeingToMenu : MonoBehaviour
         if (timer <= 3) {
             FadeToLevel();
             if (timer <= 1) {
-                SceneManager.LoadScene("menu_principal");
+                SceneManager.LoadScene("menu_principal_GOOD");
             }
 
         }

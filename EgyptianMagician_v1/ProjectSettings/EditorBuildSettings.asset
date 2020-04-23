@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/logo.unity
     guid: 77bac1a013314ac4da185373356b3cd0
   - enabled: 0
@@ -83,7 +83,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_09.unity
     guid: 52c5b7c3e8cc9584eafedba8fd712358
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/menu_principal_GOOD.unity
     guid: a932f0a1a0448814d83e69cc6fdf21dc
   - enabled: 0
