@@ -20,12 +20,12 @@ public class StartCountCountroller : MonoBehaviour
         
     }
     IEnumerator StartCount() {
-        StartCountCanvas.SetActive(true);
-        animStartCount.SetBool("StartCount", true);
-        Time.timeScale = 0;
-        yield return new WaitForSecondsRealtime(2);
+        //StartCountCanvas.SetActive(true);
+        //animStartCount.SetBool("StartCount", true);
+        Time.timeScale = 0.05f;
+        yield return new WaitForSecondsRealtime(3f);
         Time.timeScale = 1;
-        StartCountCanvas.SetActive(false);
+       // StartCountCanvas.SetActive(false);
 
     }
 }
