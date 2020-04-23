@@ -7,7 +7,6 @@ public class AnubisDie : MonoBehaviour
     public AnubisManager _am;
     public Animator _animPortal;
     public PlayerController _pl;
-    public AnubisMeteor _aaa;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +18,6 @@ public class AnubisDie : MonoBehaviour
     {
         if(_am.AnubisLife <= 0) {
             _pl.FireRate = 80;
-            _pl.lifePlayer = 900;
-            _aaa.FireRate = 999;
             _animPortal.SetBool("portalactive", true);
             StartCoroutine(CountWin());
         }

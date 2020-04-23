@@ -47,7 +47,7 @@ public class comprobacioEnemicMesAprop : MonoBehaviour
 
         GOenemicMesaprop = CalculAprop();
         //vidaEnemicComprobacio = GameObject.Find("lilaEnemic20").GetComponent<EnemyManager>().vidaEnemics;
-        //Debug.Log("ENEMICMESAPROP: " + GOenemicMesaprop.name);
+        Debug.Log("ENEMICMESAPROP: " + GOenemicMesaprop.name);
         if (vidaEnemicComprobacio != -100) {
             vidaEnemicComprobacio = GameObject.Find(GOenemicMesaprop.name).GetComponent<EnemyManager>().vidaEnemics;
         }
