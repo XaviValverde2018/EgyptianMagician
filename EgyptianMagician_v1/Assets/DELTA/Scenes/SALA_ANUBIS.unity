@@ -11381,7 +11381,7 @@ PrefabInstance:
     - target: {fileID: 8409109211646461485, guid: bbd5b97f7f308a5428a28e772cf045e6,
         type: 3}
       propertyPath: StartLifePlayer
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbd5b97f7f308a5428a28e772cf045e6, type: 3}

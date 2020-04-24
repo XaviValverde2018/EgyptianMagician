@@ -11,6 +11,7 @@ public class activeGold : MonoBehaviour
     public float speed = 10f;
     public bool goldHitsPlayer;
     public GameManager _gameManager;
+    public AudioSource audioCoin;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class activeGold : MonoBehaviour
         if (other.transform.CompareTag("Player")) {
             Debug.Log("Gold hits Player");
             goldHitsPlayer = true;
+            if (!audioCoin.isPlaying) { audioCoin.Play(); }
             PlayerPrefs.SetInt("goldValue", _gameManager.totalGold += 100);
             Destroy(gameObject);
         } else {
