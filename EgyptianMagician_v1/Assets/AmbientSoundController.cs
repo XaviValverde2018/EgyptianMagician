@@ -8,6 +8,7 @@ public class AmbientSoundController : MonoBehaviour
     public int numMusic;
     // Start is called before the first frame update
     void Start() {
+        this.gameObject.SetActive(true);
         if (!ambientsound.isPlaying) { ambientsound.Play(); }
         numMusic = FindObjectsOfType<AudioSource>().Length;
         if(numMusic != 1) {
@@ -19,7 +20,7 @@ public class AmbientSoundController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if ((SceneManager.GetActiveScene().name == "menu_principal_GOOD")|| (SceneManager.GetActiveScene().name == "logros") || (SceneManager.GetActiveScene().name == "settings") || (SceneManager.GetActiveScene().name == "sala_mapas")) {
-            this.gameObject.SetActive(true);
+          
             DontDestroyOnLoad(this.gameObject);
         } else {
             this.gameObject.SetActive(false);

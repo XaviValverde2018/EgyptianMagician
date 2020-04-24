@@ -32,13 +32,8 @@ public class DustController : MonoBehaviour
     }
 
     void ActiveRandomDustAll() {
-        if((random_min == 2)||(random_max == 5)){
             if (!audioDustAll.isPlaying) { audioDustAll.Play(); }
             dustAll.SetActive(true);
-        } else {
-            dustAll.SetActive(false);
-            audioDustAll.Stop();
-        }
     }
     void ActiveRandomDustSphere() {
         if ((random_min == 1) || (random_max == 4)) {
