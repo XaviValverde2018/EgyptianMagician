@@ -16622,7 +16622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1676002320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16636,11 +16636,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ambientsound: {fileID: 1676002322}
-  atack_horus: {fileID: 0}
-  mummy_mouth: {fileID: 0}
-  Horus_Damage: {fileID: 0}
-  win: {fileID: 0}
-  isSilence: 0
 --- !u!4 &1676002321
 Transform:
   m_ObjectHideFlags: 0
@@ -21036,11 +21031,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.041256506
       objectReference: {fileID: 0}
-    - target: {fileID: 6303880988301699246, guid: 869b91b15bd7b1143b56928e8271bd94,
-        type: 3}
-      propertyPath: m_Name
-      value: Horus_delta
-      objectReference: {fileID: 0}
     - target: {fileID: 649762024081972913, guid: 869b91b15bd7b1143b56928e8271bd94,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -21056,6 +21046,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 820c57b4c8d77ff4782c8579e0cf559a, type: 2}
+    - target: {fileID: 8693007234034396380, guid: 869b91b15bd7b1143b56928e8271bd94,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 72e79862b2ed190469d4290438ab6150, type: 2}
+    - target: {fileID: 8693007234034396380, guid: 869b91b15bd7b1143b56928e8271bd94,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 820c57b4c8d77ff4782c8579e0cf559a, type: 2}
+    - target: {fileID: 8693007234034396380, guid: 869b91b15bd7b1143b56928e8271bd94,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b08892ae2683a424aa41a35d274ea7d3, type: 2}
+    - target: {fileID: 6303880988301699246, guid: 869b91b15bd7b1143b56928e8271bd94,
+        type: 3}
+      propertyPath: m_Name
+      value: Horus_delta
+      objectReference: {fileID: 0}
     - target: {fileID: 8772207976766083505, guid: 869b91b15bd7b1143b56928e8271bd94,
         type: 3}
       propertyPath: m_Materials.Array.data[4]
@@ -21081,21 +21091,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[3]
       value: 
       objectReference: {fileID: 2100000, guid: 2ce874ab4a1002b4ea696886768a30d7, type: 2}
-    - target: {fileID: 8693007234034396380, guid: 869b91b15bd7b1143b56928e8271bd94,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 72e79862b2ed190469d4290438ab6150, type: 2}
-    - target: {fileID: 8693007234034396380, guid: 869b91b15bd7b1143b56928e8271bd94,
-        type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 820c57b4c8d77ff4782c8579e0cf559a, type: 2}
-    - target: {fileID: 8693007234034396380, guid: 869b91b15bd7b1143b56928e8271bd94,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: b08892ae2683a424aa41a35d274ea7d3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 869b91b15bd7b1143b56928e8271bd94, type: 3}
 --- !u!1001 &4664785220544072698
@@ -21355,6 +21350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Apofis_Delta_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705286410047052477, guid: d6555150945b5a24c93da0894cfda437,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3705286410047052470, guid: d6555150945b5a24c93da0894cfda437,
         type: 3}

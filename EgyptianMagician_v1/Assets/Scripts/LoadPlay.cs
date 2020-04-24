@@ -27,4 +27,7 @@ public class LoadPlay : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
+    public void Achievements() {
+        SceneManager.LoadScene("logros");
+    }
 }

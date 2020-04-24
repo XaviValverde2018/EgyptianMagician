@@ -19,8 +19,9 @@ public class AnubisBossBattleMusic : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "SALA_ANUBIS_3") {
             audioBossBattle.volume = 0.05f;
-        } else {
-            audioBossBattle.Pause();
+        } 
+        if(SceneManager.GetActiveScene().name == "menu_principal_GOOD") {
+            this.gameObject.SetActive(false);
         }
 
     }

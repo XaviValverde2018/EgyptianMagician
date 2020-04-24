@@ -16055,6 +16055,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DustController
       objectReference: {fileID: 0}
+    - target: {fileID: 301935299536536206, guid: 0fbcc36e519607f48aa57c29a13f08e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 301935299536536207, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
       propertyPath: m_LocalPosition.x

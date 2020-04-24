@@ -18,31 +18,10 @@ public class LevelSelector : MonoBehaviour
         
     }
     public void lvl1(){
-        SceneManager.LoadScene("SALA1902_02");
+        SceneManager.LoadScene("SALA1802_tutorial");
     }
     public void lvl2() {
-        SceneManager.LoadScene("SALA1902_03");
-    }
-    public void lvl3() {
-        SceneManager.LoadScene("SALA1902_04");
-    }
-    public void lvl4() {
-        SceneManager.LoadScene("SALA1902_05");
-    }
-    public void lvl5() {
-        SceneManager.LoadScene("SALA1902_06");
-    }
-    public void lvl6() {
-        SceneManager.LoadScene("SALA1902_07");
-    }
-    public void lvl7() {
-        SceneManager.LoadScene("SALA1902_08");
-    }
-    public void lvl8() {
-        SceneManager.LoadScene("SALA1902_09");
-    }
-    public void lvl9() {
-        SceneManager.LoadScene("SALA1902_10");
+        SceneManager.LoadScene("SALA_ANUBIS");
     }
     public void Home() {
         SceneManager.LoadScene("menu_principal_GOOD");
