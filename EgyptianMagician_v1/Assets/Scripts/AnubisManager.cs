@@ -13,7 +13,7 @@ public class AnubisManager : MonoBehaviour
     public Animator _animBlood;
     public PlayerController _playerController;
     public GameObject _anubisLookAt;
-
+    public AudioSource _Evillaught;
     //[Header("FASE1")]
     //public GameObject _meteoriteAnubisPREFAB;
     // Start is called before the first frame update
@@ -26,12 +26,15 @@ public class AnubisManager : MonoBehaviour
         LifeFase3 = (AnubisLife * 0.25f);
 
         if (SceneManager.GetActiveScene().name == "SALA_ANUBIS") {
+            if (!_Evillaught.isPlaying) { _Evillaught.Play(); }
             AnubisLife = LifeFase1;
         }
         if (SceneManager.GetActiveScene().name == "SALA_ANUBIS_2") {
+            if (!_Evillaught.isPlaying) { _Evillaught.Play(); }
             AnubisLife = LifeFase2;
         }
         if (SceneManager.GetActiveScene().name == "SALA_ANUBIS_3") {
+            if (!_Evillaught.isPlaying) { _Evillaught.Play(); }
             AnubisLife = LifeFase3;
         }
     }

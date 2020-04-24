@@ -12,6 +12,7 @@ public class EnemyManager : MonoBehaviour
     public int vidaEnemics;
     public bool enemicMort;
     public Animator _animBlood;
+    public AudioSource audioEnemyDamage;
 
     [Header("Shield Status")]
     public bool ShieldActive;
@@ -58,6 +59,7 @@ public class EnemyManager : MonoBehaviour
     }
     IEnumerator ActiveBlood() {
         _animBlood.SetBool("BloodEnemyBool", true);
+        if (!audioEnemyDamage.isPlaying) { audioEnemyDamage.Play(); }
         yield return new WaitForSeconds(.036f);
         _animBlood.SetBool("BloodEnemyBool", false);
     }

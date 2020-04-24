@@ -204,13 +204,12 @@ public class PlayerController : MonoBehaviour {
             if (_comprobacioEnemicMesAprop.NoEnemicsOnRoom == false) {
                 Instantiate(bulletBala, posicioGenerarBulletBala.transform.position, posicioGenerarBulletBala.transform.rotation);
 
-                
-                shootHorusAudio.Play();
-                
+
+                if (!shootHorusAudio.isPlaying) { shootHorusAudio.Play(); }
+
                 elapsedTime = 0f;
             }
         } else {
-            shootHorusAudio.Pause();
             Debug.Log("no instantiate"); // no disparar quan estigui moventse. 
         }
         walkHorusAnimation.SetBool("isWalk", false);
