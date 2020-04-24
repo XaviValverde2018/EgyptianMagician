@@ -12,7 +12,7 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
     public string seguentnivell;
     public Animator _animOpenDoorRight;
     public Animator _animOpenDoorLeft;
-
+    public AudioSource audioDoorOpen;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +37,9 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
 
             _animOpenDoorLeft.SetBool("OpenDoorLeftBool", true);
             _animOpenDoorRight.SetBool("OpenDoorRightBool", true);
+            if (!audioDoorOpen.isPlaying) { audioDoorOpen.Play(); }
+            StartCoroutine(CloseDor());
+
         } else {
             bc.isTrigger = false;
             ps.SetActive(false);
@@ -47,5 +50,9 @@ public class potsAnarAlSeguentNivell : MonoBehaviour
         if (other.CompareTag("Player")) {
             SceneManager.LoadScene(seguentnivell);//6 = SALA 1
         }
+    }
+    IEnumerator CloseDor() {
+        yield return new WaitForSeconds(1.6f);
+        audioDoorOpen.Stop();
     }
 }

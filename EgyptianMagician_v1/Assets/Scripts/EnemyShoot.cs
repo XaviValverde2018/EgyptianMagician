@@ -11,6 +11,7 @@ public class EnemyShoot : MonoBehaviour
     public float elapsedTime;
     public float FireRate = 0.5f;
     public GameObject _playerTarget;
+    public AudioSource audioShootBullet;
 
     [Header("Bird Activated")]
     public GameManager _gmBirdActivated;
@@ -48,6 +49,7 @@ public class EnemyShoot : MonoBehaviour
             if (ES_GM_BirdActivated == false) {
                 StartCoroutine(DrawLineRenderer());
                 Instantiate(bulletEnemy, posicioGenerarBulletEnemy.transform.position, posicioGenerarBulletEnemy.transform.rotation);
+                if (!audioShootBullet.isPlaying) { audioShootBullet.Play(); }
                 elapsedTime = 0f;
             } else {
                 DestroyBulletsBirdActivated();

@@ -14852,7 +14852,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cc1c4f875bd106443b886cba65dfb9b2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.332
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -16049,22 +16049,42 @@ PrefabInstance:
     - target: {fileID: 2996780958214993571, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
       propertyPath: m_Volume
-      value: 0.709
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2996780958214993571, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2996780958214993571, guid: 0fbcc36e519607f48aa57c29a13f08e7,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8281016189781980294, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
       propertyPath: MaxDistance
-      value: 30
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8281016189781980294, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
       propertyPath: m_Volume
-      value: 0.159
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281016189781980294, guid: 0fbcc36e519607f48aa57c29a13f08e7,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281016189781980294, guid: 0fbcc36e519607f48aa57c29a13f08e7,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 301935300501641794, guid: 0fbcc36e519607f48aa57c29a13f08e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fbcc36e519607f48aa57c29a13f08e7, type: 3}
