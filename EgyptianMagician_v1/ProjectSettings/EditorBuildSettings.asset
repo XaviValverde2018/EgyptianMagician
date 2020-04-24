@@ -116,4 +116,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/logros.unity
     guid: 19d91d1a248ab2b429e0b4c20fb35853
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA3103_03.unity
+    guid: d4cb5970ac3742041b350eef77291805
   m_configObjects: {}

@@ -4913,36 +4913,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687702215}
   m_CullTransparentMesh: 0
---- !u!1 &698360078
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 698360079}
-  m_Layer: 0
-  m_Name: gameovertutorial
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &698360079
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698360078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 293.88962, y: 464.76483, z: 43.938812}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 30
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701987704
 GameObject:
   m_ObjectHideFlags: 0
@@ -5386,7 +5356,7 @@ MonoBehaviour:
   _activeBird: {fileID: 1911571135}
   GM_BirdActivated: 0
   _PC: {fileID: 509024961}
-  gameOverScreen: {fileID: 698360078}
+  gameOverScreen: {fileID: 0}
   meteorBoolPlayerPrefs: 0
   meteorBoolPlayerPrefsValue: 0
   healthBoolPlayerPrefs: 0
@@ -7066,7 +7036,7 @@ PrefabInstance:
     - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
         type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
         type: 3}
@@ -8944,7 +8914,7 @@ PrefabInstance:
     - target: {fileID: 1358517912828399986, guid: 1cbca8bb95d399740b7e895b9512d5a4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1358517912828399986, guid: 1cbca8bb95d399740b7e895b9512d5a4,
         type: 3}
@@ -14890,11 +14860,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ambientsound: {fileID: 1676002322}
-  atack_horus: {fileID: 0}
-  mummy_mouth: {fileID: 0}
-  Horus_Damage: {fileID: 0}
-  win: {fileID: 0}
-  isSilence: 0
 --- !u!4 &1676002321
 Transform:
   m_ObjectHideFlags: 0
@@ -16098,7 +16063,7 @@ PrefabInstance:
     - target: {fileID: 301935299536536207, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 301935299536536207, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
@@ -18715,7 +18680,7 @@ PrefabInstance:
     - target: {fileID: 8409109211646461484, guid: bbd5b97f7f308a5428a28e772cf045e6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8409109211646461484, guid: bbd5b97f7f308a5428a28e772cf045e6,
         type: 3}
