@@ -5,6 +5,7 @@ using UnityEngine;
 public class ActiveInHorusPosition : MonoBehaviour
 {
     public GameObject _horusPosition;
+    public AudioSource audioMeteoritoAnubis;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class ActiveInHorusPosition : MonoBehaviour
         Invoke("HorusPosition", 4);
     }
     public void HorusPosition() {
+        if (!audioMeteoritoAnubis.isPlaying) { audioMeteoritoAnubis.Play(); }
         this.gameObject.transform.position = new Vector3(_horusPosition.transform.position.x, this.transform.position.y, _horusPosition.transform.position.z);
 
     }

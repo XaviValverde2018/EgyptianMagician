@@ -10,6 +10,7 @@ public class AnubisAreaAttack : MonoBehaviour
     public float FireRate;
     public float Elapsedtime;
     public GameObject _anubisLookAt;
+    public AudioSource soundCetroAnubis;
 
     [Header("Animations")]
     public Animator _animatorAnubis;
@@ -58,6 +59,7 @@ public class AnubisAreaAttack : MonoBehaviour
     IEnumerator AnubisAttacK() {
         _animatorAnubis.SetBool("AnubisAttackBool", true);
         _animatorAnubis.SetBool("ActivarMeteoritoBool", false);
+        if (!soundCetroAnubis.isPlaying) { soundCetroAnubis.Play(); }
         yield return new WaitForSeconds(0.2f);
         _playerController.lifePlayer -= anubisAttack;
         _animatorAnubis.SetBool("AnubisAttackBool", false);

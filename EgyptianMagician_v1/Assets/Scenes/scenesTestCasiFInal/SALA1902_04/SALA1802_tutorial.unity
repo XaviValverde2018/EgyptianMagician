@@ -3485,7 +3485,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 44044f1858bd8694b89938e7a7f3b147, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2ec5e14f5daf38c4b8a80019772cb9f5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7016,6 +7016,75 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 23b54efe14cf9af4a87658f0b266c487, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90b98161324ebf41b05065c0ce68a46, type: 3}
+--- !u!1001 &1027296757
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2911572431425729903, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_Name
+      value: DUST_VFX 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.145375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.053683452
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6839661
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.050590977
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7257749
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 4.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911572431425729890, guid: e922568cee5cc194c8f0f17bbd0eab95,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e922568cee5cc194c8f0f17bbd0eab95, type: 3}
 --- !u!1 &1029593118
 GameObject:
   m_ObjectHideFlags: 0
@@ -14852,7 +14921,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cc1c4f875bd106443b886cba65dfb9b2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -16049,7 +16118,7 @@ PrefabInstance:
     - target: {fileID: 2996780958214993571, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2996780958214993571, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
@@ -16069,7 +16138,7 @@ PrefabInstance:
     - target: {fileID: 8281016189781980294, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
       propertyPath: m_Volume
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8281016189781980294, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}

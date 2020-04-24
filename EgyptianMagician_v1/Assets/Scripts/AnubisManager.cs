@@ -14,6 +14,7 @@ public class AnubisManager : MonoBehaviour
     public PlayerController _playerController;
     public GameObject _anubisLookAt;
     public AudioSource _Evillaught;
+    public AudioSource _anubisDamage;
     //[Header("FASE1")]
     //public GameObject _meteoriteAnubisPREFAB;
     // Start is called before the first frame update
@@ -74,6 +75,7 @@ public class AnubisManager : MonoBehaviour
         AnubisLife--;
     }
     IEnumerator ActiveBlood() {
+        if (!_anubisDamage.isPlaying) { _anubisDamage.Play(); }
         _animBlood.SetBool("BloodEnemyBool", true);
         yield return new WaitForSeconds(0.33f);
         _animBlood.SetBool("BloodEnemyBool", false);
