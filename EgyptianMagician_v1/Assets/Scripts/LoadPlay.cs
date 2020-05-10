@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class LoadPlay : MonoBehaviour
 {
+    public AudioSource audioclip;
    public void Play() {
         SceneManager.LoadScene("SALA1802_tutorial");
     }
@@ -30,4 +31,11 @@ public class LoadPlay : MonoBehaviour
     public void Achievements() {
         SceneManager.LoadScene("logros");
     }
+    public void Trailer() {
+        SceneManager.LoadScene("video");
+    }
+    public void Credits() {
+        SceneManager.LoadScene("credits");
+    }
+
 }

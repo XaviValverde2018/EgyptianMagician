@@ -14842,7 +14842,7 @@ GameObject:
   - component: {fileID: 1676002322}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: audiomanager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16080,6 +16080,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 301935300501641794, guid: 0fbcc36e519607f48aa57c29a13f08e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2996780958214993571, guid: 0fbcc36e519607f48aa57c29a13f08e7,
         type: 3}
       propertyPath: MaxDistance
@@ -16119,11 +16124,6 @@ PrefabInstance:
         type: 3}
       propertyPath: Loop
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 301935300501641794, guid: 0fbcc36e519607f48aa57c29a13f08e7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fbcc36e519607f48aa57c29a13f08e7, type: 3}
@@ -18299,11 +18299,6 @@ PrefabInstance:
       propertyPath: pausesystem
       value: 
       objectReference: {fileID: 981839077}
-    - target: {fileID: 914194412123119243, guid: ed14db847bd3aba4a99576bb8fa74239,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1676002320}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed14db847bd3aba4a99576bb8fa74239, type: 3}
 --- !u!1001 &1717981607116194871

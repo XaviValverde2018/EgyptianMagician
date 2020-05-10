@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class FadeingToMenu : MonoBehaviour
 {
     bool fadefin = false;
-    public float timer = 0f;
+    public float timer;
     public Animator fadeanimator;
     // Start is called before the first frame update
     void Start()
     {
-        timer = 15.0f;
+        //timer = 15.0f;
     }
 
     // Update is called once per frame

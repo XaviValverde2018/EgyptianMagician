@@ -21,7 +21,7 @@ public class BatFollow : MonoBehaviour {
 
     IEnumerator BatMove() {
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, transform.position.y, target.position.z), speed * Time.deltaTime);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
     }
 }

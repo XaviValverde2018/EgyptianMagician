@@ -16,6 +16,7 @@ TagManager:
   - ray
   - health
   - meteoritoAnubis
+  - audiomanager
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ public class PauseCanvasSystem : MonoBehaviour
     }
 
     public void BackToMenu() {
-        SceneManager.LoadScene("menu_principal");
+        SceneManager.LoadScene("menu_principal_GOOD");
     }
 
 }

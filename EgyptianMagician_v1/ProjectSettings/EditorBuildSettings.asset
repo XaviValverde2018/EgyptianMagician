@@ -119,4 +119,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DELTA/Scenes/SALA3103_03.unity
     guid: d4cb5970ac3742041b350eef77291805
+  - enabled: 1
+    path: Assets/Scenes/video.unity
+    guid: bb382b9be0c1400488d42fa1e8e316f3
+  - enabled: 1
+    path: Assets/Scenes/credits.unity
+    guid: b7f16f9fac8038843abe97958a7cb46b
   m_configObjects: {}
