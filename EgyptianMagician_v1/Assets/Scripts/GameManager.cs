@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         currentExpToChangeLevel = 0;
         LevelsValueExp = 0;
       
-        PlayerPrefs.SetInt("expValue", totalExp);
+        totalExp = PlayerPrefs.GetInt("expValue");
         PlayerPrefs.SetInt("LevelExpPP",LevelsValueExp);
 
 
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
 
 
         LevelExpBehavior();
-
+        //PlayerPrefs.SetInt("expValue", totalExp);
         if (_PC.lifePlayer <= 0)
             StartCoroutine(GameOver());
 

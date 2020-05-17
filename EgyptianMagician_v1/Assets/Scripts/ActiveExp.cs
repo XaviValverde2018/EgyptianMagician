@@ -19,8 +19,9 @@ public class ActiveExp : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) {
         if (other.transform.CompareTag("Player")) {
-            Debug.Log("Exp add");
+            Debug.Log("Exp add");        
             _gameManager.totalExp += 3;
+            PlayerPrefs.SetInt("expValue",_gameManager.totalExp);
             Destroy(gameObject);
         }
     }
