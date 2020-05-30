@@ -3502,8 +3502,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 1138186861}
   moveSpeed: 7
-  lifePlayer: 200
-  maxlifeplayer: 200
+  lifePlayer: 50
+  maxlifeplayer: 50
   LifePPGetInt: 0
   currentLifePlayer: 0
   ChangeValueLife: 0
