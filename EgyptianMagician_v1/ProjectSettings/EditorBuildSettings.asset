@@ -93,8 +93,29 @@ EditorBuildSettings:
     path: Assets/DELTA/Scenes/SALA3103_02.unity
     guid: aed6d6cfd8773a34a908aba7549176a1
   - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_GOLD_1.unity
+    guid: e9d0431bfa3c66c4689cb47cc6a20acc
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_GOLD_8.unity
+    guid: 233a7f9eea0fdfd479fff9d6dd362e43
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_GOLD_2.unity
+    guid: 2c49f314a42761841876b9441f3acca8
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_GOLD_7.unity
+    guid: 10ee80ce6507a704198b577e427867c2
+  - enabled: 1
     path: Assets/DELTA/Scenes/SALA_ANUBIS.unity
     guid: 7a8d90defdc077940bb1b7935327f362
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_GOLD_3.unity
+    guid: 9690bf63d167c9f4aad61b4c1de3d4c0
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_GOLD_5.unity
+    guid: 7fcf77a764cba1a45a8ace6b6b3ea706
+  - enabled: 1
+    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA_SHOP_2.unity
+    guid: c4434a37f56abd1449cb307234494794
   - enabled: 0
     path: Assets/DELTA/Scenes/SALA_ANUBIS_BACKUP.unity
     guid: ee095d5df5ac6a747bbf9b9f43cac439
@@ -105,11 +126,17 @@ EditorBuildSettings:
     path: Assets/DELTA/Scenes/SALA_ANUBIS_FASE3.unity
     guid: be0f799fad63af14b90fadc9ef2bfcd4
   - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_GOLD_6.unity
+    guid: 181ba7c33ebe44f43bc778c4fd758490
+  - enabled: 1
     path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA_SHOP.unity
     guid: 7eaae0d209819d0408c4b148b4345597
   - enabled: 1
     path: Assets/DELTA/Scenes/SALA_ANUBIS_2.unity
     guid: 54662ebc3859c0449bf3148d3e30ca4d
+  - enabled: 1
+    path: Assets/DELTA/Scenes/SALA_GOLD_4.unity
+    guid: c94189244f495ff46b1fe25d3164bb8f
   - enabled: 1
     path: Assets/DELTA/Scenes/SALA_ANUBIS_3.unity
     guid: 611941e90c018d847abecc030c46f558
