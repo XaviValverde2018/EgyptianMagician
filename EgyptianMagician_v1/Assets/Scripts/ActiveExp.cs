@@ -20,7 +20,7 @@ public class ActiveExp : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.transform.CompareTag("Player")) {
             Debug.Log("Exp add");        
-            _gameManager.totalExp += 3;
+            _gameManager.totalExp += 6;
             PlayerPrefs.SetInt("expValue",_gameManager.totalExp);
             Destroy(gameObject);
         }

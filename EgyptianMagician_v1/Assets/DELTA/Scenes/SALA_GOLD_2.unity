@@ -1742,6 +1742,11 @@ PrefabInstance:
       propertyPath: randomvalue
       value: 33
       objectReference: {fileID: 0}
+    - target: {fileID: 1292004117476234189, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: MummyFollowAttackValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 437244605033828573, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: _comprobacioEnemicMesAprop
@@ -2909,6 +2914,11 @@ PrefabInstance:
       propertyPath: audioEnemyDamage
       value: 
       objectReference: {fileID: 1016286256}
+    - target: {fileID: 1292004117784308908, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: vidaEnemics
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 1292004117784308905, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3003,6 +3013,11 @@ PrefabInstance:
         type: 3}
       propertyPath: randomvalue
       value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292004117476234189, guid: 21d8238283601ab4b9af80e289ac65bb,
+        type: 3}
+      propertyPath: MummyFollowAttackValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 437244605033828573, guid: 21d8238283601ab4b9af80e289ac65bb,
         type: 3}
