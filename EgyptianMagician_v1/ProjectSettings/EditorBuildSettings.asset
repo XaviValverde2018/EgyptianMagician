@@ -8,90 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/logo.unity
     guid: 77bac1a013314ac4da185373356b3cd0
-  - enabled: 0
-    path: Assets/Scenes/menu_principal.unity
-    guid: 1a1756118ba3efb439c7f2104baa09d1
-  - enabled: 0
-    path: Assets/Scenes/lvl1.unity
-    guid: 5ea0d732eb2d5a6409e832f8371240d1
-  - enabled: 0
-    path: Assets/Scenes/gameoverwin.unity
-    guid: 931bf29920343aa45a9fa7b956b3093c
-  - enabled: 0
-    path: Assets/Scenes/muerte.unity
-    guid: 83cbb684e8952c04a8a447918b9ba528
   - enabled: 1
     path: Assets/Scenes/settings.unity
     guid: fcf95a416ed8a644281a5e032c539493
-  - enabled: 0
-    path: Assets/Scenes/SALA1.unity
-    guid: fa1d1b817cef1b64b93e44b9064c1d33
-  - enabled: 0
-    path: Assets/Scenes/DOS ESCENES IMPORTANTS/SALATUTORIAL.unity
-    guid: 017fcf7dca994c74d98a224d2adbfa56
-  - enabled: 0
-    path: Assets/Scenes/DOS ESCENES IMPORTANTS/SALA1_BETA.unity
-    guid: 9ee528ccd3ea90342889ca194804b63e
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA2_BETA_MF.unity
-    guid: 20b51a5661e2543489d60b4e5544848e
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA3_BETA_MFA.unity
-    guid: 696f057cd1790dc4fb4fa2fc230826b9
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA4_BETA_MFA.unity
-    guid: a82322d1f51db74478cf57a88ef6912f
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_02.unity
-    guid: a2c2dea17e3de5448bdd0d2b39adcddc
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1802_01.unity
-    guid: 1b74c889e186f404cad0593dc6ae3ef8
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1802_03.unity
-    guid: f3c5a04a02e023340bf4d93aaa83f17d
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1802_04.unity
-    guid: ad22e22326a757a489f3d0bf57dfd5f5
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1802_05.unity
-    guid: bb6edde548943c9458f3c1fac6b83be7
   - enabled: 1
     path: Assets/Scenes/sala_mapas.unity
     guid: a82bbd6a643a9ec4aa90635e6209c3d6
   - enabled: 1
     path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1802_tutorial.unity
     guid: 2cea063286eeef245ac46a914be0cd50
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_03.unity
-    guid: 9222f8635d466cb448420e8715881a7c
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_04.unity
-    guid: 39f89997f7085214dbd8eaa52224d27e
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_05.unity
-    guid: 46eea7714c75e0348bd18231e79592d2
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_06.unity
-    guid: 5f50e3c70d2dbe14ba48531dfd86af60
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_07.unity
-    guid: 7a1a6e578fceefc42903481492878747
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_08.unity
-    guid: b4955f85f167d624292cfcb177a5d015
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_09.unity
-    guid: 52c5b7c3e8cc9584eafedba8fd712358
   - enabled: 1
     path: Assets/Scenes/menu_principal_GOOD.unity
     guid: a932f0a1a0448814d83e69cc6fdf21dc
-  - enabled: 0
-    path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA1902_10.unity
-    guid: 4707b6e5fc16e0446aec634596f0e498
-  - enabled: 0
-    path: Assets/DELTA/Scenes/SALA3103_02.unity
-    guid: aed6d6cfd8773a34a908aba7549176a1
   - enabled: 1
     path: Assets/DELTA/Scenes/SALA_GOLD_1.unity
     guid: e9d0431bfa3c66c4689cb47cc6a20acc
@@ -116,15 +44,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/scenesTestCasiFInal/SALA1902_04/SALA_SHOP_2.unity
     guid: c4434a37f56abd1449cb307234494794
-  - enabled: 0
-    path: Assets/DELTA/Scenes/SALA_ANUBIS_BACKUP.unity
-    guid: ee095d5df5ac6a747bbf9b9f43cac439
-  - enabled: 0
-    path: Assets/DELTA/Scenes/SALA_ANUBIS_FASE2.unity
-    guid: 1573ee6334aa7bc41881263f2205ad37
-  - enabled: 0
-    path: Assets/DELTA/Scenes/SALA_ANUBIS_FASE3.unity
-    guid: be0f799fad63af14b90fadc9ef2bfcd4
   - enabled: 1
     path: Assets/DELTA/Scenes/SALA_GOLD_6.unity
     guid: 181ba7c33ebe44f43bc778c4fd758490
@@ -143,9 +62,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/logros.unity
     guid: 19d91d1a248ab2b429e0b4c20fb35853
-  - enabled: 0
-    path: Assets/DELTA/Scenes/SALA3103_03.unity
-    guid: d4cb5970ac3742041b350eef77291805
   - enabled: 1
     path: Assets/Scenes/video.unity
     guid: bb382b9be0c1400488d42fa1e8e316f3
